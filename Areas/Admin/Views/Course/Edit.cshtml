@@ -1,0 +1,103 @@
+﻿@model WebUniversity.Models.Course
+@{
+    var lstsub = ViewData["listsubject"] as List<WebUniversity.Models.Subject>;
+    var selectSubject = lstsub?.Select(x => new SelectListItem
+            {
+                Text = x.SubjectName,
+                Value = x.Id.ToString()
+            }).ToList();
+    var lstLec = ViewData["listlecturer"] as List<WebUniversity.Models.Lecturer>;
+    var selectLecturer = lstLec?.Select(x => new SelectListItem
+            {
+                Text = x.FullName,
+                Value = x.Id.ToString()
+            }).ToList();
+}
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form asp-area="Admin" asp-controller="Course" asp-action="EditPost"
+                      class="form-horizontal"
+                      data-ajax="true"
+                      data-ajax-begin="BlockUI()"
+                      data-ajax-failure="UnBlockUI()"
+                      data-ajax-method="POST"
+                      data-ajax-success="successAction"
+                      id="basicForm"
+                      method="post">
+                    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="SubjectId" class="control-label col-md-2 text-right">Subject</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(s => s.SubjectId, selectSubject, "-- Select Subject --", new { @class = "form-select" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="Lecturer" class="control-label col-md-2 text-right">Lecturer</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(l => l.LecturerId, selectLecturer, "-- Select Lecturer --", new { @class = "form-select" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="Semester" class="control-label col-md-2 text-right">Semester <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="number" class="form-control" name="Semester" id="Semester" min="1" value="@Model.Semester" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="SchoolYear" class="control-label col-md-2 text-right">SchoolYear <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="number" class="form-control" name="SchoolYear" id="SchoolYear" value="@Model.SchoolYear" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="Status" class="control-label col-md-2 text-right">Status</label>
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="Status" type="checkbox" name="Status" value="true" @(Model.Status?"checked":"")>
+                                        <label class="form-check-label" for="Status">
+                                            Active
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Submit Button</label>
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form><!-- End General Form Elements -->
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

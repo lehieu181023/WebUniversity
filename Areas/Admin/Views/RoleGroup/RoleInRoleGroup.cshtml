@@ -1,0 +1,58 @@
+﻿@model WebUniversity.Models.RoleGroup
+@{
+    var lstRole = ViewData["lstRole"] as List<WebUniversity.Models.Role>;
+    var lstRoleParent = lstRole?.Where(x => x.ParentId == null).ToList();
+    var roleIdSet1 = ViewData["lstRoleInRoleGroup"];
+    var roleIdSet = ViewData["lstRoleInRoleGroup"] as HashSet<int> ?? new HashSet<int>();
+}
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="container">
+                    <ul>
+                        @foreach (var itemPR1 in lstRoleParent?? new List<Role>())
+                        {
+                            <li>
+                                 <input type="checkbox" class="group" name="Role" value="@itemPR1.Id" @(roleIdSet.Contains(itemPR1.Id) ? "checked" : "")>
+                                <label onclick="toggleList(event)">
+                                    @itemPR1.RoleCode <i class="fa-solid fa-square-caret-down"></i>
+                                </label>
+                                <ul style="display:none;">
+                                    @{
+                                        var lstRole2 = lstRole?.Where(x => x.ParentId == itemPR1.Id).ToList();
+                                    }
+                                    @foreach (var itemPR2 in lstRole2 ?? new List<Role>())
+                                    {
+                                        <li>
+                                            <label>
+                                                <input type="checkbox" class="role" name="Role" value="@itemPR2.Id" @(roleIdSet.Contains(itemPR2.Id) ? "checked" : "")> @itemPR2.RoleCode
+                                            </label>
+                                        </li>
+                                    }
+                                </ul>
+                            </li>
+                        }
+                    </ul>
+                </div>
+                
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button class="btn btn-success" onclick="sendData(@Model.Id)">Lưu</button>
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+

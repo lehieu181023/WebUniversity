@@ -1,0 +1,79 @@
+﻿@model IEnumerable<WebUniversity.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var returnClass = ViewBag.ReturnClass??false;
+}
+
+<div class="pagetitle">
+    <h1>Student</h1>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item active">Student</li>
+        </ol>
+    </nav>
+</div><!-- End Page Title -->
+
+<section class="section">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="top-row">
+                        <!-- Thanh tìm kiếm ở góc trái -->
+                        <div class="search-container" hidden>
+                            <label for="searchInput">Tìm kiếm:</label>
+                            <input type="text" id="searchInput" placeholder="Nhập từ khóa tìm kiếm">
+                        </div>
+
+                        <!-- Nút Thêm Category ở góc phải -->
+                        <div class="add-category-button">
+                            <button type="button" class="btn btn-success mt-2 mb-2" onclick="LoadModelAdd()">
+                                <i class="bi bi-plus-circle"></i> Add student
+                            </button>
+                        </div>
+                        <!-- nút thêm tài khoản --></>
+                        <div class="add-category-button">
+                            <button type="button" class="btn btn-success mt-2 mb-2" onclick="LoadModeCreateAcount()">
+                                <i class="bi bi-plus-circle"></i> Add Account student
+                            </button>
+                        </div>
+                        <!-- Nút Quay lại ở góc phải -->
+                        @if (returnClass)
+                        {
+                            <div class="back-class">
+                                <button type="button" class="btn btn-primary mt-2 mb-2" onclick="window.location.href='/Admin/Class'">
+                                    <i class="bi bi-arrow-left-circle"></i> Back Class
+                                </button>
+                            </div>
+                        }
+                    </div>
+
+                    <!-- Table with stripped rows -->
+                    <div id="listdata">
+
+                    </div>
+
+                    <!-- End Table with stripped rows -->
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<div id="target-div">
+
+</div>
+
+@section Scripts {
+    <script src="~/Admin/js/Student.js"></script>
+    <script src="~/Admin/js/UploadFile.js"></script>
+}
+
+
+
+

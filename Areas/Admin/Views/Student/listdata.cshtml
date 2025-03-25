@@ -1,0 +1,86 @@
+﻿@model List<WebUniversity.Models.Student>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Chk</th>
+            <th>STT</th>
+            <th>StudentCode</th>
+            <th>Image</th>
+            <th>Full Name</th>
+            <th data-type="date" data-format="YYYY/DD/MM">BirthDate</th>
+            <th>Gender</th>
+            <th>Class</th>
+            <th>Status</th>
+            <th>Operate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int stt = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <input type="checkbox" name="chk" value="@item.Id" />
+                </td>
+                <td>@(stt++)</td>
+                <td>@item.StudentCode</td>
+                <td><img src="@item.Image" alt="Hình ảnh" style="width: 100px; height: 100px;"></td>
+                <td>@item.FullName</td>
+                <td>@item.BirthDate.ToString("yyyy/MM/dd")</td>
+                <td>
+                    @(item.Gender?"Male":"Female")
+                </td>
+                <td>
+                    @item.Class?.ClassName
+                </td>
+                <td>
+                    @if (item.Status)
+                    {
+                        <button type="button" class="btn btn-primary" onclick="editStatus(@item.Id)">Hoạt động</button>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-danger" onclick="editStatus(@item.Id)">Khóa</button>
+                    }
+                </td>
+                <td>
+                    <!-- Nút xem -->
+                    <button type="button" class="btn btn-success text-white mb-3" id="editButton" onclick="LoadModelDetail(@item.Id)">
+                        <i class="bi bi-eye"></i> Xem
+                    </button>
+                    <!-- Nút Sửa -->
+                    <button type="button" class="btn btn-warning text-white mb-3" id="editButton" onclick="LoadModelEdit(@item.Id)">
+                        <i class="bi bi-pencil"></i> Sửa
+                    </button>
+                    <!-- Nút Xóa -->
+                    <button type="button" class="btn btn-danger mb-3" id="deleteButton" onclick="deleteData(@item.Id)">
+                        <i class="bi bi-trash"></i> Xóa
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!-- DataTables JS Script -->
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('table').DataTable({
+        "pageLength": 10,  // Số dòng mỗi trang
+        "lengthChange": true, // Không cho phép thay đổi số lượng dòng
+        "searching": true,  // Tắt thanh tìm kiếm
+        "language": {
+          "lengthMenu": "Hiển thị _MENU_ dòng",
+          "info": "Hiển thị từ _START_ đến _END_ trong tổng số _TOTAL_ dòng",
+          "paginate": {
+            "previous": "Trước",
+            "next": "Tiếp"
+          }
+        }
+      });
+    });
+</script>

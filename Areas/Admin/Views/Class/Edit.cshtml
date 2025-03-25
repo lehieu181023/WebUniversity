@@ -1,0 +1,81 @@
+﻿@model WebUniversity.Models.Class
+@{
+    var listfaculty = ViewData["listfaculty"] as List<WebUniversity.Models.Faculty>;
+    var selectFaculty = listfaculty?.Select(x => new SelectListItem
+            {
+                Text = x.FacultyName,
+                Value = x.Id.ToString()
+            }).ToList();
+}
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form asp-area="Admin" asp-controller="Class" asp-action="EditPost"
+                      class="form-horizontal"
+                      data-ajax="true"
+                      data-ajax-begin="BlockUI()"
+                      data-ajax-failure="UnBlockUI()"
+                      data-ajax-method="POST"
+                      data-ajax-success="successAction"
+                      id="basicForm"
+                      method="post">
+                    <input type="hidden" asp-for="Id" value="@Model.Id"/>
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="ClassName" class="control-label col-md-2 text-right">Class Name <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="ClassName" id="ClassName" value="@Model.ClassName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="FacultyId" class="control-label col-md-2 text-right">Faculty</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(m => m.FacultyId, selectFaculty, "-- Select Faculty --", new { @class = "form-select", required = "true" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="Status" class="control-label col-md-2 text-right">Status</label>
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="Status" type="checkbox" name="Status" value="true" @(Model.Status?"checked":"")>
+                                        <label class="form-check-label" for="Status">
+                                            Active
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Submit Button</label>
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form><!-- End General Form Elements -->
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

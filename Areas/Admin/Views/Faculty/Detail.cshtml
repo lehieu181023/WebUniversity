@@ -1,0 +1,83 @@
+﻿@model WebUniversity.Models.Student
+@{
+    var listclass = ViewData["listclass"] as List<WebUniversity.Models.Class>;
+    var selectClass = listclass?.Select(x => new SelectListItem
+            {
+                Text = x.ClassName,
+                Value = x.Id.ToString()
+            }).ToList();
+}
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="row mb-3">
+                        <label for="FullName" class="control-label col-md-2 text-right">Full Name</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.FullName</p>
+                        </div>
+                        <label for="BirthDate" class="control-label col-md-2 text-right">Birth Date</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.BirthDate.ToString("yyyy-MM-dd")</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Gender" class="control-label col-md-2 text-right">Gender</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@(Model.Gender ? "Male" : "Female")</p>
+                        </div>
+                        <label for="Address" class="control-label col-md-2 text-right">Address</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Address</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Email" class="control-label col-md-2 text-right">Email</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Email</p>
+                        </div>
+                        <label for="PhoneNumber" class="control-label col-md-2 text-right">Phone Number</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.PhoneNumber</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="ClassId" class="control-label col-md-2 text-right">Class</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@selectClass?.FirstOrDefault(c => c.Value == Model.ClassId.ToString())?.Text</p>
+                        </div>
+                        <label for="Status" class="control-label col-md-2 text-right">Status</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@(Model.Status ? "Active" : "Inactive")</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Image" class="control-label col-md-2 text-right">Image</label>
+                        <div class="col-md-4">
+                            <img src="@Model.Image" alt="Student Image" class="img-thumbnail" />
+                        </div>
+                        <label for="Cccd" class="control-label col-md-2 text-right">CCCD</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Cccd</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

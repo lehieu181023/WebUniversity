@@ -1,6 +1,3 @@
-"# WebHoaQua" 
+"# WebUnivercity" 
 
-open file HoaQuaSql.sql use sqlserver and choose execute
-
-go to appsettings.json and change DefaultConnection equal to your default connection
-"# WebUniversity" 
+Đề tài:Xây dựng phần mềm quản lý đào tạo và công tác sinh viên sử dụng ASP.NET MVC, AJAX, JQuery và ReactJS
