@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using WebUniversity.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,7 +33,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     {
         options.LoginPath = "/Account/Login";
         options.LogoutPath = "/Account/Logout";
-        options.AccessDeniedPath = "/Home/Index";
+        options.AccessDeniedPath = "/";
     });
 
 builder.Services.AddAuthorization(options =>
@@ -42,6 +43,14 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddSingleton<IAuthorizationHandler, AdminAccessHandler>();
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("NotLectureOrStudent", policy =>
+        policy.RequireAssertion(context =>
+            !context.User.IsInRole("LectureRole") &&
+            !context.User.IsInRole("StudentRole"))); // Chặn cả hai vai trò
+});
 
 
 var app = builder.Build();
@@ -82,6 +91,16 @@ app.Use(async (context, next) =>
         context.Response.Redirect("/Admin/Dashboard");
         return;
     }
+    else if (context.Request.Path == "/Lecturer")
+    {
+        context.Response.Redirect("/Lecturer/Info");
+        return;
+    }
+    else if (context.Request.Path == "/Student")
+    {
+        context.Response.Redirect("/Student/Info");
+        return;
+    }
     await next();
 });
 
@@ -89,10 +108,34 @@ app.Use(async (context, next) =>
 {
     if (context.Request.Path == "/")
     {
-        context.Response.Redirect("/Admin/Student");
+        var user = context.User;
+
+        if (!user.Identity!.IsAuthenticated)
+        {
+            // Nếu chưa đăng nhập, chuyển hướng đến trang Login
+            context.Response.Redirect("/Account/Login");
+            return;
+        }
+
+        // Kiểm tra quyền để chuyển hướng đến đúng trang
+        string redirectUrl = "/Admin"; // Mặc định là trang Admin
+
+        if (user.HasClaim(c => c.Type == ClaimTypes.Role && c.Value == "LecturerRole"))
+        {
+            redirectUrl = "/Lecturer";
+        }
+        else if (user.HasClaim(c => c.Type == ClaimTypes.Role && c.Value == "StudentRole"))
+        {
+            redirectUrl = "/Student";
+        }
+
+        context.Response.Redirect(redirectUrl);
         return;
     }
+
     await next();
 });
+
+
 
 app.Run();

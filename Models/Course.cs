@@ -19,9 +19,9 @@ public partial class Course
 
     public bool Status { get; set; }
 
-    public virtual ICollection<ClassSchedule> ClassSchedules { get; set; } = new List<ClassSchedule>();
+    public string? CourseName { get; set; }
 
-    public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
+    public virtual ICollection<ClassSchedule> ClassSchedules { get; set; } = new List<ClassSchedule>();
 
     public virtual Lecturer? Lecturer { get; set; }
 

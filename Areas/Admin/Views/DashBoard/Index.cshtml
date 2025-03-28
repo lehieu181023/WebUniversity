@@ -1,0 +1,52 @@
+﻿@{
+    ViewData["Title"] = "DashBoard";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+        <div class="row">
+
+            <!-- Left side columns -->
+            <div class="col-lg-8">
+                <div class="row">
+                    <!-- Reports -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Reports <span>/Today</span></h5>
+
+                                <!-- Line Chart -->
+                                <div id="reportsChart"></div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div><!-- End Reports -->
+                </div>
+            </div><!-- End Left side columns -->
+            
+        </div>
+    </section>
+
+
+
+   @section Scripts{
+
+    <script src="~/Admin/js/DashBoard.js"></script>
+   }
+
+   

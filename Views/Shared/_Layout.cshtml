@@ -1,11 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@{
+	var Tt = ViewData["Title"] as string;
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>Pages / Login - NiceAdmin Bootstrap Template</title>
+	<title>@Tt</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 
@@ -66,6 +69,16 @@
 	<script src="~/assets/js/main.js"></script>
 	<script src="~/react/assets/index-CmBJohSG.js"></script>
 	@await RenderSectionAsync("Scripts", required: false)
+	@{
+		var errorMessage = TempData["ErrorMessage"] as string;
+	}
+	@if (!string.IsNullOrEmpty(errorMessage))
+	{
+		<script>
+			showToast("@Html.Raw(errorMessage)", "error");
+		</script>
+
+	}
 </body>
 
 </html>

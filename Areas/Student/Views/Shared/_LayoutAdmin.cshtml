@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿
+@{
+    var Tt = ViewData["Title"] as string;
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>@Tt</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -69,7 +73,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a asp-area="admin" asp-controller="DashBoard" action="Index" class="logo d-flex align-items-center">
-                <span class="d-none d-lg-block">Admin</span>
+                <span class="d-none d-lg-block">Lecturer</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -81,10 +85,7 @@
             </form>
         </div><!-- End Search Bar -->
 
-        <nav class="header-nav ms-auto">
-            @await Html.PartialAsync("~/Areas/Admin/Views/ThongBao/ThongBaoo.cshtml")
-        </nav><!-- End Icons Navigation -->
-
+        <nav class="header-nav ms-auto" id="TB"></nav>
     </header><!-- End Header -->
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
@@ -92,47 +93,28 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="DashBoard" action="Index">
+                <a class="nav-link collapsed" asp-area="student" asp-controller="Info" action="Index">
                     <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
+                    <span>Info</span>
                 </a>
             </li><!-- End Dashboard Nav -->
-
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="DanhMucSanPham" action="Index">
-                    <i class="bi bi-menu-button-wide"></i><span>Danh mục sản phẩm</span>
+                <a class="nav-link collapsed" asp-area="student" asp-controller="Schedule" action="Index">
+                    <i class="bi bi-grid"></i>
+                    <span>Schedule</span>
                 </a>
-            </li>
-
+            </li><!-- End Dashboard Nav -->
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="SanPham" action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Sản phẩm</span>
+                <a class="nav-link collapsed" asp-area="student" asp-controller="ScheduleWeek" action="Index">
+                    <i class="bi bi-grid"></i>
+                    <span>ScheduleWeek</span>
                 </a>
-            </li><!-- End Shop Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="User" action="Index">
-                    <i class="bi bi-people"></i>
-                    <span>Người dùng</span>
-                </a>
-            </li><!-- End Member Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="DonHang" action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Đơn hàng</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="LienHe">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Liên hệ</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
+            </li><!-- End Dashboard Nav -->
             <li class="nav-heading">Pages</li>
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="nav-link collapsed" asp-area="" asp-controller="Account" asp-action="Logout">
                     <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Trang khách hàng</span>
+                    <span>Đăng xuất</span>
                 </a>
             </li><!-- End Login Page Nav -->
 
@@ -143,7 +125,7 @@
     <main id="main" class="main">
         @RenderBody()
     </main><!-- End Main -->
-
+    <div id="target-div-changepass"></div>
     <footer id="footer" class="footer">
     </footer><!-- End Footer -->
 
@@ -167,11 +149,22 @@
 
     <!-- Template Main JS File -->
     <script src="~/admin/assets/js/main.js"></script>
-    <script src="~/Admin/js/ThongBao.js"></script>
+
+    <script src="~/Admin/js/TB.js"></script>
+
     <script src="~/react/assets/index-CmBJohSG.js"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 
+    @{
+        var errorMessage = TempData["ErrorMessage"] as string;
+    }
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <script>
+            showToast("@errorMessage", "error");
+        </script>
+    }
 
 </body>
 

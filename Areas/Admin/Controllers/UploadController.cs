@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebUniversity.Areas.Admin.Controllers
@@ -10,6 +11,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         private readonly string _uploadPath;
         private readonly long _maxFileSize = 5 * 1024 * 1024; // Giới hạn 5MB
 
+        
         public UploadController(IConfiguration configuration, IWebHostEnvironment env)
         {
             _uploadPath = Path.Combine(env.WebRootPath, "uploads");
@@ -18,7 +20,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 Directory.CreateDirectory(_uploadPath);
             }
         }
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> UploadFile(IFormFile file)
         {
@@ -61,7 +63,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpPost]
         public IActionResult DeleteFile(string fileName)
         {

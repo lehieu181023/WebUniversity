@@ -1,0 +1,82 @@
+﻿@model WebUniversity.Models.ClassSchedule
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Chi tiết</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="form-horizontal">
+                    <div class="row mb-3">
+                        <label for="FullName" class="control-label col-md-2 text-right">Course</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Course?.CourseName</p>
+                        </div>
+                        <label for="BirthDate" class="control-label col-md-2 text-right">Class</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Class?.ClassName</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Gender" class="control-label col-md-2 text-right">Lecturer</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@(Model.Course?.Lecturer?.FullName)</p>
+                        </div>
+                        <label for="Address" class="control-label col-md-2 text-right">Semester</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Course?.Semester</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Status" class="control-label col-md-2 text-right">Year</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.Course?.SchoolYear</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="Email" class="control-label col-md-2 text-right">Class Shift</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.ClassShift?.Name</p>
+                        </div>
+                        <label for="PhoneNumber" class="control-label col-md-2 text-right">Day of week</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.DayOfWeek</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="ClassId" class="control-label col-md-2 text-right">Start Day</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.StartDay?.ToString("dd/MM/yyyy")</p>
+                        </div>
+                        <label for="Status" class="control-label col-md-2 text-right">End Day</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.EndDay?.ToString("dd/MM/yyyy")</p>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="ClassId" class="control-label col-md-2 text-right">Create Day</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@Model.CreateDay.ToString("dd/MM/yyyy")</p>
+                        </div>
+                        <label for="Status" class="control-label col-md-2 text-right">Status</label>
+                        <div class="col-md-4">
+                            <p class="form-control-static">@(Model.Status ? "Active" : "Inactive")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

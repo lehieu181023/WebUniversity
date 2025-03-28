@@ -20,7 +20,7 @@ namespace WebUniversity.Controllers
         }
 
         [HttpPost]
-        public async Task<JsonResult> LoginAction(string UserName, string PassWord)
+        public async Task<IActionResult> LoginAction(string UserName, string PassWord)
         {
             var user = db.Account.Where(s => s.Status).Include(u => u.RoleGroup).FirstOrDefault(u => u.Username == UserName);
 
@@ -30,7 +30,7 @@ namespace WebUniversity.Controllers
             }
 
             // Kiểm tra mật khẩu
-            if (string.IsNullOrEmpty(user.Password) || !new PasswordHelper().VerifyPassword(user.Password, PassWord))
+            if (string.IsNullOrEmpty(PassWord) || !new PasswordHelper().VerifyPassword(user.Password, PassWord))
             {
                 return Json(new { success = false, message = "Mật khẩu không chính xác" });
             }
@@ -66,7 +66,22 @@ namespace WebUniversity.Controllers
                         AllowRefresh = true
                     });
 
-                return Json(new { success = true, message = "Đăng nhập thành công" });
+                string redirectUrl;
+                if (user.LecturerId != null)
+                {
+                    redirectUrl = Url.Action("Index", "Info", new { area = "Lecturer" });
+                }
+                else if (user.StudentId != null)
+                {
+                    redirectUrl = Url.Action("Index", "Info", new { area = "Student" });
+                }
+                else
+                {
+                    redirectUrl = Url.Action("Index", "DashBoard", new { area = "Admin" });
+                }
+
+                return Json(new { success = true, url = redirectUrl });
+
             }
             catch (Exception e)
             {

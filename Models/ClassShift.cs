@@ -13,9 +13,9 @@ public partial class ClassShift
 
     public TimeOnly EndTime { get; set; }
 
-    public DateTime? CreateDay { get; set; }
+    public DateTime CreateDay { get; set; }
 
-    public bool? Status { get; set; }
+    public bool Status { get; set; }
 
     public virtual ICollection<ClassSchedule> ClassSchedules { get; set; } = new List<ClassSchedule>();
 }

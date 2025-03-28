@@ -25,13 +25,9 @@ public partial class DBContext : DbContext
 
     public virtual DbSet<Course> Course { get; set; }
 
-    public virtual DbSet<Enrollment> Enrollment { get; set; }
-
     public virtual DbSet<Faculty> Faculty { get; set; }
 
     public virtual DbSet<Lecturer> Lecturer { get; set; }
-
-    public virtual DbSet<Participation> Participation { get; set; }
 
     public virtual DbSet<Role> Role { get; set; }
 
@@ -42,8 +38,6 @@ public partial class DBContext : DbContext
     public virtual DbSet<Room> Room { get; set; }
 
     public virtual DbSet<Student> Student { get; set; }
-
-    public virtual DbSet<StudentActivity> StudentActivity { get; set; }
 
     public virtual DbSet<Subject> Subject { get; set; }
 
@@ -112,13 +106,11 @@ public partial class DBContext : DbContext
         {
             entity.HasKey(e => e.Id).HasName("PK__ClassSch__3214EC07BE111558");
 
-            entity.ToTable("ClassSchedule");
-
-            entity.HasIndex(e => new { e.ClassShiftId, e.DayOfWeek, e.ClassId }, "UQ_Class").IsUnique();
-
-            entity.HasIndex(e => new { e.ClassShiftId, e.DayOfWeek, e.RoomId }, "UQ_Room").IsUnique();
-
-            entity.HasIndex(e => new { e.ClassShiftId, e.DayOfWeek, e.CourseId }, "UQ_Teacher").IsUnique();
+            entity.ToTable("ClassSchedule", tb =>
+                {
+                    tb.HasTrigger("TR_ClassSchedule_Unique");
+                    tb.HasTrigger("TR_Update_ClassSchedule_Unique");
+                });
 
             entity.Property(e => e.CreateDay)
                 .HasDefaultValueSql("(getdate())")
@@ -165,6 +157,7 @@ public partial class DBContext : DbContext
 
             entity.ToTable("Course");
 
+            entity.Property(e => e.CourseName).HasMaxLength(50);
             entity.Property(e => e.CreateDay)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -177,27 +170,6 @@ public partial class DBContext : DbContext
             entity.HasOne(d => d.Subject).WithMany(p => p.Courses)
                 .HasForeignKey(d => d.SubjectId)
                 .HasConstraintName("FK__Course__SubjectI__571DF1D5");
-        });
-
-        modelBuilder.Entity<Enrollment>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__Enrollme__3214EC0715E2B83C");
-
-            entity.ToTable("Enrollment");
-
-            entity.Property(e => e.CreateDay)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Score).HasDefaultValueSql("(NULL)");
-            entity.Property(e => e.Status).HasDefaultValue(true);
-
-            entity.HasOne(d => d.Course).WithMany(p => p.Enrollments)
-                .HasForeignKey(d => d.CourseId)
-                .HasConstraintName("FK__Enrollmen__Cours__5DCAEF64");
-
-            entity.HasOne(d => d.Student).WithMany(p => p.Enrollments)
-                .HasForeignKey(d => d.StudentId)
-                .HasConstraintName("FK__Enrollmen__Stude__5CD6CB2B");
         });
 
         modelBuilder.Entity<Faculty>(entity =>
@@ -236,28 +208,6 @@ public partial class DBContext : DbContext
             entity.HasOne(d => d.Faculty).WithMany(p => p.Lecturers)
                 .HasForeignKey(d => d.FacultyId)
                 .HasConstraintName("FK__Lecturer__Facult__4D94879B");
-        });
-
-        modelBuilder.Entity<Participation>(entity =>
-        {
-            entity.HasKey(e => new { e.StudentId, e.ActivityId }).HasName("PK__Particip__369A61E094E2C000");
-
-            entity.ToTable("Participation");
-
-            entity.Property(e => e.CreateDay)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Status).HasDefaultValue(true);
-
-            entity.HasOne(d => d.Activity).WithMany(p => p.Participations)
-                .HasForeignKey(d => d.ActivityId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Participa__Activ__693CA210");
-
-            entity.HasOne(d => d.Student).WithMany(p => p.Participations)
-                .HasForeignKey(d => d.StudentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__Participa__Stude__68487DD7");
         });
 
         modelBuilder.Entity<Role>(entity =>
@@ -335,20 +285,6 @@ public partial class DBContext : DbContext
             entity.HasOne(d => d.Class).WithMany(p => p.Students)
                 .HasForeignKey(d => d.ClassId)
                 .HasConstraintName("FK__Student__ClassId__47DBAE45");
-        });
-
-        modelBuilder.Entity<StudentActivity>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK__StudentA__3214EC070CA2CAC0");
-
-            entity.ToTable("StudentActivity");
-
-            entity.Property(e => e.ActivityName).HasMaxLength(255);
-            entity.Property(e => e.CreateDay)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime");
-            entity.Property(e => e.Location).HasMaxLength(255);
-            entity.Property(e => e.Status).HasDefaultValue(true);
         });
 
         modelBuilder.Entity<Subject>(entity =>

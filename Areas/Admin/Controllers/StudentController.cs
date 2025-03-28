@@ -15,6 +15,8 @@ namespace WebUniversity.Areas.Admin.Controllers
     {
         private readonly DBContext db = new DBContext();
         private const string KeyCache = "Student";
+
+        [Authorize(Roles = "Student|Student.View")]
         public ActionResult Index(int ClassId = 0)
        {
             var roles = User.Claims
@@ -27,7 +29,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return View();
         }
-        
+
+        [Authorize(Roles = "Student|Student.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData(int ClassId = 0)
         {
@@ -50,7 +53,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             
             return PartialView(listData);
         }
-        
+
+        [Authorize(Roles = "Student|Student.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -66,14 +70,16 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listclass"] = listclass;
             return PartialView(objData);
         }
-        
+
+        [Authorize(Roles = "Student|Student.Create")]
         public PartialViewResult Create()
         {
             var listclass = db.Class.ToList();
             ViewData["listclass"] = listclass;
             return PartialView();
         }
-        
+
+        [Authorize(Roles = "Student|Student.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,FullName,BirthDate,Gender,Address,Email,PhoneNumber,ClassId,Status,Image,Cccd")] Models.Student obj)
         {
@@ -111,17 +117,16 @@ namespace WebUniversity.Areas.Admin.Controllers
         }
 
 
-
+        [Authorize(Roles = "Student|Student.Create")]
         public PartialViewResult CreateAccount(string selectedValues = "")
         {
-            var lstRoleGR = db.RoleGroup.Where(m => m.Status).ToList();
-            ViewData["lstRoleGR"] = lstRoleGR;
             ViewData["selectedValues"] = selectedValues;
             return PartialView();
         }
 
+        [Authorize(Roles = "Student|Student.Create")]
         [HttpPost]
-        public async Task<JsonResult> CreateAcountStdent(string selectedValues = "", string Password = "", int RoleGroupID = 0)
+        public async Task<JsonResult> CreateAcountStdent(string selectedValues = "", string Password = "")
         {
             try
             {
@@ -141,7 +146,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                         {
                             Username = student.StudentCode,
                             Password = Password,
-                            RoleGroupId = RoleGroupID,
+                            RoleGroupId = 2010,
                             StudentId = item,
                             Status = true
                         };
@@ -169,7 +174,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Thêm tài khoản thành công" });
         }
 
-
+        [Authorize(Roles = "Student|Student.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -187,9 +192,9 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listclass"] = listclass;
             return PartialView(obj);
         }
-        
-        [HttpPost]
 
+        [Authorize(Roles = "Student|Student.Edit")]
+        [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,FullName,BirthDate,Gender,Address,Email,PhoneNumber,ClassId,Status,Image,Cccd")] Models.Student obj, int? Id)
         {
             if (Id == null)
@@ -238,7 +243,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        
+        [Authorize(Roles = "Student|Student.Delete")]
         public JsonResult Delete(int? id)
         {
             Student obj = null;
@@ -264,7 +269,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        
+        [Authorize(Roles = "Student|Student.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

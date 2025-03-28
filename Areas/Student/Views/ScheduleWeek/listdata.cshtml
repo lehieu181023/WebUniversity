@@ -1,0 +1,66 @@
+﻿@model List<WebUniversity.Models.ClassSchedule>
+@{
+    var lstClShift = ViewData["ClassShift"] as List<WebUniversity.Models.ClassShift>;
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Class Shift</th>
+            <th>Monday </th>
+            <th>Tuesday  </th>
+            <th>Wednesday  </th>
+            <th>Thursday  </th>
+            <th>Friday  </th>
+            <th>Saturday </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var itemCS in lstClShift)
+        {
+            <tr>
+                <td>@itemCS.Name</td>
+                @for (int i = 2; i <= 7; i++)
+                {
+                    var item = Model.FirstOrDefault(x => x.ClassShiftId == itemCS.Id && x.DayOfWeek == i);
+                    if (item != null)
+                    {
+                        <td>
+                            <p>@item.Course?.Subject?.SubjectName
+                                <br>Giờ học: từ @item.ClassShift?.StartTime đến @item.ClassShift?.EndTime
+                                <br> Mã lớp học phần: @item.Course?.CourseName
+                                <br> Giáo viên: @item.Course?.Lecturer?.FullName
+                                <br> Phòng : @item.Room?.Name 
+                                <br>Tầng: @item.Room?.Floor
+                                <br> Tòa: @item.Room?.Building
+                            </p>
+                        </td>
+                    }
+                    else
+                    {
+                        <td></td>
+                    }
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!-- DataTables JS Script -->
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('table').DataTable({
+        "pageLength": 10,  // Số dòng mỗi trang
+        "lengthChange": true, // Không cho phép thay đổi số lượng dòng
+        "searching": true,  // Tắt thanh tìm kiếm
+        "language": {
+          "lengthMenu": "Hiển thị _MENU_ dòng",
+          "info": "Hiển thị từ _START_ đến _END_ trong tổng số _TOTAL_ dòng",
+          "paginate": {
+            "previous": "Trước",
+            "next": "Tiếp"
+          }
+        }
+      });
+    });
+</script>

@@ -14,11 +14,14 @@ namespace WebUniversity.Areas.Admin.Controllers
     {
         private readonly DBContext db = new DBContext();
         private const string KeyCache = "Subject";
+
+        [Authorize(Roles = "Subject|Subject.View")]
         public ActionResult Index()
         {
             return View();
         }
-        
+
+        [Authorize(Roles = "Subject|Subject.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -36,7 +39,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return PartialView(listData);
         }
-        
+
+        [Authorize(Roles = "Subject|Subject.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -52,14 +56,16 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listfaculty"] = listfaculty;
             return PartialView(objData);
         }
-        
+
+        [Authorize(Roles = "Subject|Subject.Create")]
         public PartialViewResult Create()
         {
             var listfaculty = db.Faculty.ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView();
         }
-        
+
+        [Authorize(Roles = "Subject|Subject.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,SubjectName,Credit,FacultyId,Status")] Models.Subject obj)
         {
@@ -83,7 +89,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
-        
+        [Authorize(Roles = "Subject|Subject.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -101,9 +107,9 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listfaculty"] = listfaculty;
             return PartialView(obj);
         }
-        
-        [HttpPost]
 
+        [Authorize(Roles = "Subject|Subject.Edit")]
+        [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,SubjectName,FacultyId,Credit,Status")] Models.Subject obj, int? Id)
         {
             if (Id == null)
@@ -147,7 +153,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        
+        [Authorize(Roles = "Subject|Subject.Delete")]
         public JsonResult Delete(int? id)
         {
             Subject obj = null;
@@ -173,7 +179,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        
+        [Authorize(Roles = "Subject|Subject.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

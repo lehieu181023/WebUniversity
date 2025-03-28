@@ -1,0 +1,119 @@
+﻿
+@{
+    var lstCourse = ViewData["lstCourse"] as SelectList;
+    var lstRoom = ViewData["lstRoom"] as SelectList;
+    var lstCS = ViewData["lstCS"] as SelectList;
+    var lstClass = ViewData["lstClass"] as SelectList;
+}
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm</h4>
+                <button type="button" class="close btn bg-transparent border-0" data-bs-dismiss="modal" onclick="closeModal()">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form asp-area="Admin" asp-controller="ClassSchedule" asp-action="Create"
+                        class="form-horizontal"
+                        data-ajax="true"
+                        data-ajax-begin="BlockUI()"
+                        data-ajax-failure="UnBlockUI()"
+                        data-ajax-method="POST"
+                        data-ajax-success="successAction"
+                        id="basicForm"
+                        method="post"
+                        >
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="CourseId" class="control-label col-md-2 text-right">Course</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownList("CourseId", lstCourse,"-- Select Course --", new { @class = "form-select", @requied="true" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="RoomId" class="control-label col-md-2 text-right">Room</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownList("RoomId", lstRoom, "-- Select Room --", new { @class = "form-select", @requied = "true" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="ClassShiftId" class="control-label col-md-2 text-right">Class Shift</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownList("ClassShiftId", lstCS, "-- Select Class Shift --", new { @class = "form-select", @requied = "true" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="DayOfWeek" class="control-label col-md-2 text-right">DayOfWeek <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="number" class="form-control" name="DayOfWeek" id="DayOfWeek" min="2" max="7" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="ClassId" class="control-label col-md-2 text-right">Class </label>
+                                <div class="col-md-10">
+                                    @Html.DropDownList("ClassId", lstClass, "-- Select Class --", new { @class = "form-select", @requied = "true" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="StartDay" class="control-label col-md-2 text-right">StartDay <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" name="StartDay" id="StartDay" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="EndDay" class="control-label col-md-2 text-right">EndDay <span class="text-danger">*</span></label>
+                                <div class="col-md-10">
+                                    <input type="date" class="form-control" name="EndDay" id="EndDay" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label for="Status" class="control-label col-md-2 text-right">Status</label>
+                                <div class="col-md-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="Status" type="checkbox" name="Status" value="true">
+                                        <label class="form-check-label" for="Status">
+                                            Active
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row mb-3">
+                                <label class="col-sm-2 col-form-label">Submit Button</label>
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form><!-- End General Form Elements -->
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="btnclosemodel" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>

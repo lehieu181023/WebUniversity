@@ -4,6 +4,7 @@
     <thead>
         <tr>
             <th>STT</th>
+            <th>Course Name</th>
             <th>Subject</th>
             <th>Lecturer</th>
             <th>Semester</th>
@@ -20,6 +21,7 @@
         {
             <tr>
                 <td>@(stt++)</td>
+                <td>@item.CourseName</td>
                 <td>@item.SubjectS?.SubjectName</td>
                 <td>@item.LecturerS?.FullName</td>
                 <td>@item.Semester.ToString()</td>

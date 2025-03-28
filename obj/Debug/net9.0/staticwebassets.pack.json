@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\WebUniversity.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebUniversity.lz7poqgni4.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebUniversity.qs9ajhld4s.bundle.scp.css"
     },
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\.gitattributes",
@@ -2009,8 +2009,20 @@
       "PackagePath": "staticwebassets\\Admin\\js\\Class.js"
     },
     {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ClassSchedule.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ClassSchedule.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ClassShift.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ClassShift.js"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\Course.js",
       "PackagePath": "staticwebassets\\Admin\\js\\Course.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\DashBoard.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\DashBoard.js"
     },
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\Faculty.js",
@@ -2029,12 +2041,36 @@
       "PackagePath": "staticwebassets\\Admin\\js\\RoleGroup.js"
     },
     {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\Room.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\Room.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ScheduleLecturer.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ScheduleLecturer.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ScheduleStudent.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ScheduleStudent.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ScheduleWeekLecturer.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ScheduleWeekLecturer.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\ScheduleWeekStudent.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\ScheduleWeekStudent.js"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\Student.js",
       "PackagePath": "staticwebassets\\Admin\\js\\Student.js"
     },
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\Subject.js",
       "PackagePath": "staticwebassets\\Admin\\js\\Subject.js"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\TB.js",
+      "PackagePath": "staticwebassets\\Admin\\js\\TB.js"
     },
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\UploadFile.js",

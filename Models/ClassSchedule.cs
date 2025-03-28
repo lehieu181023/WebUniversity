@@ -25,11 +25,11 @@ public partial class ClassSchedule
 
     public DateOnly? EndDay { get; set; }
 
-    public virtual Class Class { get; set; } = null!;
+    public virtual Class? Class { get; set; } = null!;
 
-    public virtual ClassShift ClassShift { get; set; } = null!;
+    public virtual ClassShift? ClassShift { get; set; } = null!;
 
-    public virtual Course Course { get; set; } = null!;
+    public virtual Course? Course { get; set; } = null!;
 
-    public virtual Room Room { get; set; } = null!;
+    public virtual Room? Room { get; set; } = null!;
 }

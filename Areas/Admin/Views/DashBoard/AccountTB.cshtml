@@ -1,0 +1,64 @@
+﻿@model WebUniversity.Models.Account
+<ul class="d-flex align-items-center">
+
+    <li class="nav-item dropdown pe-3">
+
+        <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            @if (Model.Lecturer != null ){
+                <img src="@Model.Lecturer.Image" alt="Profile" class="rounded-circle">
+                <span class="d-none d-md-block dropdown-toggle ps-2">@Model.Lecturer.FullName</span>
+            }
+            else if (Model.Student != null)
+            {
+                <img src="@Model.Student.Image" alt="Profile" class="rounded-circle">
+                <span class="d-none d-md-block dropdown-toggle ps-2">@Model.Student.FullName</span>
+
+            }
+            else{<span class="d-none d-md-block dropdown-toggle ps-2">@Model.Username</span>}
+                
+            </a><!-- End Profile Iamge Icon -->
+
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                <li class="dropdown-header">
+                    
+                @if (Model.Lecturer != null)
+                {
+                    <h6>@Model.Lecturer.FullName</h6>
+                    <span>@Model.Username</span>
+                }
+                else if (Model.Student != null)
+                {
+                    <h6>@Model.Student.FullName</h6>
+                    <span>@Model.Username</span>
+                }
+                else
+                {
+                    <h6>@Model.Username</h6>
+                }
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+
+                <li>
+                <a class="dropdown-item d-flex align-items-center" onclick="changePass(@Model.Id)">
+                        <i class="fa-solid fa-lock"></i>
+                        <span>Change Password</span>
+                    </a>
+                </li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+
+            <li>
+                <a class="dropdown-item d-flex align-items-center" asp-area="" asp-controller="Account" asp-action="Logout">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Sign Out</span>
+                </a>
+            </li>
+
+            </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+    </ul>
+

@@ -14,11 +14,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     {
         private readonly DBContext db = new DBContext();
         private const string KeyCache = "Course";
+        [Authorize(Roles = "Course|Course.View")]
         public ActionResult Index()
         {
             return View();
         }
-        
+
+        [Authorize(Roles = "Course|Course.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -36,7 +38,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return PartialView(listData);
         }
-        
+
+        [Authorize(Roles = "Course|Course.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -52,7 +55,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listfaculty"] = listfaculty;
             return PartialView(objData);
         }
-        
+
+        [Authorize(Roles = "Course|Course.Create")]
         public PartialViewResult Create()
         {
             var listsubject = db.Subject.ToList();
@@ -62,7 +66,8 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return PartialView();
         }
-        
+
+        [Authorize(Roles = "Course|Course.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,SubjectId,LecturerId,Semester,SchoolYear,Status")] Models.Course obj)
         {
@@ -70,23 +75,42 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    // Lấy dữ liệu môn học và giảng viên
+                    var subject = db.Subject.FirstOrDefault(s => s.Id == obj.SubjectId);
+                    var lecturer = db.Lecturer.FirstOrDefault(l => l.Id == obj.LecturerId);
+
+                    // Tạo mã môn học (lấy chữ cái đầu của từng từ)
+                    string subjectCode = subject != null
+                        ? new string(subject.SubjectName.Split(' ').Select(w => w[0]).ToArray()).ToUpper()
+                        : "UNK";
+
+                    // Tạo mã giảng viên (lấy chữ cái đầu của từng từ)
+                    string lecturerCode = lecturer != null
+                        ? new string(lecturer.FullName.Split(' ').Select(w => w[0]).ToArray()).ToUpper()
+                        : "UNK";
+
+                    // Tạo CourseName theo định dạng mong muốn
+                    obj.CourseName = $"{subjectCode}_{lecturerCode}_{obj.Semester}_{obj.SchoolYear}";
+
+                    // Thêm vào database
                     db.Course.Add(obj);
                     await db.SaveChangesAsync();
+
+                    return Json(new { success = true, message = "Thêm mới thành công" });
                 }
                 else
                 {
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
-        
+
+        [Authorize(Roles = "Course|Course.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -106,9 +130,9 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listlecturer"] = listlecturer;
             return PartialView(obj);
         }
-        
-        [HttpPost]
 
+        [Authorize(Roles = "Course|Course.Edit")]
+        [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,SubjectId,LecturerId,Semester,SchoolYear,Status")] Models.Course obj, int? Id)
         {
             if (Id == null)
@@ -124,13 +148,37 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             try
             {
-                objData.SubjectId = obj.SubjectId;
-                objData.LecturerId = obj.LecturerId;
-                objData.Semester = obj.Semester;
-                objData.SchoolYear = obj.SchoolYear;
-                objData.Status = obj.Status;
+                if (ModelState.IsValid)
+                {
+                    // Lấy dữ liệu môn học & giảng viên
+                    var subject = db.Subject.FirstOrDefault(s => s.Id == obj.SubjectId);
+                    var lecturer = db.Lecturer.FirstOrDefault(l => l.Id == obj.LecturerId);
 
-                await db.SaveChangesAsync();
+                    // Tạo CourseName mới nếu SubjectId hoặc LecturerId thay đổi
+                    string subjectCode = subject != null
+                        ? new string(subject.SubjectName.Split(' ').Select(w => w[0]).ToArray()).ToUpper()
+                        : "UNK";
+
+                    string lecturerCode = lecturer != null
+                        ? new string(lecturer.FullName.Split(' ').Select(w => w[0]).ToArray()).ToUpper()
+                        : "UNK";
+
+                    objData.CourseName = $"{subjectCode}_{lecturerCode}_{obj.Semester}_{obj.SchoolYear}";
+
+                    // Cập nhật các thông tin khác
+                    objData.SubjectId = obj.SubjectId;
+                    objData.LecturerId = obj.LecturerId;
+                    objData.Semester = obj.Semester;
+                    objData.SchoolYear = obj.SchoolYear;
+                    objData.Status = obj.Status;
+
+                    await db.SaveChangesAsync();
+                    return Json(new { success = true, message = "Cập nhật thành công" });
+                }
+                else
+                {
+                    return Json(new { success = false, message = "Dữ liệu không hợp lệ" });
+                }
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -145,15 +193,14 @@ namespace WebUniversity.Areas.Admin.Controllers
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
-
-            return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        
+
+        [Authorize(Roles = "Course|Course.Delete")]
         public JsonResult Delete(int? id)
         {
             Course obj = null;
@@ -179,7 +226,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        
+        [Authorize(Roles = "Course|Course.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

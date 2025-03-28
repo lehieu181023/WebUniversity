@@ -1,0 +1,60 @@
+﻿@model List<WebUniversity.Models.ClassSchedule>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Course</th>
+            <th>Lecturer</th>
+            <th>Class Shift</th>
+            <th>Day Of week</th>
+            <th data-type="date" data-format="YYYY/DD/MM">StartDay</th>
+            <th data-type="date" data-format="YYYY/DD/MM">EndDay</th>
+            <th>Operate</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int stt = 1;
+        }
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(stt++)</td>
+                <td>@item.Course?.CourseName</td>
+                <td>@item.Course?.Lecturer?.FullName</td>
+                <td>@item.ClassShift?.Name</td>
+                <td>@item.DayOfWeek</td>
+                <td>@item.StartDay?.ToString("yyyy/MM/dd")</td>
+                <td>@item.EndDay?.ToString("yyyy/MM/dd")</td>
+
+                <td>
+                    <!-- Nút xem -->
+                    <button type="button" class="btn btn-success text-white mb-3" id="editButton" onclick="LoadModelDetail(@item.Id)">
+                        <i class="bi bi-eye"></i> Xem chi tiết
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<!-- DataTables JS Script -->
+<script type="text/javascript">
+    $(document).ready(function() {
+      $('table').DataTable({
+        "pageLength": 10,  // Số dòng mỗi trang
+        "lengthChange": true, // Không cho phép thay đổi số lượng dòng
+        "searching": true,  // Tắt thanh tìm kiếm
+        "language": {
+          "lengthMenu": "Hiển thị _MENU_ dòng",
+          "info": "Hiển thị từ _START_ đến _END_ trong tổng số _TOTAL_ dòng",
+          "paginate": {
+            "previous": "Trước",
+            "next": "Tiếp"
+          }
+        }
+      });
+    });
+</script>

@@ -350,5 +350,28 @@ GotoUrl = function (url) {
 };
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll("[data-bs-target]");
 
+    menuItems.forEach(function (menuItem) {
+        let targetId = menuItem.getAttribute("data-bs-target").substring(1); // Bỏ dấu #
+        let submenu = document.getElementById(targetId);
+
+        // Kiểm tra trạng thái từ localStorage
+        if (localStorage.getItem(targetId) === "open") {
+            submenu.classList.add("show");
+            menuItem.classList.remove("collapsed");
+            menuItem.setAttribute("aria-expanded", "true");
+        }
+
+        // Lắng nghe sự kiện Bootstrap để lưu trạng thái
+        submenu.addEventListener("shown.bs.collapse", function () {
+            localStorage.setItem(targetId, "open");
+        });
+
+        submenu.addEventListener("hidden.bs.collapse", function () {
+            localStorage.setItem(targetId, "closed");
+        });
+    });
+});
 

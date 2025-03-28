@@ -1,10 +1,4 @@
 ﻿@{
-    var lstRoleGR = ViewData["lstRoleGR"] as List<RoleGroup>;
-    var SLRoleGR = lstRoleGR?.Select(x => new SelectListItem
-            {
-                Text = x.NameRoleGroup,
-                Value = x.Id.ToString()
-            }).ToList();
     var selectedValues = ViewData["selectedValues"] as string;
 }
 
@@ -37,14 +31,6 @@
                                 <label for="Password" class="control-label col-md-2 text-right">PassWord <span class="text-danger">*</span></label>
                                 <div class="col-md-10">
                                     <input type="text" class="form-control" name="Password" id="Password" min="1" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="row mb-3">
-                                <label for="FacultyId" class="control-label col-md-2 text-right">RoleGroup</label>
-                                <div class="col-md-10">
-                                    @Html.DropDownList("RoleGroupId", SLRoleGR, "-- Select RoleGroup --", new { @class = "form-select", @required = "true" })
                                 </div>
                             </div>
                         </div>

@@ -34,8 +34,4 @@ public partial class Student
     public virtual ICollection<Account> Accounts { get; set; } = new List<Account>();
 
     public virtual Class? Class { get; set; }
-
-    public virtual ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
-
-    public virtual ICollection<Participation> Participations { get; set; } = new List<Participation>();
 }

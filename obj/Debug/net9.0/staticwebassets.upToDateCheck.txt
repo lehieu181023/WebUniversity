@@ -1,4 +1,5 @@
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\insertdatetime\plugin.min.js
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ScheduleWeekStudent.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18n\keynav\es.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\models\dom\model.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\wordcount\plugin.min.js
@@ -44,6 +45,7 @@ D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\tiny
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\help\js\i18n\keynav\nl.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\bootstrap\js\bootstrap.esm.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\tinymce-5-dark\content.inline.min.css
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ScheduleWeekLecturer.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\echarts\extension\bmap.min.js
 D:\ASP.NET Core\Web-University\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18n\keynav\sv_SE.js
@@ -194,6 +196,7 @@ D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\echarts\echarts.common.js.m
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\quill\quill.core.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\visualchars\plugin.js
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\DashBoard.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\preview\index.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\apexcharts\locales\hu.json
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\save\index.js
@@ -264,6 +267,7 @@ D:\ASP.NET Core\Web-University\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\tinymce-5\skin.shadowdom.css
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\directionality\index.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\oxide\content.js
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ScheduleStudent.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\apexcharts\locales\ar.json
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\apexcharts\locales\nb.json
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\oxide-dark\content.inline.css
@@ -343,6 +347,7 @@ D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\bootstrap\js\bootstrap.min.js.map
 D:\ASP.NET Core\Web-University\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ScheduleLecturer.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\echarts\echarts.esm.mjs
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\apexcharts\locales\rs.json
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\help\js\i18n\keynav\es.js
@@ -410,6 +415,7 @@ D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\apexcharts\apexcharts
 D:\ASP.NET Core\Web-University\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\apexcharts\locales\id.json
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\code\plugin.js
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ClassShift.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\emoticons\js\emojiimages.min.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\help\js\i18n\keynav\ko_KR.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18n\keynav\ja.js
@@ -565,6 +571,7 @@ D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\oxid
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\bootstrap\css\bootstrap-reboot.min.css
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\searchreplace\index.js
 D:\ASP.NET Core\Web-University\wwwroot\help-documentation\css\responsive-leyouts.css
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\ClassSchedule.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\skins\ui\oxide-dark\content.min.css
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\autolink\index.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\apexcharts\locales\hy.json
@@ -790,6 +797,7 @@ D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\chart.js\chart.js.map
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\media\plugin.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\help\plugin.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18n\keynav\uk.js
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\Room.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\help\js\i18n\keynav\ar.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\help\js\i18n\keynav\cs.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\skins\ui\oxide-dark\content.css
@@ -819,6 +827,7 @@ D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\plugins\wordcount\i
 D:\ASP.NET Core\Web-University\wwwroot\Admin\js\Faculty.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\tinymce\plugins\importcss\index.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css
+D:\ASP.NET Core\Web-University\wwwroot\Admin\js\TB.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map
 D:\ASP.NET Core\Web-University\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
 D:\ASP.NET Core\Web-University\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -1343,13 +1352,22 @@ wwwroot\Admin\assets\vendor\tinymce\tinymce.js
 wwwroot\Admin\assets\vendor\tinymce\tinymce.min.js
 wwwroot\Admin\js\Account.js
 wwwroot\Admin\js\Class.js
+wwwroot\Admin\js\ClassSchedule.js
+wwwroot\Admin\js\ClassShift.js
 wwwroot\Admin\js\Course.js
+wwwroot\Admin\js\DashBoard.js
 wwwroot\Admin\js\Faculty.js
 wwwroot\Admin\js\Lecturer.js
 wwwroot\Admin\js\Role.js
 wwwroot\Admin\js\RoleGroup.js
+wwwroot\Admin\js\Room.js
+wwwroot\Admin\js\ScheduleLecturer.js
+wwwroot\Admin\js\ScheduleStudent.js
+wwwroot\Admin\js\ScheduleWeekLecturer.js
+wwwroot\Admin\js\ScheduleWeekStudent.js
 wwwroot\Admin\js\Student.js
 wwwroot\Admin\js\Subject.js
+wwwroot\Admin\js\TB.js
 wwwroot\Admin\js\UploadFile.js
 wwwroot\AppJs\Account.js
 wwwroot\AppJs\CuaHang.js

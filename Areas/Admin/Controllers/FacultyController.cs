@@ -14,11 +14,14 @@ namespace WebUniversity.Areas.Admin.Controllers
     {
         private readonly DBContext db = new DBContext();
         private const string KeyCache = "Faculty";
+
+        [Authorize(Roles = "Faculty|Faculty.View")]
         public ActionResult Index()
         {
             return View();
         }
-        
+
+        [Authorize(Roles = "Faculty|Faculty.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -36,7 +39,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return PartialView(listData);
         }
-        
+
+        [Authorize(Roles = "Faculty|Faculty.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -50,12 +54,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return PartialView(objData);
         }
-        
+
+        [Authorize(Roles = "Faculty|Faculty.Create")]
         public PartialViewResult Create()
         {
             return PartialView();
         }
-        
+        [Authorize(Roles = "Faculty|Faculty.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,FacultyName,Status")] Models.Faculty obj)
         {
@@ -79,7 +84,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
-        
+        [Authorize(Roles = "Faculty|Faculty.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -95,9 +100,9 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return PartialView(obj);
         }
-        
-        [HttpPost]
 
+        [Authorize(Roles = "Faculty|Faculty.Edit")]
+        [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,FacultyName,Status")] Models.Faculty obj, int? Id)
         {
             if (Id == null)
@@ -139,7 +144,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        
+
+        [Authorize(Roles = "Faculty|Faculty.Delete")]
         public JsonResult Delete(int? id)
         {
             Faculty obj = null;
@@ -165,7 +171,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        
+        [Authorize(Roles = "Faculty|Faculty.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

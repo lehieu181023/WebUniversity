@@ -1,11 +1,14 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var Tt = ViewData["Title"] as string;
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>@Tt</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -80,7 +83,7 @@
                 <button type="submit" title="Search"><i class="bi bi-search"></i></button>
             </form>
         </div><!-- End Search Bar -->
-
+        <nav class="header-nav ms-auto" id="TB"></nav>
 
     </header><!-- End Header -->
     <!-- ======= Sidebar ======= -->
@@ -94,62 +97,106 @@
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
-
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="Student" action="Index">
-                    <i class="bi bi-menu-button-wide"></i><span>Student management</span>
+                <a class="nav-link collapsed" data-bs-target="#SystemAdministration-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                    <i class="bi bi-journal-text"></i><span>System Administration</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="SystemAdministration-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="RoleGroup" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>RoleGroup management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="Account" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Account management</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#StudentManagement-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                    <i class="bi bi-journal-text"></i><span>Student Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="StudentManagement-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a class="nav-link collapsed" asp-area="admin" asp-controller="Student" action="Index">
+                            <i class="bi bi-menu-button-wide"></i><span>Student management</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#FLManagement-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                    <i class="bi bi-journal-text"></i><span>Faculty & Lecturer Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="FLManagement-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a class="nav-link collapsed" asp-area="admin" asp-controller="Lecturer" action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Lecturer management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" asp-area="admin" asp-controller="Faculty" action="Index">
+                            <i class="bi bi-people"></i>
+                            <span>Faculty management</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#CRManagement-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                    <i class="bi bi-journal-text"></i><span>Classroom & Room Management</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="CRManagement-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-area="admin" asp-controller="Class" action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>classroom management</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="Room" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Room management</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="Class" action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>classroom management</span>
+                <a class="nav-link collapsed" data-bs-target="#AcademicManagement-nav" data-bs-toggle="collapse" href="#" aria-expanded="false">
+                    <i class="bi bi-journal-text"></i><span>Academic Management</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
-            </li><!-- End Shop Nav -->
+                <ul id="AcademicManagement-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="Faculty" action="Index">
-                    <i class="bi bi-people"></i>
-                    <span>Faculty management</span>
-                </a>
-            </li><!-- End Member Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="admin" asp-controller="Lecturer" action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Lecturer management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="Subject" asp-action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Subject management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="Course" asp-action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Course management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="Role" asp-action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Role management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="RoleGroup" asp-action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>RoleGroup management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="Admin" asp-controller="Account" asp-action="Index">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Account management</span>
-                </a>
-            </li><!-- End ThanhToan Nav -->
+                    <li >
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="Subject" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Subject management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="Course" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>Course management</span>
+                        </a>
+                    </li>
+                    
+                    <li >
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="ClassShift" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>ClassShift management</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="nav-link collapsed" asp-area="Admin" asp-controller="ClassSchedule" asp-action="Index">
+                            <i class="bi bi-layout-text-window-reverse"></i><span>ClassSchedule management</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            
             <li class="nav-heading">Pages</li>
             <li class="nav-item">
-                <a class="nav-link collapsed" asp-area="" asp-controller="Home" asp-action="Index">
+                <a class="nav-link collapsed" asp-area="" asp-controller="Account" asp-action="Logout">
                     <i class="bi bi-box-arrow-in-right"></i>
-                    <span>Trang khách hàng</span>
+                    <span>Đăng xuất</span>
                 </a>
             </li><!-- End Login Page Nav -->
 
@@ -160,6 +207,8 @@
     <main id="main" class="main">
         @RenderBody()
     </main><!-- End Main -->
+
+    <div id="target-div-changepass"></div>
 
     <footer id="footer" class="footer">
     </footer><!-- End Footer -->
@@ -184,6 +233,8 @@
 
     <!-- Template Main JS File -->
     <script src="~/admin/assets/js/main.js"></script>
+
+    <script src="~/Admin/js/TB.js"></script>
 
     <script src="~/react/assets/index-CmBJohSG.js"></script>
 
