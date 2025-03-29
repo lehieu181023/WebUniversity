@@ -9,7 +9,12 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class DashBoardController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
+
+        public DashBoardController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize(Policy = "NotLectureOrStudent")]
         public IActionResult Index()
@@ -27,21 +32,21 @@ namespace WebUniversity.Areas.Admin.Controllers
             var years = Enumerable.Range(startYear, 5).ToList();
 
             // Truy vấn dữ liệu sinh viên
-            var studentData = await db.Student
+            var studentData = await _db.Student
                 .Where(s => s.CreateDay != null && s.CreateDay.Year >= startYear)
                 .GroupBy(s => s.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
                 .ToListAsync();
 
             // Truy vấn dữ liệu giảng viên
-            var lecturerData = await db.Lecturer
+            var lecturerData = await _db.Lecturer
                 .Where(l => l.CreateDay != null && l.CreateDay.Year >= startYear)
                 .GroupBy(l => l.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
                 .ToListAsync();
 
             // Truy vấn dữ liệu phòng học
-            var roomData = await db.Room
+            var roomData = await _db.Room
                 .Where(r => r.CreateDay != null && r.CreateDay.Year >= startYear)
                 .GroupBy(r => r.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
@@ -79,7 +84,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return RedirectToAction("Login", "Account", new { area = "" });
             }
 
-            var user = await db.Account.Include(x => x.Lecturer).Include(x => x.Student).FirstOrDefaultAsync(u => u.Username == username);
+            var user = await _db.Account.Include(x => x.Lecturer).Include(x => x.Student).FirstOrDefaultAsync(u => u.Username == username);
             return PartialView(user);
         }
 
@@ -91,7 +96,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Account obj = db.Account.Find(id) ?? new Account();
+            Models.Account obj = _db.Account.Find(id) ?? new Account();
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -109,7 +114,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.Account.FindAsync(Id);
+            var objData = await _db.Account.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -128,7 +133,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Password = new PasswordHelper().HashPassword(obj.Password);
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {

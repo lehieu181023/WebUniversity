@@ -13,8 +13,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class StudentController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "Student";
+
+        public StudentController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize(Roles = "Student|Student.View")]
         public ActionResult Index(int ClassId = 0)
@@ -37,7 +42,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.Student> listData = null;
             try
             {
-                var list = db.Student.AsQueryable();
+                var list = _db.Student.AsQueryable();
                 list = list.Include(x => x.Class);
                 if (ClassId > 0)
                 {
@@ -61,12 +66,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Student objData = await db.Student.FindAsync(id);
+            Models.Student objData = await _db.Student.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = " Bản ghi không tồn tại" });
             }
-            var listclass = db.Class.ToList();
+            var listclass = _db.Class.ToList();
             ViewData["listclass"] = listclass;
             return PartialView(objData);
         }
@@ -74,7 +79,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         [Authorize(Roles = "Student|Student.Create")]
         public PartialViewResult Create()
         {
-            var listclass = db.Class.ToList();
+            var listclass = _db.Class.ToList();
             ViewData["listclass"] = listclass;
             return PartialView();
         }
@@ -87,8 +92,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Student.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.Student.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -139,7 +144,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 Password = new PasswordHelper().HashPassword(Password);
                 foreach (var item in newRoleIds)
                 {
-                    var student = db.Student.Find(item);
+                    var student = _db.Student.Find(item);
                     if (student != null)
                     {
                         Account obj = new Account
@@ -156,8 +161,8 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                 if (lstAccount.Count > 0)
                 {
-                    db.Account.AddRange(lstAccount);
-                    await db.SaveChangesAsync(); // Lưu vào database
+                    _db.Account.AddRange(lstAccount);
+                    await _db.SaveChangesAsync(); // Lưu vào database
                 }
             }
             catch (Exception ex)
@@ -182,13 +187,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Student obj = await db.Student.FindAsync(id);
+            Models.Student obj = await _db.Student.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
-            var listclass = db.Class.ToList();
+            var listclass = _db.Class.ToList();
             ViewData["listclass"] = listclass;
             return PartialView(obj);
         }
@@ -202,7 +207,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.Student.FindAsync(Id);
+            var objData = await _db.Student.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -220,7 +225,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Status = obj.Status;
                 objData.Image = obj.Image;
                 objData.Cccd = obj.Cccd;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -254,11 +259,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.Student.Find(id);
+                obj = _db.Student.Find(id);
                 if (obj != null)
                 {
-                    db.Student.Remove(obj);
-                    db.SaveChanges();
+                    _db.Student.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -276,7 +281,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.Student.FindAsync(id);
+            var objData = await _db.Student.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -284,7 +289,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -299,7 +304,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

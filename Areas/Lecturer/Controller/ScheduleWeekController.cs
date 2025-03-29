@@ -14,8 +14,14 @@ namespace WebUniversity.Areas.Lec.Controllers
     [Area("Lecturer")]
     public class ScheduleWeekController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "ClassSchedule";
+
+        public ScheduleWeekController(DBContext db)
+        {
+            _db = db;
+        }
+
         [Authorize(Roles = "LecturerRole")]
         public ActionResult Index()
         {
@@ -40,7 +46,7 @@ namespace WebUniversity.Areas.Lec.Controllers
             }
             try
             {
-                var listData = db.ClassSchedule
+                var listData = _db.ClassSchedule
                     .Include(x => x.Class)
                     .Include(x => x.Course)
                         .ThenInclude(x => x.Subject)
@@ -72,7 +78,7 @@ namespace WebUniversity.Areas.Lec.Controllers
 
                 ListData = await listData.Where(x => x.Status == true).ToListAsync();
 
-                var lstClShift = db.ClassShift.Where(x => x.Status).OrderBy(x => x.StartTime).ToList();
+                var lstClShift = _db.ClassShift.Where(x => x.Status).OrderBy(x => x.StartTime).ToList();
                 ViewData["ClassShift"] = lstClShift;
                 return PartialView("ListData", ListData); // Đặt tên PartialView cụ thể
             }
@@ -88,7 +94,7 @@ namespace WebUniversity.Areas.Lec.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

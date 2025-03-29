@@ -12,8 +12,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class RoomController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "Room";
+
+        public RoomController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize]
         public ActionResult Index()
@@ -28,7 +33,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.Room> listData = null;
             try
             {
-                var list = db.Room.AsQueryable();
+                var list = _db.Room.AsQueryable();
 
                 listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
 
@@ -47,7 +52,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Room objData = await db.Room.FindAsync(id);
+            Models.Room objData = await _db.Room.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = " Bản ghi không tồn tại" });
@@ -71,8 +76,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Room.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.Room.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -95,7 +100,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Room obj = await db.Room.FindAsync(id);
+            Models.Room obj = await _db.Room.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -114,7 +119,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.Room.FindAsync(Id);
+            var objData = await _db.Room.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -130,7 +135,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                 objData.Status = obj.Status;
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -164,11 +169,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.Room.Find(id);
+                obj = _db.Room.Find(id);
                 if (obj != null)
                 {
-                    db.Room.Remove(obj);
-                    db.SaveChanges();
+                    _db.Room.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -186,7 +191,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.Room.FindAsync(id);
+            var objData = await _db.Room.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -194,7 +199,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -212,7 +217,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.Room.FindAsync(id);
+            var objData = await _db.Room.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -220,7 +225,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Vacuity = !objData.Vacuity;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -235,7 +240,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

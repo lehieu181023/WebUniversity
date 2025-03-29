@@ -13,7 +13,13 @@ namespace WebUniversity.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
+
+        public AccountController(DBContext db)
+        {
+            _db = db;
+        }
+
         public IActionResult login()
         {
             return View();
@@ -22,7 +28,7 @@ namespace WebUniversity.Controllers
         [HttpPost]
         public async Task<IActionResult> LoginAction(string UserName, string PassWord)
         {
-            var user = db.Account.Where(s => s.Status).Include(u => u.RoleGroup).FirstOrDefault(u => u.Username == UserName);
+            var user = _db.Account.Where(s => s.Status).Include(u => u.RoleGroup).FirstOrDefault(u => u.Username == UserName);
 
             if (user == null)
             {
@@ -44,7 +50,7 @@ namespace WebUniversity.Controllers
             // Thêm role nếu có
             if (user.RoleGroup != null)
             {
-                user.RoleGroup.RoleInRoleGroups = db.RoleInRoleGroup.Where(r => r.RoleGroupId == user.RoleGroupId).Include(r => r.Role).ToList();
+                user.RoleGroup.RoleInRoleGroups = _db.RoleInRoleGroup.Where(r => r.RoleGroupId == user.RoleGroupId).Include(r => r.Role).ToList();
                 foreach (var role in user.RoleGroup.RoleInRoleGroups)
                 {
                     if (role.RoleGroup?.RoleInRoleGroups != null) { 

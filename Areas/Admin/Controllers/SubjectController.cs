@@ -12,8 +12,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class SubjectController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "Subject";
+
+        public SubjectController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize(Roles = "Subject|Subject.View")]
         public ActionResult Index()
@@ -28,7 +33,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.Subject> listData = null;
             try
             {
-                var list = db.Subject.AsQueryable();
+                var list = _db.Subject.AsQueryable();
 
                 listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
 
@@ -47,12 +52,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Subject objData = await db.Subject.FindAsync(id);
+            Models.Subject objData = await _db.Subject.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = " Bản ghi không tồn tại" });
             }
-            var listfaculty = db.Faculty.ToList();
+            var listfaculty = _db.Faculty.ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView(objData);
         }
@@ -60,7 +65,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         [Authorize(Roles = "Subject|Subject.Create")]
         public PartialViewResult Create()
         {
-            var listfaculty = db.Faculty.ToList();
+            var listfaculty = _db.Faculty.ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView();
         }
@@ -73,8 +78,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Subject.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.Subject.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -97,13 +102,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Subject obj = await db.Subject.FindAsync(id);
+            Models.Subject obj = await _db.Subject.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
-            var listfaculty = db.Faculty.ToList();
+            var listfaculty = _db.Faculty.ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView(obj);
         }
@@ -117,7 +122,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.Subject.FindAsync(Id);
+            var objData = await _db.Subject.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -130,7 +135,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Credit = obj.Credit;
                 objData.Status = obj.Status;
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -164,11 +169,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.Subject.Find(id);
+                obj = _db.Subject.Find(id);
                 if (obj != null)
                 {
-                    db.Subject.Remove(obj);
-                    db.SaveChanges();
+                    _db.Subject.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -186,7 +191,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.Subject.FindAsync(id);
+            var objData = await _db.Subject.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -194,7 +199,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -209,7 +214,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

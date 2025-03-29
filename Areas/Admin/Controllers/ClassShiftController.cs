@@ -12,8 +12,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class ClassShiftController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "ClassShift";
+
+        public ClassShiftController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize]
         public ActionResult Index()
@@ -28,7 +33,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.ClassShift> listData = null;
             try
             {
-                var list = db.ClassShift.AsQueryable();
+                var list = _db.ClassShift.AsQueryable();
 
                 listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
 
@@ -47,7 +52,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.ClassShift objData = await db.ClassShift.FindAsync(id);
+            Models.ClassShift objData = await _db.ClassShift.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = " Bản ghi không tồn tại" });
@@ -71,8 +76,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.ClassShift.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.ClassShift.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -94,7 +99,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.ClassShift obj = await db.ClassShift.FindAsync(id);
+            Models.ClassShift obj = await _db.ClassShift.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -113,7 +118,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.ClassShift.FindAsync(Id);
+            var objData = await _db.ClassShift.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -127,7 +132,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.EndTime = obj.EndTime;
                 objData.Status = obj.Status;
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -161,11 +166,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.ClassShift.Find(id);
+                obj = _db.ClassShift.Find(id);
                 if (obj != null)
                 {
-                    db.ClassShift.Remove(obj);
-                    db.SaveChanges();
+                    _db.ClassShift.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -183,7 +188,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.ClassShift.FindAsync(id);
+            var objData = await _db.ClassShift.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -191,7 +196,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -207,7 +212,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

@@ -2,8 +2,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System.Security.Claims;
 using WebUniversity.Models;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,7 +17,13 @@ builder.Services.AddDbContext<DBContext>(options =>
     var connectionString = configuration.GetConnectionString("DefaultConnection");
     options.UseLazyLoadingProxies().UseSqlServer(connectionString);
 });
+builder.Host.UseSerilog((context, config) =>
+{
+    config.WriteTo.Console()
+          .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day);
+});
 
+builder.Services.AddHostedService<BackupService>();
 
 // Thêm services cho Session
 builder.Services.AddDistributedMemoryCache();

@@ -1,0 +1,4 @@
+//lệnh backup cơ sở dữ liệu
+RESTORE DATABASE YourDatabaseName 
+FROM DISK = 'D:\SQLBackups\YourDatabaseName_Backup.bak'
+WITH REPLACE, RECOVERY, STATS = 10;

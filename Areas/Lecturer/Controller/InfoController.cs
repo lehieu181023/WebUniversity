@@ -11,7 +11,13 @@ namespace WebUniversity.Areas.Lec.Controllers
     [Authorize(Roles = "LecturerRole")]
     public class InfoController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
+
+        public InfoController(DBContext db)
+        {
+            _db = db;
+        }
+
         public IActionResult Index()
         {
             if (!User.Identity.IsAuthenticated)
@@ -27,7 +33,7 @@ namespace WebUniversity.Areas.Lec.Controllers
                 return RedirectToAction("Login", "Account", new { area = "" });
             }
 
-            var lecturer = db.Lecturer.Include(x => x.Faculty).SingleOrDefault(l => l.LecturerCode == username);
+            var lecturer = _db.Lecturer.Include(x => x.Faculty).SingleOrDefault(l => l.LecturerCode == username);
             if (lecturer == null)
             {
                 TempData["ErrorMessage"] = "Giảng viên không tồn tại!";

@@ -10,7 +10,13 @@ namespace WebUniversity.Areas.Stu.Controllers
     [Area("Student")]
     public class InfoController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
+
+        public InfoController(DBContext db)
+        {
+            _db = db;
+        }
+
         [Authorize (Roles = "StudentRole")]
         public IActionResult Index()
         {
@@ -27,7 +33,7 @@ namespace WebUniversity.Areas.Stu.Controllers
                 return RedirectToAction("Login", "Account", new { area = "" });
             }
 
-            var student = db.Student.Include(x => x.Class).FirstOrDefault(l => l.StudentCode == username);
+            var student = _db.Student.Include(x => x.Class).FirstOrDefault(l => l.StudentCode == username);
             if (student == null)
             {
                 TempData["ErrorMessage"] = "Sinh viên không tồn tại!";

@@ -13,8 +13,14 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class ClassScheduleController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "ClassSchedule";
+
+        public ClassScheduleController(DBContext db)
+        {
+            _db = db;
+        }
+
         [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
         public ActionResult Index()
         {
@@ -26,7 +32,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             try
             {
-                var listData = await db.ClassSchedule
+                var listData = await _db.ClassSchedule
                     .Include(x => x.Class)
                     .Include(x => x.Course)
                         .ThenInclude(x => x.Lecturer)
@@ -51,7 +57,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.ClassSchedule objData = await db.ClassSchedule
+            Models.ClassSchedule objData = await _db.ClassSchedule
                     .Include(x => x.Class)
                     .Include(x => x.Course)
                         .ThenInclude(x => x.Lecturer)
@@ -69,10 +75,10 @@ namespace WebUniversity.Areas.Admin.Controllers
         [Authorize(Roles = "ClassSchedule|ClassSchedule.Create")]
         public PartialViewResult Create()
         {
-            var lstCourse = db.Course.Where(s => s.Status).ToList();
-            var lstCS = db.ClassShift.Where(s => s.Status).ToList();
-            var lstRoom = db.Room.Where(s => s.Status).ToList();
-            var lstClass = db.Class.Where(s => s.Status).ToList();
+            var lstCourse = _db.Course.Where(s => s.Status).ToList();
+            var lstCS = _db.ClassShift.Where(s => s.Status).ToList();
+            var lstRoom = _db.Room.Where(s => s.Status).ToList();
+            var lstClass = _db.Class.Where(s => s.Status).ToList();
 
             ViewData["lstCourse"] = new SelectList(lstCourse,"Id","CourseName");
             ViewData["lstCS"] = new SelectList(lstCS, "Id", "Name");
@@ -90,8 +96,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.ClassSchedule.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.ClassSchedule.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -126,16 +132,16 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.ClassSchedule obj = await db.ClassSchedule.FindAsync(id);
+            Models.ClassSchedule obj = await _db.ClassSchedule.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
-            var lstCourse = db.Course.Where(s => s.Status).ToList();
-            var lstCS = db.ClassShift.Where(s => s.Status).ToList();
-            var lstRoom = db.Room.Where(s => s.Status).ToList();
-            var lstClass = db.Class.Where(s => s.Status).ToList();
+            var lstCourse = _db.Course.Where(s => s.Status).ToList();
+            var lstCS = _db.ClassShift.Where(s => s.Status).ToList();
+            var lstRoom = _db.Room.Where(s => s.Status).ToList();
+            var lstClass = _db.Class.Where(s => s.Status).ToList();
 
             ViewData["lstCourse"] = new SelectList(lstCourse, "Id", "CourseName");
             ViewData["lstCS"] = new SelectList(lstCS, "Id", "Name");
@@ -153,7 +159,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.ClassSchedule.FindAsync(Id);
+            var objData = await _db.ClassSchedule.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -171,7 +177,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                 objData.Status = obj.Status;
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -214,11 +220,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.ClassSchedule.Find(id);
+                obj = _db.ClassSchedule.Find(id);
                 if (obj != null)
                 {
-                    db.ClassSchedule.Remove(obj);
-                    db.SaveChanges();
+                    _db.ClassSchedule.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -236,7 +242,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.ClassSchedule.FindAsync(id);
+            var objData = await _db.ClassSchedule.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -244,7 +250,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -259,7 +265,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

@@ -13,8 +13,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class RoleGroupController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "RoleGroup";
+
+        public RoleGroupController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize(Roles = "RoleGroup|RoleGroup.View")]
         public ActionResult Index()
@@ -29,7 +34,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.RoleGroup> listData = null;
             try
             {
-                var list = db.RoleGroup.AsQueryable();
+                var list = _db.RoleGroup.AsQueryable();
 
                 listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
 
@@ -49,14 +54,14 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.RoleGroup obj = await db.RoleGroup.FindAsync(Id);
+            Models.RoleGroup obj = await _db.RoleGroup.FindAsync(Id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
-            var lstRole = db.Role.Where(x => x.Status).ToList();
+            var lstRole = _db.Role.Where(x => x.Status).ToList();
             ViewData["lstRole"] = lstRole;
-            var lstRoleInRoleGroup = db.RoleInRoleGroup.Where(x => x.RoleGroupId == Id).Select(m => m.RoleId).ToHashSet();
+            var lstRoleInRoleGroup = _db.RoleInRoleGroup.Where(x => x.RoleGroupId == Id).Select(m => m.RoleId).ToHashSet();
             // Chuyển lstRoleInRoleGroup thành HashSet để tối ưu tìm kiếm
             var roleIdSet = lstRoleInRoleGroup as HashSet<int>;
 
@@ -77,12 +82,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 // Lấy danh sách RoleId đã có trong nhóm
-                var existingRoles = db.RoleInRoleGroup.Where(x => x.RoleGroupId == Id).ToList();
+                var existingRoles = _db.RoleInRoleGroup.Where(x => x.RoleGroupId == Id).ToList();
 
                 if (string.IsNullOrWhiteSpace(selectedValues))
                 {
                     // Nếu không có giá trị nào được chọn, xóa hết quyền của nhóm
-                    db.RoleInRoleGroup.RemoveRange(existingRoles);
+                    _db.RoleInRoleGroup.RemoveRange(existingRoles);
                 }
                 else
                 {
@@ -94,17 +99,17 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                     // Xóa các quyền không còn trong danh sách mới
                     var rolesToRemove = existingRoles.Where(x => !newRoleIds.Contains(x.RoleId)).ToList();
-                    db.RoleInRoleGroup.RemoveRange(rolesToRemove);
+                    _db.RoleInRoleGroup.RemoveRange(rolesToRemove);
 
                     // Thêm các quyền mới chưa có trong database
                     var existingRoleIds = existingRoles.Select(x => x.RoleId).ToHashSet();
                     var rolesToAdd = newRoleIds.Where(x => !existingRoleIds.Contains(x))
                                                .Select(roleId => new RoleInRoleGroup() { RoleId = roleId, RoleGroupId = Id })
                                                .ToList();
-                    db.RoleInRoleGroup.AddRange(rolesToAdd);
+                    _db.RoleInRoleGroup.AddRange(rolesToAdd);
                 }
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
                 return Json(new { success = true, message = "Cập nhật thành công" });
             }
             catch (Exception ex)
@@ -121,8 +126,8 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.RoleGroup.Add(obj);
-                    await db.SaveChangesAsync();
+                    _db.RoleGroup.Add(obj);
+                    await _db.SaveChangesAsync();
                 }
                 else
                 {
@@ -146,7 +151,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.RoleGroup obj = await db.RoleGroup.FindAsync(id);
+            Models.RoleGroup obj = await _db.RoleGroup.FindAsync(id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -163,7 +168,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            var objData = await db.RoleGroup.FindAsync(Id);
+            var objData = await _db.RoleGroup.FindAsync(Id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Không thể lưu vì có người dùng khác đang sửa hoặc đã bị xóa" });
@@ -175,7 +180,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                 objData.Status = obj.Status;
 
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -209,12 +214,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = db.RoleGroup.Find(id);
+                obj = _db.RoleGroup.Find(id);
                 if (obj != null)
                 {
-                    db.RoleInRoleGroup.RemoveRange(db.RoleInRoleGroup.Where(x => x.RoleGroupId == id));
-                    db.RoleGroup.Remove(obj);
-                    db.SaveChanges();
+                    _db.RoleInRoleGroup.RemoveRange(_db.RoleInRoleGroup.Where(x => x.RoleGroupId == id));
+                    _db.RoleGroup.Remove(obj);
+                    _db.SaveChanges();
                 }
             }
             catch (DbUpdateConcurrencyException ex)
@@ -232,7 +237,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Id không được để trống" });
             }
-            var objData = await db.RoleGroup.FindAsync(id);
+            var objData = await _db.RoleGroup.FindAsync(id);
             if (objData == null)
             {
                 return Json(new { success = false, message = "Bản ghi đã bị xóa" });
@@ -240,7 +245,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.Status = !objData.Status;
-                await db.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -255,7 +260,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }

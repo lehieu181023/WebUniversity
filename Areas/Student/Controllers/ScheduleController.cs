@@ -14,8 +14,13 @@ namespace WebUniversity.Areas.Stu.Controllers
     [Area("Student")]
     public class ScheduleController : Controller
     {
-        private readonly DBContext db = new DBContext();
+        private readonly DBContext _db;
         private const string KeyCache = "ClassSchedule";
+
+        public ScheduleController(DBContext db)
+        {
+            _db = db;
+        }
 
         [Authorize(Roles = "StudentRole")]
         public ActionResult Index()
@@ -40,7 +45,7 @@ namespace WebUniversity.Areas.Stu.Controllers
             }
             try
             {
-                var listData = await db.ClassSchedule
+                var listData = await _db.ClassSchedule
                     .Include(x => x.Class)
                         .ThenInclude(x => x.Students)
                     .Include(x => x.Course)
@@ -68,7 +73,7 @@ namespace WebUniversity.Areas.Stu.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.ClassSchedule objData = await db.ClassSchedule
+            Models.ClassSchedule objData = await _db.ClassSchedule
                     .Include(x => x.Class)
                     .Include(x => x.Course)
                         .ThenInclude(x => x.Lecturer)
@@ -89,7 +94,7 @@ namespace WebUniversity.Areas.Stu.Controllers
         {
             if (disposing)
             {
-                db.Dispose();
+                _db.Dispose();
             }
             base.Dispose(disposing);
         }
