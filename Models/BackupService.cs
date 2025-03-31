@@ -99,16 +99,16 @@
         {
             try
             {
-                var smtpClient = new SmtpClient("smtp.yourmail.com")
+                var smtpClient = new SmtpClient("smtp.gmail.com")
                 {
                     Port = 587,
-                    Credentials = new NetworkCredential("your-email@example.com", "your-password"),
+                    Credentials = new NetworkCredential("20214045@eaut.edu.vn", "#include"),
                     EnableSsl = true
                 };
 
                 var mailMessage = new MailMessage
                 {
-                    From = new MailAddress("your-email@example.com"),
+                    From = new MailAddress("20214045@eaut.edu.vn"),
                     Subject = subject,
                     Body = body,
                     IsBodyHtml = false

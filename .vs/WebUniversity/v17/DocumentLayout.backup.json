@@ -3,92 +3,32 @@
   "WorkspaceRootPath": "D:\\ASP.NET Core\\Web-University\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\models\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:models\\backupservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\controllers\\scheduleweekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\controllers\\scheduleweekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\controllers\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\views\\info\\reportviewpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\views\\info\\reportviewpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\controllers\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\lecturer\\controller\\scheduleweekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\lecturer\\controller\\scheduleweekcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\views\\info\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\views\\info\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\lecturer\\controller\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\lecturer\\controller\\schedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\student\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\student\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\lecturer\\views\\info\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\lecturer\\views\\info\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\lecturer\\controller\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\lecturer\\controller\\infocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\subjectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\roomcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\rolegroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\rolegroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\lecturercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\classshiftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\classshiftcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\classschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\classschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\classcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\lecturer\\views\\info\\reportviewpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\lecturer\\views\\info\\reportviewpdf.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -98,123 +38,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:43:50.115Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "BackupService.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Models\\BackupService.cs",
-              "RelativeDocumentMoniker": "Models\\BackupService.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Models\\BackupService.cs",
-              "RelativeToolTip": "Models\\BackupService.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:41:57.091Z",
+              "DocumentIndex": 3,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Student\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "Areas\\Student\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T07:52:22.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ScheduleWeekController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\ScheduleWeekController.cs",
-              "RelativeDocumentMoniker": "Areas\\Student\\Controllers\\ScheduleWeekController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\ScheduleWeekController.cs",
-              "RelativeToolTip": "Areas\\Student\\Controllers\\ScheduleWeekController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:32:53.922Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Info\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Student\\Views\\Info\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Info\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Student\\Views\\Info\\Index.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAAoAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T07:49:12.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScheduleController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\ScheduleController.cs",
-              "RelativeDocumentMoniker": "Areas\\Student\\Controllers\\ScheduleController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\ScheduleController.cs",
-              "RelativeToolTip": "Areas\\Student\\Controllers\\ScheduleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:32:33.343Z",
+              "DocumentIndex": 0,
+              "Title": "ReportViewPDF.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Info\\ReportViewPDF.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Student\\Views\\Info\\ReportViewPDF.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Views\\Info\\ReportViewPDF.cshtml",
+              "RelativeToolTip": "Areas\\Student\\Views\\Info\\ReportViewPDF.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAAAFoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T07:46:32.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "InfoController.cs",
               "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\InfoController.cs",
               "RelativeDocumentMoniker": "Areas\\Student\\Controllers\\InfoController.cs",
               "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Student\\Controllers\\InfoController.cs",
               "RelativeToolTip": "Areas\\Student\\Controllers\\InfoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAqwDUAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:32:04.664Z",
+              "WhenOpened": "2025-03-31T07:45:28.41Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InfoController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\InfoController.cs",
-              "RelativeDocumentMoniker": "Areas\\Lecturer\\Controller\\InfoController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\InfoController.cs",
-              "RelativeToolTip": "Areas\\Lecturer\\Controller\\InfoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:30:49.978Z",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Views\\Info\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Lecturer\\Views\\Info\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Views\\Info\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Lecturer\\Views\\Info\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T07:41:42.593Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "SubjectController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\SubjectController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\SubjectController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\SubjectController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\SubjectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:30:25.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StudentController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\StudentController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\StudentController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\StudentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:29:59.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RoomController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoomController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoomController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoomController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoomController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:29:36.31Z",
+              "DocumentIndex": 6,
+              "Title": "ReportViewPDF.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Views\\Info\\ReportViewPDF.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Lecturer\\Views\\Info\\ReportViewPDF.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Views\\Info\\ReportViewPDF.cshtml",
+              "RelativeToolTip": "Areas\\Lecturer\\Views\\Info\\ReportViewPDF.cshtml",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAuwH0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T07:33:19.538Z",
               "EditorCaption": ""
             },
             {
@@ -222,176 +123,16 @@
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScheduleController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\ScheduleController.cs",
-              "RelativeDocumentMoniker": "Areas\\Lecturer\\Controller\\ScheduleController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\ScheduleController.cs",
-              "RelativeToolTip": "Areas\\Lecturer\\Controller\\ScheduleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.67Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ScheduleWeekController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\ScheduleWeekController.cs",
-              "RelativeDocumentMoniker": "Areas\\Lecturer\\Controller\\ScheduleWeekController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\ScheduleWeekController.cs",
-              "RelativeToolTip": "Areas\\Lecturer\\Controller\\ScheduleWeekController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Title": "InfoController.cs",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\InfoController.cs",
+              "RelativeDocumentMoniker": "Areas\\Lecturer\\Controller\\InfoController.cs",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Lecturer\\Controller\\InfoController.cs",
+              "RelativeToolTip": "Areas\\Lecturer\\Controller\\InfoController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "LecturerController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\LecturerController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\LecturerController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\LecturerController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\LecturerController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:28:13.367Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FacultyController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\FacultyController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\FacultyController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\FacultyController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\FacultyController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:27:46.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\CourseController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\CourseController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\CourseController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\CourseController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:26:28.788Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ClassShiftController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassShiftController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ClassShiftController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassShiftController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ClassShiftController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:23:45.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ClassController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ClassController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ClassController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:17:47.3Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.612Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RoleGroupController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.634Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ClassScheduleController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassScheduleController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\ClassScheduleController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\ClassScheduleController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\ClassScheduleController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.65Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "DashBoardController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\DashBoardController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DashBoardController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\DashBoardController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\DashBoardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:49.681Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:10:07.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-29T04:08:29.928Z",
+              "WhenOpened": "2025-03-31T07:32:10.37Z",
               "EditorCaption": ""
             }
           ]

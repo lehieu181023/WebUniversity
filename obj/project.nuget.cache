@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OzZ4WrMi6Vw=",
+  "dgSpecHash": "L5a2kmR+wNo=",
   "success": true,
   "projectFilePath": "D:\\ASP.NET Core\\Web-University\\WebUniversity.csproj",
   "expectedPackageFiles": [
@@ -164,6 +164,7 @@
     "C:\\Users\\lehie\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\lehie\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\lehie\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\lehie\\.nuget\\packages\\rotativa.aspnetcore\\1.4.0\\rotativa.aspnetcore.1.4.0.nupkg.sha512",
     "C:\\Users\\lehie\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\lehie\\.nuget\\packages\\serilog.aspnetcore\\9.0.0\\serilog.aspnetcore.9.0.0.nupkg.sha512",
     "C:\\Users\\lehie\\.nuget\\packages\\serilog.extensions.hosting\\9.0.0\\serilog.extensions.hosting.9.0.0.nupkg.sha512",

@@ -107,7 +107,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
         [Authorize]
         [HttpPost]
-        public async Task<JsonResult> EditPasswordPost([Bind("Id,Password")] Models.Account obj, int? Id,string PasswordAgain = "" , string PasswordCurent = "")
+        public async Task<JsonResult> EditPasswordPost([Bind("Id,Password")] Models.Account obj, int? Id, string PasswordAgain = "", string PasswordCurent = "")
         {
             if (Id == null)
             {
@@ -129,11 +129,19 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Mật khẩu không chính xác" });
             }
 
+            // Kiểm tra độ mạnh của mật khẩu
+            if (!IsStrongPassword(obj.Password))
+            {
+                return Json(new { success = false, message = "Mật khẩu phải có ít nhất 8 ký tự, bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt" });
+            }
+
             try
             {
                 objData.Password = new PasswordHelper().HashPassword(obj.Password);
 
                 await _db.SaveChangesAsync();
+
+                return Json(new { success = true, message = "Đổi mật khẩu thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -148,12 +156,24 @@ namespace WebUniversity.Areas.Admin.Controllers
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
+        }
 
-            return Json(new { success = true, message = "Đổi mật khẩu thành công" });
+        // Hàm kiểm tra độ mạnh mật khẩu
+        private bool IsStrongPassword(string password)
+        {
+            if (string.IsNullOrEmpty(password)) return false;
+
+            bool hasUpper = password.Any(char.IsUpper);
+            bool hasLower = password.Any(char.IsLower);
+            bool hasDigit = password.Any(char.IsDigit);
+            bool hasSpecial = password.Any(ch => !char.IsLetterOrDigit(ch));
+            bool hasMinLength = password.Length >= 8;
+
+            return hasUpper && hasLower && hasDigit && hasSpecial && hasMinLength;
         }
 
     }

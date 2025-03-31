@@ -320,6 +320,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGVjdHVyZXJcVmlld3NcSW5mb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/ASP.NET Core/Web-University/Areas/Lecturer/Views/Info/ReportViewPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGVjdHVyZXJcVmlld3NcSW5mb1xSZXBvcnRWaWV3UERGLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/ASP.NET Core/Web-University/Areas/Lecturer/Views/ScheduleWeek/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTGVjdHVyZXJcVmlld3NcU2NoZWR1bGVXZWVrXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -362,6 +366,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/ASP.NET Core/Web-University/Areas/Student/Views/Info/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xJbmZvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/ASP.NET Core/Web-University/Areas/Student/Views/Info/ReportViewPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU3R1ZGVudFxWaWV3c1xJbmZvXFJlcG9ydFZpZXdQREYuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/ASP.NET Core/Web-University/Areas/Student/Views/ScheduleWeek/Index.cshtml]

@@ -55,7 +55,7 @@ changePass = function (Id) {
 
 successChange = function (res) {
     debugger;
-    if (res.success) {
+    if (res.success == true) {
         UnBlockUI();
         $('#btnclosemodel').click();
         loaddata();

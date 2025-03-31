@@ -23,25 +23,25 @@
                 <td>
                     @if (item.Status)
                     {
-                        <button type="button" class="btn btn-primary" onclick="editStatus(@item.Id)">Hoạt động</button>
+                        <button type="button" class="btn btn-primary" onclick="editStatus(@item.Id)">Active</button>
                     }
                     else
                     {
-                        <button type="button" class="btn btn-danger" onclick="editStatus(@item.Id)">Khóa</button>
+                        <button type="button" class="btn btn-danger" onclick="editStatus(@item.Id)">Lock</button>
                     }
                 </td>
                 <td>
                     <!-- Nút cài đặt -->
                     <button type="button" class="btn btn-dark text-white mb-3" id="editButton" onclick="LoadModelRole(@item.Id)">
-                        <i class="bi bi-gear"></i> Chỉnh sử quyền
+                        <i class="bi bi-gear"></i> Edit role
                     </button>
                     <!-- Nút Sửa -->
                     <button type="button" class="btn btn-warning text-white mb-3" id="editButton" onclick="LoadModelEdit(@item.Id)">
-                        <i class="bi bi-pencil"></i> Sửa
+                        <i class="bi bi-pencil"></i> Edit
                     </button>
                     <!-- Nút Xóa -->
                     <button type="button" class="btn btn-danger mb-3" id="deleteButton" onclick="deleteData(@item.Id)">
-                        <i class="bi bi-trash"></i> Xóa
+                        <i class="bi bi-trash"></i> Delete
                     </button>
                 </td>
             </tr>

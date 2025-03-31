@@ -1,0 +1,125 @@
+﻿@model WebUniversity.Models.Lecturer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Giảng Viên</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            font-weight: bold;
+            font-size: 1.5em;
+            color: #007bff; /* Màu xanh nổi bật */
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+
+        .info-value {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .img-thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Thông Tin Giảng Viên</h1>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Mã Giảng Viên:</div>
+                <div class="info-value highlight">@Model.LecturerCode</div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-label">Họ và Tên:</div>
+                <div class="info-value highlight">@Model.FullName</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Ngày Sinh:</div>
+                <div class="info-value">@Model.BirthDate?.ToString("yyyy-MM-dd")</div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-label">Giới Tính:</div>
+                <div class="info-value">@(Model.Gender ? "Nam" : "Nữ")</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Địa Chỉ:</div>
+                <div class="info-value">@Model.Address</div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-label">Email:</div>
+                <div class="info-value">@Model.Email</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Số Điện Thoại:</div>
+                <div class="info-value">@Model.PhoneNumber</div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-label">Khoa:</div>
+                <div class="info-value">@Model.Faculty?.FacultyName</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Trạng Thái:</div>
+                <div class="info-value">@(Model.Status ? "Hoạt Động" : "Ngừng Hoạt Động")</div>
+            </div>
+            <div class="col-md-6">
+                <div class="info-label">CCCD:</div>
+                <div class="info-value">@Model.Cccd</div>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <div class="info-label">Hình Ảnh:</div>
+                <img src="@Model.Image" alt="Hình Ảnh Giảng Viên" class="img-thumbnail" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            window.print();
+
+            window.onafterprint = function () {
+                window.location.href = "/Lecturer"; // Thay đổi URL theo nhu cầu
+            };
+        };
+    </script>
+
+
+</body>
+</html>
