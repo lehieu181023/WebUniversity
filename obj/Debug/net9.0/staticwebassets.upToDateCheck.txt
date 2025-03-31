@@ -2000,4 +2000,5 @@ wwwroot\uploads\logo-footer (1).png
 wwwroot\uploads\OIP (1).jpg
 wwwroot\uploads\OIP (2).jpg
 wwwroot\uploads\OIP.jpg
+wwwroot\uploads\turtel-4121001_1280.jpg
 wwwroot\uploads\xoai-cat-hoa-loc-thom-ngon-dep-ma-da-cang-bong.jpg

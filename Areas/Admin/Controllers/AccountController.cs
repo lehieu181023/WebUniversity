@@ -28,7 +28,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             return View();
         }
-        [Authorize(Roles = "Account|Account.View")]
+        [Authorize(Roles = "Account,Account.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -47,7 +47,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             return PartialView(listData);
         }
-        [Authorize(Roles = "Account|Account.View")]
+        [Authorize(Roles = "Account,Account.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -63,14 +63,14 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["listfaculty"] = listfaculty;
             return PartialView(objData);
         }
-        [Authorize(Roles = "Account|Account.Create")]
+        [Authorize(Roles = "Account,Account.Create")]
         public PartialViewResult Create()
         {
             var lstRoleGR = _db.RoleGroup.Where(m => m.Status).ToList();
             ViewData["lstRoleGR"] = lstRoleGR;
             return PartialView();
         }
-        [Authorize(Roles = "Account|Account.Create")]
+        [Authorize(Roles = "Account,Account.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,Username,Password,RoleGroupId,StudentId,LecturerId,Status")] Models.Account obj)
         {
@@ -78,7 +78,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
 
@@ -102,7 +102,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                     }
                 }
 
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
@@ -110,7 +110,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
 
 
-        [Authorize(Roles = "Account|Account.Edit")]
+        [Authorize(Roles = "Account,Account.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -128,7 +128,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             ViewData["lstRoleGR"] = lstRoleGR;
             return PartialView(obj);
         }
-        [Authorize(Roles = "Account|Account.Edit")]
+        [Authorize(Roles = "Account,Account.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,RoleGroupId,Status")] Models.Account obj, int? Id)
         {
@@ -166,13 +166,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật tài khoản: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật tài khoản: {obj.Username}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
-        [Authorize(Roles = "Account|Account.Edit")]
+        [Authorize(Roles = "Account,Account.Edit")]
         public async Task<ActionResult> EditPassword(int? id)
         {
             if (id == null)
@@ -188,7 +188,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return PartialView(obj);
         }
-        [Authorize(Roles = "Account|Account.Edit")]
+        [Authorize(Roles = "Account,Account.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPasswordPost([Bind("Id,Password")] Models.Account obj, int? Id)
         {
@@ -225,13 +225,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật mật khẩu tài khoản: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật mật khẩu tài khoản: {obj.Username}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
             return Json(new { success = true, message = "Đổi mật khẩu thành công" });
         }
-        [Authorize(Roles = "Account|Account.Delete")]
+        [Authorize(Roles = "Account,Account.Delete")]
         public JsonResult Delete(int? id)
         {
             Account obj = null;
@@ -259,7 +259,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "Account|Account.Edit")]
+        [Authorize(Roles = "Account,Account.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

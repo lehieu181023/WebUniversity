@@ -28881,3 +28881,1066 @@ WHERE [s].[Id] = @__p_0
 2025-03-31 19:13:44.216 +07:00 [INF] Executed action WebUniversity.Areas.Stu.Controllers.ScheduleWeekController.ListData (WebUniversity) in 40.8665ms
 2025-03-31 19:13:44.216 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Stu.Controllers.ScheduleWeekController.ListData (WebUniversity)'
 2025-03-31 19:13:44.216 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Student/ScheduleWeek/listdata?week=1 - 200 null text/html; charset=utf-8 42.2045ms
+2025-03-31 23:21:29.596 +07:00 [INF] User profile is available. Using 'C:\Users\lehie\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-31 23:21:29.720 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 24 giờ trước lần backup đầu tiên.
+2025-03-31 23:21:31.119 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/ - null null
+2025-03-31 23:21:31.142 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-31 23:21:31.143 +07:00 [INF] Hosting environment: Development
+2025-03-31 23:21:31.143 +07:00 [INF] Content root path: D:\ASP.NET Core\Web-University
+2025-03-31 23:21:31.619 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Student - null null
+2025-03-31 23:21:31.617 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/ - 302 null null 499.3735ms
+2025-03-31 23:21:31.629 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Student - 302 null null 9.8886ms
+2025-03-31 23:21:31.639 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Student/Info - null null
+2025-03-31 23:21:31.650 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Stu.Controllers.InfoController.Index (WebUniversity)'
+2025-03-31 23:21:31.699 +07:00 [INF] Route matched with {area = "Student", action = "Index", controller = "Info"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Stu.Controllers.InfoController (WebUniversity).
+2025-03-31 23:21:34.407 +07:00 [INF] Executed DbCommand (84ms) [Parameters=[@__username_0='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode], [c].[Id], [c].[ClassName], [c].[CreateDay], [c].[FacultyId], [c].[Status]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[StudentCode] = @__username_0
+2025-03-31 23:21:34.505 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:21:34.606 +07:00 [INF] Executed ViewResult - view Index executed in 103.2194ms.
+2025-03-31 23:21:34.607 +07:00 [INF] Executed action WebUniversity.Areas.Stu.Controllers.InfoController.Index (WebUniversity) in 2907.4298ms
+2025-03-31 23:21:34.607 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Stu.Controllers.InfoController.Index (WebUniversity)'
+2025-03-31 23:21:34.620 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Student/Info - 200 null text/html; charset=utf-8 2980.379ms
+2025-03-31 23:21:34.654 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:21:34.654 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:21:34.660 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.662 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.654 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:21:34.664 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:21:34.665 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.667 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.668 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:21:34.670 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.671 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:21:34.671 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:21:34.671 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:21:34.674 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.675 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 6.3256ms
+2025-03-31 23:21:34.675 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:21:34.676 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:21:34.676 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.676 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.676 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.676 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 12.8536ms
+2025-03-31 23:21:34.676 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.677 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 23.6534ms
+2025-03-31 23:21:34.678 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:21:34.678 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:21:34.679 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.676 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 21.7941ms
+2025-03-31 23:21:34.681 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:21:34.681 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.682 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 27.9044ms
+2025-03-31 23:21:34.683 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:21:34.684 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:21:34.684 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:21:34.684 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.685 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.685 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:21:34.691 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.692 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:21:34.692 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.697 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.698 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:21:34.698 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 10.8848ms
+2025-03-31 23:21:34.698 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.700 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 16.1259ms
+2025-03-31 23:21:34.701 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 18.5248ms
+2025-03-31 23:21:34.701 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:21:34.702 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:21:34.705 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.703 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:21:34.703 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:21:34.705 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.705 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:21:34.706 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.707 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:21:34.707 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 5.5552ms
+2025-03-31 23:21:34.707 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:21:34.709 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.715 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.727 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:21:34.727 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:21:34.727 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.727 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.727 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 43.079ms
+2025-03-31 23:21:34.727 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 49.5549ms
+2025-03-31 23:21:34.728 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:21:34.730 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:21:34.731 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:21:34.727 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:21:34.732 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.732 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 53.8511ms
+2025-03-31 23:21:34.732 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.732 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:21:34.733 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.734 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.735 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:21:34.735 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.735 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 5.1755ms
+2025-03-31 23:21:34.755 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.772 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:21:34.772 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.783 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:21:34.784 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.800 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.852 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:21:34.852 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.853 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-03-31 23:21:34.853 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 121.4345ms
+2025-03-31 23:21:34.862 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 187.0478ms
+2025-03-31 23:21:34.870 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 163.74ms
+2025-03-31 23:21:34.873 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-03-31 23:21:34.873 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.874 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 20.8817ms
+2025-03-31 23:21:34.889 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:21:34.889 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.889 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 187.9122ms
+2025-03-31 23:21:34.901 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:21:34.902 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.902 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 195.1841ms
+2025-03-31 23:21:34.910 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:21:34.910 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.910 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 207.4932ms
+2025-03-31 23:21:34.922 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 189.4637ms
+2025-03-31 23:21:34.964 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:21:34.964 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.965 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 237.6118ms
+2025-03-31 23:21:34.967 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:21:34.967 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:21:34.968 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 264.5859ms
+2025-03-31 23:21:35.023 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:21:35.025 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:21:35.034 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:21:35.199 +07:00 [INF] Executed DbCommand (75ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:21:35.223 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:21:35.232 +07:00 [INF] Executed PartialViewResult - view null executed in 9.5017ms.
+2025-03-31 23:21:35.233 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 198.4093ms
+2025-03-31 23:21:35.234 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:21:35.235 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 211.736ms
+2025-03-31 23:22:46.627 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Account/Logout - null null
+2025-03-31 23:22:46.631 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.Logout (WebUniversity)'
+2025-03-31 23:22:46.634 +07:00 [INF] Route matched with {action = "Logout", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-03-31 23:22:46.639 +07:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-03-31 23:22:46.640 +07:00 [INF] Executing RedirectResult, redirecting to /Account/Login.
+2025-03-31 23:22:46.640 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.Logout (WebUniversity) in 5.7576ms
+2025-03-31 23:22:46.640 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.Logout (WebUniversity)'
+2025-03-31 23:22:46.641 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Account/Logout - 302 null null 13.6237ms
+2025-03-31 23:22:46.650 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Account/Login - null null
+2025-03-31 23:22:46.652 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-03-31 23:22:46.653 +07:00 [INF] Route matched with {action = "login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult login() on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-03-31 23:22:46.655 +07:00 [INF] Executing ViewResult, running view login.
+2025-03-31 23:22:46.674 +07:00 [INF] Executed ViewResult - view login executed in 20.2817ms.
+2025-03-31 23:22:46.674 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.login (WebUniversity) in 21.0196ms
+2025-03-31 23:22:46.674 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-03-31 23:22:46.675 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Account/Login - 200 null text/html; charset=utf-8 24.4863ms
+2025-03-31 23:22:46.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:22:46.729 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:22:46.729 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:22:46.729 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:22:46.729 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:22:46.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:22:46.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:22:46.735 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/css/style.css - null null
+2025-03-31 23:22:46.735 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] The file assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:22:46.736 +07:00 [INF] The file assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:22:46.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] The file assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:22:46.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - 304 null text/css 1.8769ms
+2025-03-31 23:22:46.737 +07:00 [INF] The file assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:22:46.737 +07:00 [INF] The file assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:22:46.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 9.0209ms
+2025-03-31 23:22:46.737 +07:00 [INF] The file assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:22:46.737 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 8.3262ms
+2025-03-31 23:22:46.737 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - 304 null text/css 2.2975ms
+2025-03-31 23:22:46.737 +07:00 [INF] The file assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:22:46.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:22:46.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 7.6962ms
+2025-03-31 23:22:46.738 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:22:46.738 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:22:46.738 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - 304 null text/css 9.0712ms
+2025-03-31 23:22:46.738 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:22:46.739 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.739 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/img/logo.png - null null
+2025-03-31 23:22:46.739 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.739 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.739 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.739 +07:00 [INF] The file assets/img/logo.png was not modified
+2025-03-31 23:22:46.740 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.739 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - 304 null text/css 9.7968ms
+2025-03-31 23:22:46.740 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.740 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:22:46.740 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/js/main.js - null null
+2025-03-31 23:22:46.741 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.741 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/img/logo.png - 304 null image/png 2.3794ms
+2025-03-31 23:22:46.746 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.746 +07:00 [INF] The file assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:22:46.746 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.747 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 8.6329ms
+2025-03-31 23:22:46.747 +07:00 [INF] Sending file. Request path: 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\si1qlylr3w-493y06b0oq.gz'
+2025-03-31 23:22:46.747 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.748 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - null null
+2025-03-31 23:22:46.750 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.752 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/AppJs/Account.js - null null
+2025-03-31 23:22:46.752 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.754 +07:00 [INF] Sending file. Request path: 'assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\gzh5x9ictr-7bfv779k36.gz'
+2025-03-31 23:22:46.755 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.756 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:22:46.756 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.756 +07:00 [INF] Sending file. Request path: 'assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\77xr10olhs-2a5arjvktv.gz'
+2025-03-31 23:22:46.756 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:22:46.758 +07:00 [INF] The file assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:22:46.759 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.759 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - 304 null text/javascript 3.418ms
+2025-03-31 23:22:46.760 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:22:46.760 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 3.246ms
+2025-03-31 23:22:46.760 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.760 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:22:46.761 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.764 +07:00 [INF] Sending file. Request path: 'assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\e9xn4k5tno-wncy1ibapd.gz'
+2025-03-31 23:22:46.764 +07:00 [INF] Sending file. Request path: 'assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\uiz4m8c624-kx3cwpk1ir.gz'
+2025-03-31 23:22:46.764 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.764 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.765 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/css/style.css - 200 21361 text/css 30.0047ms
+2025-03-31 23:22:46.765 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 27.7045ms
+2025-03-31 23:22:46.766 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:22:46.768 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 27.6553ms
+2025-03-31 23:22:46.769 +07:00 [INF] Sending file. Request path: 'assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tac8qs4qq4-m0ksaommmi.gz'
+2025-03-31 23:22:46.769 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 39.2646ms
+2025-03-31 23:22:46.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 17.0291ms
+2025-03-31 23:22:46.779 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:22:46.779 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.781 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 20.2292ms
+2025-03-31 23:22:46.782 +07:00 [INF] Sending file. Request path: 'AppJs/Account.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\9sokuyuy9y-d8dad84h8l.gz'
+2025-03-31 23:22:46.782 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.782 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/AppJs/Account.js - 200 353 text/javascript 30.7926ms
+2025-03-31 23:22:46.791 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 52.4043ms
+2025-03-31 23:22:46.806 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.2891ms
+2025-03-31 23:22:46.807 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-03-31 23:22:46.814 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.814 +07:00 [INF] The file assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-03-31 23:22:46.814 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.814 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 7.2653ms
+2025-03-31 23:22:46.828 +07:00 [INF] Sending file. Request path: 'assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6tob5d88xv-j1s052mfj7.gz'
+2025-03-31 23:22:46.829 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.829 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/js/main.js - 200 8891 text/javascript 89.0395ms
+2025-03-31 23:22:46.843 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.846 +07:00 [INF] Sending file. Request path: 'assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\qracv1nz4u-ypojrgjh6b.gz'
+2025-03-31 23:22:46.846 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:46.847 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - 200 209403 text/javascript 98.9649ms
+2025-03-31 23:22:49.214 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44344/Account/LoginAction - application/x-www-form-urlencoded; charset=UTF-8 244
+2025-03-31 23:22:49.214 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.LoginAction (WebUniversity)'
+2025-03-31 23:22:49.226 +07:00 [INF] Route matched with {action = "LoginAction", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAction(System.String, System.String) on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-03-31 23:22:49.324 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[@__UserName_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [r].[Id], [r].[CreateDay], [r].[NameRoleGroup], [r].[Status]
+FROM [Account] AS [a]
+INNER JOIN [RoleGroup] AS [r] ON [a].[RoleGroupId] = [r].[Id]
+WHERE [a].[Status] = CAST(1 AS bit) AND [a].[Username] = @__UserName_0
+2025-03-31 23:22:49.450 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__user_RoleGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleGroupId], [r].[RoleId], [r0].[Id], [r0].[CreateDay], [r0].[ParentId], [r0].[RoleCode], [r0].[Status]
+FROM [RoleInRoleGroup] AS [r]
+INNER JOIN [Role] AS [r0] ON [r].[RoleId] = [r0].[Id]
+WHERE [r].[RoleGroupId] = @__user_RoleGroupId_0
+2025-03-31 23:22:49.502 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleGroupId], [r].[RoleId]
+FROM [RoleInRoleGroup] AS [r]
+WHERE [r].[RoleGroupId] = @__p_0
+2025-03-31 23:22:49.504 +07:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-03-31 23:22:49.506 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType6`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-31 23:22:49.516 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.LoginAction (WebUniversity) in 290.098ms
+2025-03-31 23:22:49.516 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.LoginAction (WebUniversity)'
+2025-03-31 23:22:49.518 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44344/Account/LoginAction - 200 null application/json; charset=utf-8 304.4293ms
+2025-03-31 23:22:49.534 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard - null null
+2025-03-31 23:22:49.537 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-03-31 23:22:49.538 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "DashBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:22:49.539 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:22:49.566 +07:00 [INF] Executed ViewResult - view Index executed in 27.4687ms.
+2025-03-31 23:22:49.566 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity) in 27.9286ms
+2025-03-31 23:22:49.566 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-03-31 23:22:49.567 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard - 200 null text/html; charset=utf-8 32.4199ms
+2025-03-31 23:22:49.610 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:22:49.610 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:22:49.610 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:22:49.611 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:22:49.611 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:22:49.611 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:22:49.611 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:22:49.611 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.8759ms
+2025-03-31 23:22:49.611 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:22:49.611 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:22:49.611 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.611 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.4554ms
+2025-03-31 23:22:49.611 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 0.5415ms
+2025-03-31 23:22:49.611 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 1.425ms
+2025-03-31 23:22:49.615 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:22:49.616 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:22:49.616 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.616 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:22:49.616 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:22:49.617 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.617 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.617 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 1.0603ms
+2025-03-31 23:22:49.617 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:22:49.617 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:22:49.617 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:22:49.618 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:22:49.618 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.618 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 1.718ms
+2025-03-31 23:22:49.618 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:22:49.619 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.619 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:22:49.619 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.620 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 9.3006ms
+2025-03-31 23:22:49.620 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.620 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:22:49.621 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:22:49.622 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.622 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 4.9558ms
+2025-03-31 23:22:49.622 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:22:49.622 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:22:49.622 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:22:49.623 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.623 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.625 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:22:49.625 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.625 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:22:49.629 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:22:49.629 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.629 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:22:49.630 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.631 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:22:49.632 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.633 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 7.3746ms
+2025-03-31 23:22:49.633 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.633 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:22:49.636 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:22:49.636 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 6.9022ms
+2025-03-31 23:22:49.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:22:49.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.3695ms
+2025-03-31 23:22:49.637 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:22:49.637 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.642 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.642 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.642 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:22:49.642 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.643 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 27.7288ms
+2025-03-31 23:22:49.643 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:22:49.644 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 22.4823ms
+2025-03-31 23:22:49.646 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.647 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - null null
+2025-03-31 23:22:49.651 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:22:49.651 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.651 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 28.8176ms
+2025-03-31 23:22:49.654 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:22:49.654 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.654 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:22:49.655 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.655 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 18.1538ms
+2025-03-31 23:22:49.662 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 39.2864ms
+2025-03-31 23:22:49.668 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 50.9919ms
+2025-03-31 23:22:49.673 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 29.2225ms
+2025-03-31 23:22:49.673 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.673 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:22:49.673 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.673 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 53.0803ms
+2025-03-31 23:22:49.706 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.707 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:22:49.707 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-03-31 23:22:49.707 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.709 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 91.706ms
+2025-03-31 23:22:49.715 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.716 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-03-31 23:22:49.716 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.716 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 9.0011ms
+2025-03-31 23:22:49.731 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.757 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:22:49.757 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.761 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 142.847ms
+2025-03-31 23:22:49.789 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.789 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.790 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:22:49.790 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.790 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 156.9283ms
+2025-03-31 23:22:49.815 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:22:49.816 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:22:49.816 +07:00 [INF] Sending file. Request path: 'Admin/js/DashBoard.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-0yy5da9swa.gz'
+2025-03-31 23:22:49.816 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:22:49.816 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:22:49.816 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - 200 2904 text/javascript 169.5715ms
+2025-03-31 23:22:49.824 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report1 - null null
+2025-03-31 23:22:49.827 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report1 (WebUniversity)'
+2025-03-31 23:22:49.830 +07:00 [INF] Executed DbCommand (9ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:22:49.831 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:22:49.832 +07:00 [INF] Route matched with {area = "Admin", action = "report1", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report1() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:22:49.833 +07:00 [INF] Executed PartialViewResult - view null executed in 1.6056ms.
+2025-03-31 23:22:49.833 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 16.9861ms
+2025-03-31 23:22:49.833 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:22:49.834 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 19.0519ms
+2025-03-31 23:22:49.920 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__startYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [s0].[Key] AS [Year], COUNT(*) AS [Count]
+FROM (
+    SELECT DATEPART(year, [s].[CreateDay]) AS [Key]
+    FROM [Student] AS [s]
+    WHERE DATEPART(year, [s].[CreateDay]) >= @__startYear_0
+) AS [s0]
+GROUP BY [s0].[Key]
+2025-03-31 23:22:49.931 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__startYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l0].[Key] AS [Year], COUNT(*) AS [Count]
+FROM (
+    SELECT DATEPART(year, [l].[CreateDay]) AS [Key]
+    FROM [Lecturer] AS [l]
+    WHERE DATEPART(year, [l].[CreateDay]) >= @__startYear_0
+) AS [l0]
+GROUP BY [l0].[Key]
+2025-03-31 23:22:49.940 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__startYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r0].[Key] AS [Year], COUNT(*) AS [Count]
+FROM (
+    SELECT DATEPART(year, [r].[CreateDay]) AS [Key]
+    FROM [Room] AS [r]
+    WHERE DATEPART(year, [r].[CreateDay]) >= @__startYear_0
+) AS [r0]
+GROUP BY [r0].[Key]
+2025-03-31 23:22:49.943 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType2`4[[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-31 23:22:49.949 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report1 (WebUniversity) in 116.2968ms
+2025-03-31 23:22:49.949 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report1 (WebUniversity)'
+2025-03-31 23:22:49.949 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report1 - 200 null application/json; charset=utf-8 125.2239ms
+2025-03-31 23:23:07.404 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassShift - null null
+2025-03-31 23:23:07.406 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity)'
+2025-03-31 23:23:07.407 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "ClassShift"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.ClassShiftController (WebUniversity).
+2025-03-31 23:23:07.408 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:23:07.416 +07:00 [INF] Executed ViewResult - view Index executed in 8.2854ms.
+2025-03-31 23:23:07.416 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity) in 9.1183ms
+2025-03-31 23:23:07.416 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity)'
+2025-03-31 23:23:07.417 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassShift - 200 null text/html; charset=utf-8 13.0048ms
+2025-03-31 23:23:07.474 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:23:07.474 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.474 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:23:07.474 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.475 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 0.723ms
+2025-03-31 23:23:07.478 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:23:07.478 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:23:07.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:23:07.479 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:23:07.479 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:23:07.479 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:23:07.479 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.479 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 0.6673ms
+2025-03-31 23:23:07.479 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.6355ms
+2025-03-31 23:23:07.479 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 1.0593ms
+2025-03-31 23:23:07.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:23:07.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:23:07.480 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.480 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:23:07.480 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:23:07.480 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:23:07.480 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.480 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.480 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.6873ms
+2025-03-31 23:23:07.480 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 0.5157ms
+2025-03-31 23:23:07.480 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.480 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:23:07.480 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.481 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 0.5744ms
+2025-03-31 23:23:07.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:23:07.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:23:07.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:23:07.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:23:07.481 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.481 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.481 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.482 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.482 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:23:07.482 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 1.7584ms
+2025-03-31 23:23:07.483 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:23:07.483 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.483 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 1.9052ms
+2025-03-31 23:23:07.483 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:23:07.483 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.483 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:23:07.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:23:07.484 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.484 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:23:07.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:23:07.484 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.484 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.484 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 0.6907ms
+2025-03-31 23:23:07.484 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.484 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 2.9514ms
+2025-03-31 23:23:07.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:23:07.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:23:07.486 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.486 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:23:07.486 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.485 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:23:07.487 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:23:07.487 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.487 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 0.7575ms
+2025-03-31 23:23:07.487 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.487 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:23:07.487 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:23:07.487 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.487 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:23:07.487 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.488 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 1.0619ms
+2025-03-31 23:23:07.488 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:23:07.488 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.488 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:23:07.488 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.488 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:23:07.488 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.488 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.9675ms
+2025-03-31 23:23:07.489 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 4.0647ms
+2025-03-31 23:23:07.489 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 5.3517ms
+2025-03-31 23:23:07.491 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:23:07.491 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:23:07.491 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:23:07.492 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - null null
+2025-03-31 23:23:07.492 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.492 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.492 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.6583ms
+2025-03-31 23:23:07.493 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/ClassShift.js - null null
+2025-03-31 23:23:07.494 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.494 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:23:07.494 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.495 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 3.2191ms
+2025-03-31 23:23:07.495 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 13.5006ms
+2025-03-31 23:23:07.496 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:23:07.496 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.496 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 12.4931ms
+2025-03-31 23:23:07.497 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:23:07.497 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.498 +07:00 [INF] Sending file. Request path: 'Admin/js/UploadFile.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tomjk8w83a-t1d3ou3poc.gz'
+2025-03-31 23:23:07.498 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - 200 3043 text/javascript 6.787ms
+2025-03-31 23:23:07.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 13.8869ms
+2025-03-31 23:23:07.499 +07:00 [INF] Sending file. Request path: 'Admin/js/ClassShift.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\gvg5f7biye-874nmgifbk.gz'
+2025-03-31 23:23:07.499 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:07.499 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/ClassShift.js - 200 6218 text/javascript 5.8861ms
+2025-03-31 23:23:07.507 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.1939ms
+2025-03-31 23:23:07.561 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:23:07.562 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:07.563 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:23:07.566 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:23:07.567 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:23:07.568 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassShift/listdata - null null
+2025-03-31 23:23:07.568 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity)'
+2025-03-31 23:23:07.569 +07:00 [INF] Executed PartialViewResult - view null executed in 1.2599ms.
+2025-03-31 23:23:07.569 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 5.2706ms
+2025-03-31 23:23:07.569 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:07.569 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 7.7862ms
+2025-03-31 23:23:07.572 +07:00 [INF] Route matched with {area = "Admin", action = "ListData", controller = "ClassShift"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.PartialViewResult] ListData() on controller WebUniversity.Areas.Admin.Controllers.ClassShiftController (WebUniversity).
+2025-03-31 23:23:07.591 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDay], [c].[EndTime], [c].[Name], [c].[StartTime], [c].[Status]
+FROM [ClassShift] AS [c]
+ORDER BY [c].[CreateDay] DESC
+2025-03-31 23:23:07.612 +07:00 [INF] Executing PartialViewResult, running view ListData.
+2025-03-31 23:23:07.617 +07:00 [INF] Executed PartialViewResult - view null executed in 6.1151ms.
+2025-03-31 23:23:07.620 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity) in 48.1297ms
+2025-03-31 23:23:07.620 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity)'
+2025-03-31 23:23:07.620 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassShift/listdata - 200 null text/html; charset=utf-8 52.5014ms
+2025-03-31 23:23:08.584 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/Course - null null
+2025-03-31 23:23:08.586 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.CourseController.Index (WebUniversity)'
+2025-03-31 23:23:08.587 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Course"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.CourseController (WebUniversity).
+2025-03-31 23:23:08.588 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:23:08.592 +07:00 [INF] Executed ViewResult - view Index executed in 4.8218ms.
+2025-03-31 23:23:08.593 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.CourseController.Index (WebUniversity) in 5.5602ms
+2025-03-31 23:23:08.593 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.CourseController.Index (WebUniversity)'
+2025-03-31 23:23:08.593 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/Course - 200 null text/html; charset=utf-8 8.7874ms
+2025-03-31 23:23:08.635 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:23:08.635 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:23:08.635 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:23:08.636 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:23:08.636 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:23:08.636 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:23:08.636 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 0.7045ms
+2025-03-31 23:23:08.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 0.6708ms
+2025-03-31 23:23:08.636 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 0.7039ms
+2025-03-31 23:23:08.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:23:08.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:23:08.637 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.637 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.637 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:23:08.637 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.637 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:23:08.637 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.637 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.7805ms
+2025-03-31 23:23:08.637 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.6157ms
+2025-03-31 23:23:08.637 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:23:08.638 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.638 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:23:08.638 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.638 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 0.7273ms
+2025-03-31 23:23:08.639 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:23:08.640 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.640 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:23:08.640 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:23:08.641 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.641 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:23:08.641 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.641 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 1.478ms
+2025-03-31 23:23:08.641 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:23:08.641 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.641 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:23:08.642 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.642 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:23:08.642 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.643 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:23:08.643 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.643 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:23:08.643 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.643 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 2.3107ms
+2025-03-31 23:23:08.643 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.643 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:23:08.643 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:23:08.644 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.644 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.644 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 1.7987ms
+2025-03-31 23:23:08.644 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:23:08.644 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.644 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:23:08.645 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.645 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:23:08.645 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.645 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:23:08.645 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.551ms
+2025-03-31 23:23:08.645 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.645 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:23:08.645 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:23:08.645 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.645 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.646 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:23:08.646 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 0.7769ms
+2025-03-31 23:23:08.646 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:23:08.646 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.646 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 5.7377ms
+2025-03-31 23:23:08.647 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 5.7044ms
+2025-03-31 23:23:08.648 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:23:08.648 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.648 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:23:08.648 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:23:08.648 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.648 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.649 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:23:08.649 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.649 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 0.8186ms
+2025-03-31 23:23:08.649 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:23:08.649 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.650 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 5.516ms
+2025-03-31 23:23:08.650 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:23:08.650 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.651 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/Course.js - null null
+2025-03-31 23:23:08.651 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:23:08.651 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - null null
+2025-03-31 23:23:08.652 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.651 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.4773ms
+2025-03-31 23:23:08.652 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:23:08.652 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.652 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 11.3044ms
+2025-03-31 23:23:08.652 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 6.7558ms
+2025-03-31 23:23:08.653 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:23:08.653 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.653 +07:00 [INF] Sending file. Request path: 'Admin/js/UploadFile.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tomjk8w83a-t1d3ou3poc.gz'
+2025-03-31 23:23:08.653 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.653 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - 200 3043 text/javascript 1.8842ms
+2025-03-31 23:23:08.653 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 8.3388ms
+2025-03-31 23:23:08.653 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:23:08.654 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.654 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 4.0382ms
+2025-03-31 23:23:08.656 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:23:08.656 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.656 +07:00 [INF] Sending file. Request path: 'Admin/js/Course.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\unlyh9wtva-w4a49jkumx.gz'
+2025-03-31 23:23:08.656 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:08.656 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/Course.js - 200 6200 text/javascript 4.9759ms
+2025-03-31 23:23:08.657 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 13.3815ms
+2025-03-31 23:23:08.665 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.471ms
+2025-03-31 23:23:08.714 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:23:08.714 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:08.714 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:23:08.717 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:23:08.717 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/Course/listdata - null null
+2025-03-31 23:23:08.718 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.CourseController.ListData (WebUniversity)'
+2025-03-31 23:23:08.718 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:23:08.719 +07:00 [INF] Executed PartialViewResult - view null executed in 0.5852ms.
+2025-03-31 23:23:08.719 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 4.6421ms
+2025-03-31 23:23:08.719 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:08.720 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 5.5038ms
+2025-03-31 23:23:08.722 +07:00 [INF] Route matched with {area = "Admin", action = "ListData", controller = "Course"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.PartialViewResult] ListData() on controller WebUniversity.Areas.Admin.Controllers.CourseController (WebUniversity).
+2025-03-31 23:23:08.765 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CourseName], [c].[CreateDay], [c].[LecturerId], [c].[SchoolYear], [c].[Semester], [c].[Status], [c].[SubjectId], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[CreateDay], [s].[Credit], [s].[FacultyId], [s].[Status], [s].[SubjectName]
+FROM [Course] AS [c]
+LEFT JOIN [Lecturer] AS [l] ON [c].[LecturerId] = [l].[Id]
+LEFT JOIN [Subject] AS [s] ON [c].[SubjectId] = [s].[Id]
+ORDER BY [c].[CreateDay] DESC
+2025-03-31 23:23:08.769 +07:00 [INF] Executing PartialViewResult, running view ListData.
+2025-03-31 23:23:08.773 +07:00 [INF] Executed PartialViewResult - view null executed in 3.7864ms.
+2025-03-31 23:23:08.773 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.CourseController.ListData (WebUniversity) in 51.1351ms
+2025-03-31 23:23:08.773 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.CourseController.ListData (WebUniversity)'
+2025-03-31 23:23:08.773 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/Course/listdata - 200 null text/html; charset=utf-8 55.8753ms
+2025-03-31 23:23:10.849 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassShift - null null
+2025-03-31 23:23:10.851 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity)'
+2025-03-31 23:23:10.851 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "ClassShift"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.ClassShiftController (WebUniversity).
+2025-03-31 23:23:10.851 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:23:10.853 +07:00 [INF] Executed ViewResult - view Index executed in 1.1859ms.
+2025-03-31 23:23:10.853 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity) in 1.5714ms
+2025-03-31 23:23:10.853 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.Index (WebUniversity)'
+2025-03-31 23:23:10.853 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassShift - 200 null text/html; charset=utf-8 3.3377ms
+2025-03-31 23:23:10.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:23:10.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:23:10.898 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.898 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.898 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:23:10.899 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:23:10.899 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:23:10.899 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:23:10.899 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:23:10.899 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:23:10.899 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:23:10.899 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 1.1873ms
+2025-03-31 23:23:10.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 1.1873ms
+2025-03-31 23:23:10.899 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 0.5444ms
+2025-03-31 23:23:10.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.5177ms
+2025-03-31 23:23:10.899 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:23:10.899 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.4792ms
+2025-03-31 23:23:10.901 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:23:10.901 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.901 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:23:10.901 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:23:10.901 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:23:10.901 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.901 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.902 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.902 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:23:10.902 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.902 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 0.8916ms
+2025-03-31 23:23:10.902 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 0.5338ms
+2025-03-31 23:23:10.902 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:23:10.902 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.902 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:23:10.902 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:23:10.903 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:23:10.903 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.903 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.903 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:23:10.903 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.903 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:23:10.903 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.903 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 2.1366ms
+2025-03-31 23:23:10.903 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 0.7305ms
+2025-03-31 23:23:10.904 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:23:10.904 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.904 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:23:10.904 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.904 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 1.8368ms
+2025-03-31 23:23:10.904 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 1.4009ms
+2025-03-31 23:23:10.905 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:23:10.905 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.905 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:23:10.906 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:23:10.906 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.906 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:23:10.906 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.907 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:23:10.907 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.907 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.908 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:23:10.908 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.908 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 1.2573ms
+2025-03-31 23:23:10.909 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:23:10.909 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:23:10.909 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.909 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.909 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:23:10.910 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.911 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:23:10.911 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.912 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:23:10.912 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.912 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 3.2823ms
+2025-03-31 23:23:10.912 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 9.8188ms
+2025-03-31 23:23:10.912 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:23:10.912 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.913 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/ClassShift.js - null null
+2025-03-31 23:23:10.913 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.913 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 7.8107ms
+2025-03-31 23:23:10.914 +07:00 [INF] Sending file. Request path: 'Admin/js/ClassShift.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\gvg5f7biye-874nmgifbk.gz'
+2025-03-31 23:23:10.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 8.2115ms
+2025-03-31 23:23:10.914 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/ClassShift.js - 200 6218 text/javascript 1.1781ms
+2025-03-31 23:23:10.914 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:23:10.914 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.914 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 5.0531ms
+2025-03-31 23:23:10.914 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - null null
+2025-03-31 23:23:10.914 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:23:10.914 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:23:10.914 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:23:10.914 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.915 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.915 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.4165ms
+2025-03-31 23:23:10.915 +07:00 [INF] Sending file. Request path: 'Admin/js/UploadFile.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tomjk8w83a-t1d3ou3poc.gz'
+2025-03-31 23:23:10.915 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.915 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - 200 3043 text/javascript 1.211ms
+2025-03-31 23:23:10.917 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:23:10.918 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 11.9ms
+2025-03-31 23:23:10.918 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.918 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:23:10.918 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.918 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.9937ms
+2025-03-31 23:23:10.920 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:23:10.920 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:23:10.922 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 16.8261ms
+2025-03-31 23:23:10.923 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.6728ms
+2025-03-31 23:23:10.973 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:23:10.974 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:10.974 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:23:10.977 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:23:10.977 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassShift/listdata - null null
+2025-03-31 23:23:10.978 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:23:10.978 +07:00 [INF] Executed PartialViewResult - view null executed in 0.5734ms.
+2025-03-31 23:23:10.978 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 4.2599ms
+2025-03-31 23:23:10.978 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:23:10.979 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 5.3702ms
+2025-03-31 23:23:10.980 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity)'
+2025-03-31 23:23:10.980 +07:00 [INF] Route matched with {area = "Admin", action = "ListData", controller = "ClassShift"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.PartialViewResult] ListData() on controller WebUniversity.Areas.Admin.Controllers.ClassShiftController (WebUniversity).
+2025-03-31 23:23:10.982 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CreateDay], [c].[EndTime], [c].[Name], [c].[StartTime], [c].[Status]
+FROM [ClassShift] AS [c]
+ORDER BY [c].[CreateDay] DESC
+2025-03-31 23:23:10.983 +07:00 [INF] Executing PartialViewResult, running view ListData.
+2025-03-31 23:23:10.983 +07:00 [INF] Executed PartialViewResult - view null executed in 0.7947ms.
+2025-03-31 23:23:10.983 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity) in 3.6204ms
+2025-03-31 23:23:10.984 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassShiftController.ListData (WebUniversity)'
+2025-03-31 23:23:10.984 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassShift/listdata - 200 null text/html; charset=utf-8 6.2666ms
+2025-03-31 23:26:50.418 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassSchedule - null null
+2025-03-31 23:26:50.423 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassScheduleController.Index (WebUniversity)'
+2025-03-31 23:26:50.425 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "ClassSchedule"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.ClassScheduleController (WebUniversity).
+2025-03-31 23:26:50.426 +07:00 [INF] Executing ViewResult, running view Index.
+2025-03-31 23:26:50.431 +07:00 [INF] Executed ViewResult - view Index executed in 5.518ms.
+2025-03-31 23:26:50.431 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassScheduleController.Index (WebUniversity) in 6.4345ms
+2025-03-31 23:26:50.431 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassScheduleController.Index (WebUniversity)'
+2025-03-31 23:26:50.432 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassSchedule - 200 null text/html; charset=utf-8 13.4599ms
+2025-03-31 23:26:50.480 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-03-31 23:26:50.479 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-03-31 23:26:50.480 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.480 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.481 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-03-31 23:26:50.481 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.481 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-03-31 23:26:50.481 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 1.2989ms
+2025-03-31 23:26:50.481 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-03-31 23:26:50.481 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.481 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 1.5236ms
+2025-03-31 23:26:50.481 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-03-31 23:26:50.482 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.482 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-03-31 23:26:50.482 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-03-31 23:26:50.482 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 1.0132ms
+2025-03-31 23:26:50.482 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.482 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.482 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-03-31 23:26:50.482 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-03-31 23:26:50.482 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.482 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.482 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.7579ms
+2025-03-31 23:26:50.482 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.5605ms
+2025-03-31 23:26:50.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-03-31 23:26:50.484 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-03-31 23:26:50.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-03-31 23:26:50.485 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.485 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.485 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-03-31 23:26:50.485 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 1.0673ms
+2025-03-31 23:26:50.485 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.485 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-03-31 23:26:50.485 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-03-31 23:26:50.485 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.485 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 0.9288ms
+2025-03-31 23:26:50.485 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.486 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-03-31 23:26:50.486 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.486 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 1.7643ms
+2025-03-31 23:26:50.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-03-31 23:26:50.487 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-03-31 23:26:50.487 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.487 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.487 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 1.6607ms
+2025-03-31 23:26:50.487 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-03-31 23:26:50.487 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.489 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-03-31 23:26:50.489 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.490 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-03-31 23:26:50.490 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-03-31 23:26:50.490 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.491 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.491 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-03-31 23:26:50.491 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.491 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 0.6007ms
+2025-03-31 23:26:50.491 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-03-31 23:26:50.491 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.495 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-03-31 23:26:50.495 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.495 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-03-31 23:26:50.495 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.496 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-03-31 23:26:50.496 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.496 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.7993ms
+2025-03-31 23:26:50.496 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-03-31 23:26:50.496 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.498 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-03-31 23:26:50.498 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.498 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 1.7696ms
+2025-03-31 23:26:50.498 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-03-31 23:26:50.498 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.499 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-03-31 23:26:50.499 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-03-31 23:26:50.501 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.501 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-03-31 23:26:50.501 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-03-31 23:26:50.501 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 3.3694ms
+2025-03-31 23:26:50.501 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.502 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 14.333ms
+2025-03-31 23:26:50.502 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.502 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/ClassSchedule.js - null null
+2025-03-31 23:26:50.503 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.503 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-03-31 23:26:50.503 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.503 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-03-31 23:26:50.503 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.503 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - null null
+2025-03-31 23:26:50.503 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-03-31 23:26:50.504 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.504 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.504 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-31 23:26:50.504 +07:00 [INF] Sending file. Request path: 'Admin/js/UploadFile.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tomjk8w83a-t1d3ou3poc.gz'
+2025-03-31 23:26:50.504 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.504 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/UploadFile.js - 200 3043 text/javascript 0.748ms
+2025-03-31 23:26:50.504 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-03-31 23:26:50.504 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.6218ms
+2025-03-31 23:26:50.504 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.505 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 1.8705ms
+2025-03-31 23:26:50.505 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-03-31 23:26:50.505 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.505 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 3.5344ms
+2025-03-31 23:26:50.506 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-03-31 23:26:50.508 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 6.7746ms
+2025-03-31 23:26:50.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 21.6047ms
+2025-03-31 23:26:50.511 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 20.4351ms
+2025-03-31 23:26:50.515 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 8.2813ms
+2025-03-31 23:26:50.522 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-03-31 23:26:50.523 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.523 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-03-31 23:26:50.523 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.523 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 0.7389ms
+2025-03-31 23:26:50.541 +07:00 [INF] Sending file. Request path: 'Admin/js/ClassSchedule.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oq7wmb8ovz-mn2mfr5a1k.gz'
+2025-03-31 23:26:50.541 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-03-31 23:26:50.541 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/ClassSchedule.js - 200 6242 text/javascript 38.8247ms
+2025-03-31 23:26:50.541 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 54.9603ms
+2025-03-31 23:26:50.589 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-03-31 23:26:50.590 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:26:50.590 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-03-31 23:26:50.593 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/ClassSchedule/listdata - null null
+2025-03-31 23:26:50.594 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.ClassScheduleController.ListData (WebUniversity)'
+2025-03-31 23:26:50.597 +07:00 [INF] Route matched with {area = "Admin", action = "ListData", controller = "ClassSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.PartialViewResult] ListData() on controller WebUniversity.Areas.Admin.Controllers.ClassScheduleController (WebUniversity).
+2025-03-31 23:26:50.609 +07:00 [INF] Executed DbCommand (18ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-03-31 23:26:50.611 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-03-31 23:26:50.612 +07:00 [INF] Executed PartialViewResult - view null executed in 0.6651ms.
+2025-03-31 23:26:50.612 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 22.1943ms
+2025-03-31 23:26:50.612 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-03-31 23:26:50.613 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 23.6846ms
+2025-03-31 23:26:50.679 +07:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[ClassId], [c].[ClassShiftId], [c].[CourseId], [c].[CreateDay], [c].[DayOfWeek], [c].[EndDay], [c].[RoomId], [c].[StartDay], [c].[Status], [c0].[Id], [c0].[ClassName], [c0].[CreateDay], [c0].[FacultyId], [c0].[Status], [c1].[Id], [c1].[CourseName], [c1].[CreateDay], [c1].[LecturerId], [c1].[SchoolYear], [c1].[Semester], [c1].[Status], [c1].[SubjectId], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [r].[Id], [r].[Building], [r].[CreateDay], [r].[Floor], [r].[Name], [r].[Status], [r].[Vacuity], [c2].[Id], [c2].[CreateDay], [c2].[EndTime], [c2].[Name], [c2].[StartTime], [c2].[Status]
+FROM [ClassSchedule] AS [c]
+INNER JOIN [Class] AS [c0] ON [c].[ClassId] = [c0].[Id]
+INNER JOIN [Course] AS [c1] ON [c].[CourseId] = [c1].[Id]
+LEFT JOIN [Lecturer] AS [l] ON [c1].[LecturerId] = [l].[Id]
+INNER JOIN [Room] AS [r] ON [c].[RoomId] = [r].[Id]
+INNER JOIN [ClassShift] AS [c2] ON [c].[ClassShiftId] = [c2].[Id]
+ORDER BY [c].[CreateDay] DESC
+2025-03-31 23:26:50.756 +07:00 [INF] Executing PartialViewResult, running view ListData.
+2025-03-31 23:26:50.761 +07:00 [INF] Executed PartialViewResult - view ListData executed in 5.4064ms.
+2025-03-31 23:26:50.765 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.ClassScheduleController.ListData (WebUniversity) in 168.0729ms
+2025-03-31 23:26:50.766 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.ClassScheduleController.ListData (WebUniversity)'
+2025-03-31 23:26:50.766 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/ClassSchedule/listdata - 200 null text/html; charset=utf-8 172.4813ms

@@ -20,15 +20,15 @@
                     series: [
                         {
                             name: 'Students',
-                            data: studentCounts
+                            data: [2000,3560,2300,4000,3560]
                         },
                         {
                             name: 'Lecturers',
-                            data: lecturerCounts
+                            data: [50,46,51,66,60]
                         },
                         {
                             name: 'Rooms',
-                            data: roomCounts
+                            data: [100,150,200,210,300]
                         }
                     ],
                     chart: {

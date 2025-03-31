@@ -168,7 +168,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi đổi mật khẩu: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi đổi mật khẩu: {objData.Username}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
         }

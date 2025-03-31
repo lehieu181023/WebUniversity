@@ -23,13 +23,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -53,7 +53,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -75,7 +75,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Create")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Create")]
         public PartialViewResult Create()
         {
             var lstCourse = _db.Course.Where(s => s.Status).ToList();
@@ -91,7 +91,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView();
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Create")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,CourseId,ClassId,ClassShiftId,RoomId,StartDay,EndDay,DayOfWeek,Status")] Models.ClassSchedule obj)
         {
@@ -99,7 +99,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
 
@@ -121,12 +121,12 @@ namespace WebUniversity.Areas.Admin.Controllers
                     }
                 }
 
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lịch học: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lịch học");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Edit")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -152,7 +152,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Edit")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,CourseId,ClassId,ClassShiftId,RoomId,StartDay,EndDay,DayOfWeek,Status")] Models.ClassSchedule obj, int? Id)
         {
@@ -206,12 +206,12 @@ namespace WebUniversity.Areas.Admin.Controllers
                         return Json(new { success = false, message = sqlException.Message });
                     }
                 }
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lịch học: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lịch học");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Delete")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Delete")]
         public JsonResult Delete(int? id)
         {
             ClassSchedule obj = null;
@@ -240,7 +240,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "ClassSchedule|ClassSchedule.Edit")]
+        [Authorize(Roles = "ClassSchedule,ClassSchedule.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

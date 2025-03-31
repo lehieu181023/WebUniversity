@@ -22,13 +22,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize]
+        [Authorize(Roles = "Room,Room.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "Room|Room.View")]
+        [Authorize(Roles = "Room,Room.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -45,7 +45,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "Room|Room.View")]
+        [Authorize(Roles = "Room,Room.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -61,13 +61,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "Room|Room.Create")]
+        [Authorize(Roles = "Room,Room.Create")]
         public PartialViewResult Create()
         {
             return PartialView();
         }
 
-        [Authorize(Roles = "Room|Room.Create")]
+        [Authorize(Roles = "Room,Room.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,Name,Building,Floor,Vacuity,Status")] Models.Room obj)
         {
@@ -75,7 +75,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
 
@@ -88,12 +88,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             catch (Exception ex)
             {
                 string currentUser = User.Identity?.Name ?? "Unknown";
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm phòng: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm phòng");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
 
-        [Authorize(Roles = "Room|Room.Edit")]
+        [Authorize(Roles = "Room,Room.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -110,7 +110,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "Room|Room.Edit")]
+        [Authorize(Roles = "Room,Room.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,Name,Building,Floor,Vacuity,Status")] Models.Room obj, int? Id)
         {
@@ -152,14 +152,14 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật phòng: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật phòng: {obj.Name}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        [Authorize(Roles = "Room|Room.Delete")]
+        [Authorize(Roles = "Room,Room.Delete")]
         public JsonResult Delete(int? id)
         {
             Room obj = null;
@@ -188,7 +188,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "Room|Room.Edit")]
+        [Authorize(Roles = "Room,Room.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)
@@ -216,7 +216,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được cập nhật trạng thái thành công" });
         }
 
-        [Authorize(Roles = "Room|Room.Edit")]
+        [Authorize(Roles = "Room,Room.Edit")]
         public async Task<JsonResult> Vacuity(int? id)
         {
             if (id == null)

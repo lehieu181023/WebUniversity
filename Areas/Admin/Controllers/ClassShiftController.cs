@@ -28,7 +28,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return View();
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.View")]
+        [Authorize(Roles = "ClassShift,ClassShift.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -45,7 +45,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.View")]
+        [Authorize(Roles = "ClassShift,ClassShift.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -61,13 +61,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Create")]
+        [Authorize(Roles = "ClassShift,ClassShift.Create")]
         public PartialViewResult Create()
         {
             return PartialView();
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Create")]
+        [Authorize(Roles = "ClassShift,ClassShift.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,Name,StartTime,EndTime,Status")] Models.ClassShift obj)
         {
@@ -81,19 +81,19 @@ namespace WebUniversity.Areas.Admin.Controllers
                 }
                 else
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi thêm ClassShift: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi thêm ClassShift");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
             return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Edit")]
+        [Authorize(Roles = "ClassShift,ClassShift.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -110,7 +110,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Edit")]
+        [Authorize(Roles = "ClassShift,ClassShift.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,Name,StartTime,EndTime,Status")] Models.ClassShift obj, int? Id)
         {
@@ -150,14 +150,14 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật ClassShift: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật ClassShift");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Delete")]
+        [Authorize(Roles = "ClassShift,ClassShift.Delete")]
         public JsonResult Delete(int? id)
         {
             ClassShift obj = null;
@@ -185,7 +185,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "ClassShift|ClassShift.Edit")]
+        [Authorize(Roles = "ClassShift,ClassShift.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

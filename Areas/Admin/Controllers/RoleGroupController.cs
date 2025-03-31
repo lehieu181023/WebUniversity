@@ -23,13 +23,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.View")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.View")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -46,7 +46,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.View")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.View")]
         public async Task<ActionResult> RoleInRoleGroup(int? Id)
         {
             if (Id == null)
@@ -68,13 +68,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Create")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Create")]
         public PartialViewResult Create()
         {
             return PartialView();
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Edit")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditRoleInRoleGroup(int Id = 0, string selectedValues = "")
         {
@@ -114,7 +114,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Create")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,NameRoleGroup,Status")] Models.RoleGroup obj)
         {
@@ -124,23 +124,23 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.RoleGroup.Add(obj);
                     await _db.SaveChangesAsync();
-                    _logger.LogInformation($"[{User.Identity?.Name}] Created new RoleGroup: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogInformation($"[{User.Identity?.Name}] Created new RoleGroup: {obj.NameRoleGroup}");
                     return Json(new { success = true, message = "Thêm mới thành công" });
                 }
                 else
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Invalid data input: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Invalid data input: ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Error creating RoleGroup: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Error creating RoleGroup");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Edit")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -156,7 +156,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Edit")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,NameRoleGroup,Status")] Models.RoleGroup obj, int? Id)
         {
@@ -200,7 +200,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Delete")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Delete")]
         public JsonResult Delete(int? id)
         {
             RoleGroup obj = null;
@@ -229,7 +229,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "RoleGroup|RoleGroup.Edit")]
+        [Authorize(Roles = "RoleGroup,RoleGroup.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

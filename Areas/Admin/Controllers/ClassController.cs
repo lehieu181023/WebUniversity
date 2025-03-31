@@ -22,13 +22,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Roles = "Class|Class.View")]
+        [Authorize(Roles = "Class,Class.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "Class|Class.View")]
+        [Authorize(Roles = "Class,Class.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -45,7 +45,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "Class|Class.View")]
+        [Authorize(Roles = "Class,Class.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -62,7 +62,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "Class|Class.Create")]
+        [Authorize(Roles = "Class,Class.Create")]
         public PartialViewResult Create()
         {
             var listfaculty = _db.Faculty.ToList();
@@ -70,7 +70,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView();
         }
 
-        [Authorize(Roles = "Class|Class.Create")]
+        [Authorize(Roles = "Class,Class.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,ClassName,FacultyId,Status")] Models.Class obj)
         {
@@ -78,7 +78,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
 
@@ -101,12 +101,12 @@ namespace WebUniversity.Areas.Admin.Controllers
                     }
                 }
 
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lớp: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lớp");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
 
-        [Authorize(Roles = "Class|Class.Edit")]
+        [Authorize(Roles = "Class,Class.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -125,7 +125,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "Class|Class.Edit")]
+        [Authorize(Roles = "Class,Class.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,ClassName,FacultyId,Status")] Models.Class obj, int? Id)
         {
@@ -168,12 +168,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lớp: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lớp: {Id}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
         }
 
-        [Authorize(Roles = "Class|Class.Delete")]
+        [Authorize(Roles = "Class,Class.Delete")]
         public JsonResult Delete(int? id)
         {
             Class obj = null;
@@ -202,7 +202,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "Class|Class.Edit")]
+        [Authorize(Roles = "Class,Class.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)

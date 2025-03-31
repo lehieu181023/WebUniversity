@@ -23,7 +23,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Roles = "Student|Student.View")]
+       
         public ActionResult Index(int ClassId = 0)
         {
             var roles = User.Claims
@@ -37,7 +37,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return View();
         }
 
-        [Authorize(Roles = "Student|Student.View")]
+        [Authorize(Roles = "Student,Student.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData(int ClassId = 0)
         {
@@ -60,7 +60,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "Student|Student.View")]
+        [Authorize(Roles = "Student,Student.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -75,7 +75,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "Student|Student.Create")]
+        [Authorize(Roles = "Student,Student.Create")]
         public PartialViewResult Create()
         {
             var listclass = _db.Class.AsNoTracking().ToList();
@@ -83,7 +83,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView();
         }
 
-        [Authorize(Roles = "Student|Student.Create")]
+        [Authorize(Roles = "Student,Student.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,FullName,BirthDate,Gender,Address,Email,PhoneNumber,ClassId,Status,Image,Cccd")] Models.Student obj)
         {
@@ -93,7 +93,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Student.Add(obj);
                     await _db.SaveChangesAsync();
-                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo học sinh mới: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo học sinh mới: {obj.FullName} - {obj.StudentCode}");
                 }
                 else
                 {
@@ -102,7 +102,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                         .Select(e => e.ErrorMessage)
                         .ToList();
 
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập: " + string.Join("; ", errors) });
                 }
 
@@ -120,20 +120,20 @@ namespace WebUniversity.Areas.Admin.Controllers
                     }
                 }
 
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm học sinh: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm học sinh");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
             return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
-        [Authorize(Roles = "Student|Student.Create")]
+        [Authorize(Roles = "Student,Student.Create")]
         public PartialViewResult CreateAccount(string selectedValues = "")
         {
             ViewData["selectedValues"] = selectedValues;
             return PartialView();
         }
 
-        [Authorize(Roles = "Student|Student.Create")]
+        [Authorize(Roles = "Student,Student.Create")]
         [HttpPost]
         public async Task<JsonResult> CreateAcountStdent(string selectedValues = "", string Password = "")
         {
@@ -168,7 +168,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Account.AddRange(lstAccount);
                     await _db.SaveChangesAsync(); // Lưu vào database
-                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo tài khoản mới cho học sinh: {JsonConvert.SerializeObject(lstAccount)}");
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo tài khoản mới cho học sinh: ");
                 }
             }
             catch (Exception ex)
@@ -183,13 +183,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                         return Json(new { success = false, message = "Có học sinh đã tạo tài khoản!" });
                     }
                 }
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản: {JsonConvert.SerializeObject(lstAccount)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
             return Json(new { success = true, message = "Thêm tài khoản thành công" });
         }
 
-        [Authorize(Roles = "Student|Student.Edit")]
+        [Authorize(Roles = "Student,Student.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -208,7 +208,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "Student|Student.Edit")]
+        [Authorize(Roles = "Student,Student.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,FullName,BirthDate,Gender,Address,Email,PhoneNumber,ClassId,Status,Image,Cccd")] Models.Student obj, int? Id)
         {
@@ -236,7 +236,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Image = obj.Image;
                 objData.Cccd = obj.Cccd;
                 await _db.SaveChangesAsync();
-                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật học sinh: {JsonConvert.SerializeObject(objData)}");
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật học sinh: {obj.FullName} - {obj.StudentCode}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -255,15 +255,15 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật học sinh: {JsonConvert.SerializeObject(objData)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật học sinh: {Id}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
             return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
-        [Authorize(Roles = "Student|Student.Delete")]
-        public JsonResult Delete(int? id)
+        [Authorize(Roles = "Student,Student.Delete")]
+        public async Task<JsonResult> Delete(int? id)
         {
             Student obj = null;
 
@@ -273,24 +273,24 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             try
             {
-                obj = _db.Student.Find(id);
+                obj = await _db.Student.FindAsync(id);
                 if (obj != null)
                 {
                     _db.Student.Remove(obj);
                     _db.SaveChanges();
-                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa học sinh: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa học sinh: {obj.FullName} - {obj.StudentCode}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa học sinh: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa học sinh: {id}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "Student|Student.Edit")]
+        [Authorize(Roles = "Student,Student.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)
@@ -306,11 +306,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
-                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái học sinh: {JsonConvert.SerializeObject(objData)}");
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái học sinh: {objData.FullName} - {objData.StudentCode}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái học sinh: {JsonConvert.SerializeObject(objData)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái học sinh: {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 

@@ -751,7 +751,6 @@ D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\29wpljdwx4-vvb1phdl44
 D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Castle.Core.dll
 D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wvlier2r3e-kzrgsve2a4.gz
-D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\n2ffmjvyfl-rx5aplolgr.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\rb2albpwza-qir2bsos44.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\644ikfh634-1btxpmx81r.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\niby1yd3g0-ive1fon2cn.gz
@@ -1153,3 +1152,4 @@ D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Rotativa.AspNetCore.dll
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\WebUniversity.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\fvv27oc137-3abn0kryoz.gz
+D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\n2ffmjvyfl-7wbo1iy1br.gz

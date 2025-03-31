@@ -22,13 +22,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Roles = "Course|Course.View")]
+        [Authorize(Roles = "Course,Course.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Roles = "Course|Course.View")]
+        [Authorize(Roles = "Course,Course.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -47,7 +47,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(listData);
         }
 
-        [Authorize(Roles = "Course|Course.View")]
+        [Authorize(Roles = "Course,Course.View")]
         public async Task<ActionResult> Detail(int? id)
         {
             if (id == null)
@@ -64,7 +64,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(objData);
         }
 
-        [Authorize(Roles = "Course|Course.Create")]
+        [Authorize(Roles = "Course,Course.Create")]
         public PartialViewResult Create()
         {
             var listsubject = _db.Subject.AsNoTracking().ToList();
@@ -75,7 +75,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView();
         }
 
-        [Authorize(Roles = "Course|Course.Create")]
+        [Authorize(Roles = "Course,Course.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,SubjectId,LecturerId,Semester,SchoolYear,Status")] Models.Course obj)
         {
@@ -109,19 +109,19 @@ namespace WebUniversity.Areas.Admin.Controllers
                 }
                 else
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
             }
             catch (Exception ex)
             {
                 string currentUser = User.Identity?.Name ?? "Unknown";
-                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm khóa học: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm khóa học");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
         }
 
-        [Authorize(Roles = "Course|Course.Edit")]
+        [Authorize(Roles = "Course,Course.Edit")]
         public async Task<ActionResult> Edit(int? id)
         {
             if (id == null)
@@ -142,7 +142,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return PartialView(obj);
         }
 
-        [Authorize(Roles = "Course|Course.Edit")]
+        [Authorize(Roles = "Course,Course.Edit")]
         [HttpPost]
         public async Task<JsonResult> EditPost([Bind("Id,SubjectId,LecturerId,Semester,SchoolYear,Status")] Models.Course obj, int? Id)
         {
@@ -189,7 +189,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 }
                 else
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Dữ liệu không hợp lệ" });
                 }
             }
@@ -199,23 +199,23 @@ namespace WebUniversity.Areas.Admin.Controllers
                 var databaseEntry = entry.GetDatabaseValues();
                 if (databaseEntry == null)
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị xóa bởi người dùng khác: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị xóa bởi người dùng khác: ");
                     return Json(new { success = false, message = "Bản ghi này đã bị xóa bởi người dùng khác" });
                 }
                 else
                 {
-                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị sửa bởi người dùng khác: {JsonConvert.SerializeObject(obj)}");
+                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị sửa bởi người dùng khác");
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật khóa học: {JsonConvert.SerializeObject(obj)}");
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật khóa học");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
         }
 
-        [Authorize(Roles = "Course|Course.Delete")]
+        [Authorize(Roles = "Course,Course.Delete")]
         public JsonResult Delete(int? id)
         {
             Course obj = null;
@@ -243,7 +243,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, message = "Bản ghi đã được xóa thành công" });
         }
 
-        [Authorize(Roles = "Course|Course.Edit")]
+        [Authorize(Roles = "Course,Course.Edit")]
         public async Task<JsonResult> Status(int? id)
         {
             if (id == null)
