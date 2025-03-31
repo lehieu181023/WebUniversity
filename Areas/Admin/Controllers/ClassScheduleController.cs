@@ -14,11 +14,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class ClassScheduleController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<ClassScheduleController> _logger;
         private const string KeyCache = "ClassSchedule";
 
-        public ClassScheduleController(DBContext db)
+        public ClassScheduleController(DBContext db, ILogger<ClassScheduleController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
@@ -26,6 +28,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             return View();
         }
+
         [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
@@ -41,15 +44,15 @@ namespace WebUniversity.Areas.Admin.Controllers
                     .OrderByDescending(g => g.CreateDay)
                     .ToListAsync();
 
-                return PartialView("ListData", listData); // Đặt tên PartialView cụ thể
+                return PartialView("ListData", listData);
             }
             catch (Exception ex)
             {
-                // Ghi log lỗi
                 Console.WriteLine(ex.Message);
-                return PartialView("_ErrorPartial"); // Trả về một PartialView thông báo lỗi
+                return PartialView("_ErrorPartial");
             }
         }
+
         [Authorize(Roles = "ClassSchedule|ClassSchedule.View")]
         public async Task<ActionResult> Detail(int? id)
         {
@@ -80,48 +83,47 @@ namespace WebUniversity.Areas.Admin.Controllers
             var lstRoom = _db.Room.Where(s => s.Status).ToList();
             var lstClass = _db.Class.Where(s => s.Status).ToList();
 
-            ViewData["lstCourse"] = new SelectList(lstCourse,"Id","CourseName");
+            ViewData["lstCourse"] = new SelectList(lstCourse, "Id", "CourseName");
             ViewData["lstCS"] = new SelectList(lstCS, "Id", "Name");
             ViewData["lstRoom"] = new SelectList(lstRoom, "Id", "Name");
             ViewData["lstClass"] = new SelectList(lstClass, "Id", "ClassName");
 
-
             return PartialView();
         }
+
         [Authorize(Roles = "ClassSchedule|ClassSchedule.Create")]
         [HttpPost]
         public async Task<JsonResult> Create([Bind("Id,CourseId,ClassId,ClassShiftId,RoomId,StartDay,EndDay,DayOfWeek,Status")] Models.ClassSchedule obj)
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    _db.ClassSchedule.Add(obj);
-                    await _db.SaveChangesAsync();
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
+                    return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
-                else
-                {
-                    var errors = ModelState.Values
-                    .SelectMany(v => v.Errors)
-                    .Select(e => e.ErrorMessage)
-                    .ToList();
 
-                    return Json(new { success = false, message = "Lỗi dữ liệu nhập: "+errors  });
-                }
+                _db.ClassSchedule.Add(obj);
+                await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo lịch học mới: ClassId = {obj.ClassId}, CourseId = {obj.CourseId}");
+                return Json(new { success = true, message = "Thêm mới thành công" });
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
+
                 if (ex.InnerException is SqlException sqlException)
                 {
-                    if (sqlException.Number == 50000) // Mã lỗi từ RAISERROR
+                    if (sqlException.Number == 50000)
                     {
                         return Json(new { success = false, message = sqlException.Message });
                     }
                 }
+
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lịch học: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
         [Authorize(Roles = "ClassSchedule|ClassSchedule.Edit")]
@@ -174,20 +176,16 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.StartDay = obj.StartDay;
                 objData.EndDay = obj.EndDay;
                 objData.DayOfWeek = obj.DayOfWeek;
-
                 objData.Status = obj.Status;
 
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật lịch học: Id = {objData.Id}");
+                return Json(new { success = true, message = "Cập nhật thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
-                if (ex.InnerException is SqlException sqlException)
-                {
-                    if (sqlException.Number == 50000) // Mã lỗi từ RAISERROR
-                    {
-                        return Json(new { success = false, message = sqlException.Message });
-                    }
-                }
+                
                 var entry = ex.Entries.Single();
                 var databaseEntry = entry.GetDatabaseValues();
                 if (databaseEntry == null)
@@ -198,15 +196,19 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
-
-
             }
             catch (Exception ex)
             {
+                if (ex.InnerException is SqlException sqlException)
+                {
+                    if (sqlException.Number == 50000)
+                    {
+                        return Json(new { success = false, message = sqlException.Message });
+                    }
+                }
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lịch học: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
-
-            return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
         [Authorize(Roles = "ClassSchedule|ClassSchedule.Delete")]
@@ -225,10 +227,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.ClassSchedule.Remove(obj);
                     _db.SaveChanges();
+
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa lịch học: Id = {obj.Id}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa lịch học: Id = {id}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -251,14 +256,15 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã thay đổi trạng thái lịch học: Id = {objData.Id}, Status = {objData.Status}");
+                return Json(new { success = true, message = "Bản ghi đã được cập nhật trạng thái thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi thay đổi trạng thái lịch học: Id = {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
-
-            return Json(new { success = true, message = "Bản ghi đã được cập nhật trạng thái thành công" });
         }
 
         protected override void Dispose(bool disposing)

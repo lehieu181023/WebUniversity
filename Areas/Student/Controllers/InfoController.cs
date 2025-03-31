@@ -42,7 +42,7 @@ namespace WebUniversity.Areas.Stu.Controllers
 
             return View(student);
         }
-
+        [Authorize(Roles = "StudentRole")]
         public IActionResult ReportViewPDF()
         {
             if (!User.Identity!.IsAuthenticated)

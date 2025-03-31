@@ -1152,3 +1152,4 @@ D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg
 D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Rotativa.AspNetCore.dll
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\WebUniversity.MvcApplicationPartsAssemblyInfo.cs
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz
+D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\fvv27oc137-3abn0kryoz.gz

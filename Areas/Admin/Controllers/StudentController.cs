@@ -14,16 +14,18 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class StudentController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<StudentController> _logger;
         private const string KeyCache = "Student";
 
-        public StudentController(DBContext db)
+        public StudentController(DBContext db, ILogger<StudentController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize(Roles = "Student|Student.View")]
         public ActionResult Index(int ClassId = 0)
-       {
+        {
             var roles = User.Claims
                     .Where(c => c.Type == ClaimTypes.Role)
                     .Select(c => c.Value)
@@ -42,20 +44,19 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.Student> listData = null;
             try
             {
-                var list = _db.Student.AsQueryable();
-                list = list.Include(x => x.Class);
+                var list = _db.Student.AsNoTracking().AsQueryable();
                 if (ClassId > 0)
                 {
                     list = list.Where(x => x.ClassId == ClassId);
                 }
 
-                listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
+                listData = await list.Include(x => x.Class).OrderByDescending(g => g.CreateDay).ToListAsync();
             }
             catch (Exception ex)
             {
-                
+                _logger.LogError(ex, "Error fetching student list data.");
             }
-            
+
             return PartialView(listData);
         }
 
@@ -66,20 +67,18 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Student objData = await _db.Student.FindAsync(id);
+            Models.Student objData = await _db.Student.Include(x => x.Class).AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
             if (objData == null)
             {
                 return Json(new { success = false, message = " Bản ghi không tồn tại" });
             }
-            var listclass = _db.Class.ToList();
-            ViewData["listclass"] = listclass;
             return PartialView(objData);
         }
 
         [Authorize(Roles = "Student|Student.Create")]
         public PartialViewResult Create()
         {
-            var listclass = _db.Class.ToList();
+            var listclass = _db.Class.AsNoTracking().ToList();
             ViewData["listclass"] = listclass;
             return PartialView();
         }
@@ -94,6 +93,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Student.Add(obj);
                     await _db.SaveChangesAsync();
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo học sinh mới: {JsonConvert.SerializeObject(obj)}");
                 }
                 else
                 {
@@ -102,25 +102,29 @@ namespace WebUniversity.Areas.Admin.Controllers
                         .Select(e => e.ErrorMessage)
                         .ToList();
 
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập: " + string.Join("; ", errors) });
                 }
 
             }
             catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
+
                 if (ex.InnerException is SqlException sqlEx)
                 {
                     if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
                     {
+                        _logger.LogWarning($"[{currentUser}] Thêm học sinh thất bại: Email hoặc Số điện thoại {obj.Email} đã tồn tại.");
                         return Json(new { success = false, message = "Email hoặc Số điện thoại đã tồn tại!" });
                     }
                 }
 
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm học sinh: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
             return Json(new { success = true, message = "Thêm mới thành công" });
         }
-
 
         [Authorize(Roles = "Student|Student.Create")]
         public PartialViewResult CreateAccount(string selectedValues = "")
@@ -133,6 +137,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         [HttpPost]
         public async Task<JsonResult> CreateAcountStdent(string selectedValues = "", string Password = "")
         {
+            List<Account> lstAccount = new List<Account>();
             try
             {
                 // Chuyển chuỗi thành danh sách các RoleId
@@ -140,7 +145,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                                  .Split(',', StringSplitOptions.RemoveEmptyEntries)
                                  .Select(v => int.Parse(v.Trim())) // Chuyển về int
                                  .ToHashSet(); // Dùng HashSet để tối ưu tìm kiếm
-                List<Account> lstAccount = new List<Account>();
+                
                 Password = new PasswordHelper().HashPassword(Password);
                 foreach (var item in newRoleIds)
                 {
@@ -163,17 +168,22 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Account.AddRange(lstAccount);
                     await _db.SaveChangesAsync(); // Lưu vào database
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo tài khoản mới cho học sinh: {JsonConvert.SerializeObject(lstAccount)}");
                 }
             }
             catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
+
                 if (ex.InnerException is SqlException sqlEx)
                 {
                     if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
                     {
+                        _logger.LogWarning($"[{currentUser}] Thêm tài khoản thất bại: Có học sinh đã tạo tài khoản.");
                         return Json(new { success = false, message = "Có học sinh đã tạo tài khoản!" });
                     }
                 }
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản: {JsonConvert.SerializeObject(lstAccount)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
             return Json(new { success = true, message = "Thêm tài khoản thành công" });
@@ -187,13 +197,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Student obj = await _db.Student.FindAsync(id);
+            Models.Student obj = await _db.Student.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
-            var listclass = _db.Class.ToList();
+            var listclass = _db.Class.AsNoTracking().ToList();
             ViewData["listclass"] = listclass;
             return PartialView(obj);
         }
@@ -226,6 +236,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Image = obj.Image;
                 objData.Cccd = obj.Cccd;
                 await _db.SaveChangesAsync();
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật học sinh: {JsonConvert.SerializeObject(objData)}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -233,15 +244,18 @@ namespace WebUniversity.Areas.Admin.Controllers
                 var databaseEntry = entry.GetDatabaseValues();
                 if (databaseEntry == null)
                 {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Cập nhật thất bại: Bản ghi này đã bị xóa bởi người dùng khác.");
                     return Json(new { success = false, message = "Bản ghi này đã bị xóa bởi người dùng khác" });
                 }
                 else
                 {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Cập nhật thất bại: Bản ghi này đã bị sửa bởi người dùng khác.");
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật học sinh: {JsonConvert.SerializeObject(objData)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
@@ -264,10 +278,12 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Student.Remove(obj);
                     _db.SaveChanges();
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa học sinh: {JsonConvert.SerializeObject(obj)}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa học sinh: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -290,10 +306,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái học sinh: {JsonConvert.SerializeObject(objData)}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái học sinh: {JsonConvert.SerializeObject(objData)}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 

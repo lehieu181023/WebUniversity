@@ -13,11 +13,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class SubjectController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<SubjectController> _logger;
         private const string KeyCache = "Subject";
 
-        public SubjectController(DBContext db)
+        public SubjectController(DBContext db, ILogger<SubjectController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize(Roles = "Subject|Subject.View")]
@@ -33,14 +35,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             List<Models.Subject> listData = null;
             try
             {
-                var list = _db.Subject.AsQueryable();
-
-                listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
-
+                var list = _db.Subject.AsNoTracking().AsQueryable();
+                listData = await list.Include(x => x.Faculty).OrderByDescending(g => g.CreateDay).ToListAsync();
             }
             catch (Exception ex)
             {
-                
+                _logger.LogError(ex, "Error fetching subject list data.");
             }
             return PartialView(listData);
         }
@@ -52,12 +52,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Subject objData = await _db.Subject.FindAsync(id);
+            Models.Subject objData = await _db.Subject.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
             if (objData == null)
             {
-                return Json(new { success = false, message = " Bản ghi không tồn tại" });
+                return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
-            var listfaculty = _db.Faculty.ToList();
+            var listfaculty = _db.Faculty.AsNoTracking().ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView(objData);
         }
@@ -65,7 +65,7 @@ namespace WebUniversity.Areas.Admin.Controllers
         [Authorize(Roles = "Subject|Subject.Create")]
         public PartialViewResult Create()
         {
-            var listfaculty = _db.Faculty.ToList();
+            var listfaculty = _db.Faculty.AsNoTracking().ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView();
         }
@@ -76,22 +76,34 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    _db.Subject.Add(obj);
-                    await _db.SaveChangesAsync();
-                }
-                else
-                {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
+
+                _db.Subject.Add(obj);
+                await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo môn học mới: SubjectName = {obj.SubjectName}, FacultyId = {obj.FacultyId}");
+                return Json(new { success = true, message = "Thêm mới thành công" });
             }
             catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
 
+                if (ex.InnerException is SqlException sqlEx)
+                {
+                    if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
+                    {
+                        _logger.LogWarning($"[{currentUser}] Thêm môn học thất bại: SubjectName {obj.SubjectName} đã tồn tại.");
+                        return Json(new { success = false, message = "SubjectName đã tồn tại!" });
+                    }
+                }
+
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm môn học: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
         [Authorize(Roles = "Subject|Subject.Edit")]
@@ -102,13 +114,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Subject obj = await _db.Subject.FindAsync(id);
+            Models.Subject obj = await _db.Subject.AsNoTracking().FirstOrDefaultAsync(s => s.Id == id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
-            var listfaculty = _db.Faculty.ToList();
+            var listfaculty = _db.Faculty.AsNoTracking().ToList();
             ViewData["listfaculty"] = listfaculty;
             return PartialView(obj);
         }
@@ -136,6 +148,9 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Status = obj.Status;
 
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật môn học: SubjectName = {obj.SubjectName}, FacultyId = {obj.FacultyId}");
+                return Json(new { success = true, message = "Cập nhật thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -152,10 +167,9 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật môn học: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
-
-            return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
         [Authorize(Roles = "Subject|Subject.Delete")]
@@ -174,10 +188,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Subject.Remove(obj);
                     _db.SaveChanges();
+
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa môn học: SubjectName = {obj.SubjectName}, FacultyId = {obj.FacultyId}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa môn học: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -200,10 +217,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã thay đổi trạng thái môn học: SubjectName = {objData.SubjectName}, FacultyId = {objData.FacultyId}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi thay đổi trạng thái môn học: {JsonConvert.SerializeObject(objData)}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 

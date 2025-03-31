@@ -16,35 +16,8 @@ namespace WebUniversity.Models
         public decimal Revenue { get; set; }
     }
 
-    public partial class Student
-    {
-        DBContext db = new DBContext();
-        public Class? Classes => db.Class.Find(ClassId) ?? new Class();
-    }
 
-    public partial class Class
-    {
-        DBContext DBContext = new DBContext();
-        public Faculty? FacultyS => DBContext.Faculty.Find(FacultyId) ?? new Faculty();
-    }
-    public partial class Lecturer
-    {
-        DBContext DBContext = new DBContext();
-        public Faculty? FacultyS => DBContext.Faculty.Find(FacultyId) ?? new Faculty();
-    }
 
-    public partial class Subject
-    {
-        DBContext DBContext = new DBContext();
-        public Faculty? FacultyS => DBContext.Faculty.Find(FacultyId) ?? new Faculty();
-    }
-
-    public partial class Course
-    {
-        DBContext DBContext = new DBContext();
-        public Subject? SubjectS => DBContext.Subject.Find(SubjectId) ?? new Subject();
-        public Lecturer? LecturerS => DBContext.Lecturer.Find(LecturerId) ?? new Lecturer();
-    }
 
     public partial class Role
     {

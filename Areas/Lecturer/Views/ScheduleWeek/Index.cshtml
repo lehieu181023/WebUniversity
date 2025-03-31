@@ -4,6 +4,7 @@
     ViewData["Title"] = "ScheduleWeek";
     Layout = "~/Areas/Lecturer/Views/Shared/_LayoutAdmin.cshtml";
 }
+<link href="~/css/print.css" rel="stylesheet" />
 
 <div class="pagetitle">
     <h1>Schedule</h1>
@@ -27,10 +28,11 @@
                                 <option value="2">Next week</option>
                             </select>
                         </div>
+                        <button class="btn" onclick="window.print()">🖨️ Print schedule</button>
                     </div>
 
                     <!-- Table with stripped rows -->
-                    <div id="listdata">
+                    <div id="listdata" >
 
                     </div>
 

@@ -1,21 +1,34 @@
 ﻿
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return "";
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 loaddata = function () {
     debugger;
     BlockUI();
+
+    var classId = getParameterByName("ClassId"); // Lấy classId từ URL
+
     $.ajax({
-        url: "/Admin/Student/listdata", // Gọi file PHP xử lý
+        url: "/Admin/Student/listdata",
         type: "GET",
+        data: { ClassId: encodeURIComponent(classId) },
         success: function (response) {
             UnBlockUI();
-            $("#listdata").html(response); // Chèn dữ liệu vào bảng
+            $("#listdata").html(response);
         },
         error: function (xhr) {
             UnBlockUI();
             if (xhr.status === 401) {
                 showToast("Bạn không có quyền truy cập! Vui lòng đăng nhập.");
                 setTimeout(() => {
-                    window.history.back(); // Quay lại trang trước
-                }, 2000); // Đợi 2 giây để hiển thị thông báo rồi quay lại
+                    window.history.back();
+                }, 2000);
             } else if (xhr.status === 403) {
                 showToast("Bạn không có quyền thực hiện thao tác này!");
             } else {
@@ -23,7 +36,14 @@ loaddata = function () {
             }
         }
     });
-}
+};
+
+// Gọi tự động khi trang tải xong
+$(document).ready(function () {
+    loaddata();
+});
+
+
 
 LoadModelAdd = function () {
     debugger;

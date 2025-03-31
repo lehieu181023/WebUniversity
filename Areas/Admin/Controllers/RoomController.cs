@@ -13,11 +13,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class RoomController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<RoomController> _logger;
         private const string KeyCache = "Room";
 
-        public RoomController(DBContext db)
+        public RoomController(DBContext db, ILogger<RoomController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize]
@@ -26,21 +28,19 @@ namespace WebUniversity.Areas.Admin.Controllers
             return View();
         }
 
-        [Authorize (Roles = "Room|Room.View")]
+        [Authorize(Roles = "Room|Room.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
             List<Models.Room> listData = null;
             try
             {
-                var list = _db.Room.AsQueryable();
-
+                var list = _db.Room.AsNoTracking().AsQueryable();
                 listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
-
             }
             catch (Exception ex)
             {
-                
+                _logger.LogError(ex, "Error fetching room list data");
             }
             return PartialView(listData);
         }
@@ -52,10 +52,10 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 return Json(new { success = false, message = "Không được để trống Id" });
             }
-            Models.Room objData = await _db.Room.FindAsync(id);
+            Models.Room objData = await _db.Room.AsNoTracking().FirstOrDefaultAsync(r => r.Id == id);
             if (objData == null)
             {
-                return Json(new { success = false, message = " Bản ghi không tồn tại" });
+                return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
 
             return PartialView(objData);
@@ -64,7 +64,6 @@ namespace WebUniversity.Areas.Admin.Controllers
         [Authorize(Roles = "Room|Room.Create")]
         public PartialViewResult Create()
         {
-
             return PartialView();
         }
 
@@ -74,22 +73,24 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    _db.Room.Add(obj);
-                    await _db.SaveChangesAsync();
-                }
-                else
-                {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
+
+                _db.Room.Add(obj);
+                await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo phòng mới: Name = {obj.Name}, Building = {obj.Building}");
+                return Json(new { success = true, message = "Thêm mới thành công" });
             }
             catch (Exception ex)
             {
-
+                string currentUser = User.Identity?.Name ?? "Unknown";
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm phòng: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
         [Authorize(Roles = "Room|Room.Edit")]
@@ -100,7 +101,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Room obj = await _db.Room.FindAsync(id);
+            Models.Room obj = await _db.Room.AsNoTracking().FirstOrDefaultAsync(r => r.Id == id);
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -111,7 +112,6 @@ namespace WebUniversity.Areas.Admin.Controllers
 
         [Authorize(Roles = "Room|Room.Edit")]
         [HttpPost]
-
         public async Task<JsonResult> EditPost([Bind("Id,Name,Building,Floor,Vacuity,Status")] Models.Room obj, int? Id)
         {
             if (Id == null)
@@ -127,15 +127,15 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             try
             {
-
                 objData.Name = obj.Name;
                 objData.Building = obj.Building;
                 objData.Floor = obj.Floor;
                 objData.Vacuity = obj.Vacuity;
-
                 objData.Status = obj.Status;
 
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật phòng: Id = {objData.Id}, Name = {objData.Name}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -152,6 +152,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật phòng: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
@@ -174,10 +175,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Room.Remove(obj);
                     _db.SaveChanges();
+
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa phòng: Id = {obj.Id}, Name = {obj.Name}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa phòng: Id = {id}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -200,10 +204,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái phòng: Id = {objData.Id}, Status = {objData.Status}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái phòng: Id = {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 
@@ -226,10 +232,12 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Vacuity = !objData.Vacuity;
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái phòng: Id = {objData.Id}, Vacuity = {objData.Vacuity}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái phòng: Id = {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 

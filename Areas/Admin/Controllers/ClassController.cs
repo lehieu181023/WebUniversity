@@ -12,21 +12,23 @@ namespace WebUniversity.Areas.Admin.Controllers
     [Area("Admin")]
     public class ClassController : Controller
     {
-        private readonly DBContext _db ;
+        private readonly DBContext _db;
+        private readonly ILogger<ClassController> _logger;
         private const string KeyCache = "Class";
 
-        public ClassController (DBContext db)
+        public ClassController(DBContext db, ILogger<ClassController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
-        [Authorize (Roles = "Class|Class.View")]
+        [Authorize(Roles = "Class|Class.View")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize (Roles = "Class|Class.View")]
+        [Authorize(Roles = "Class|Class.View")]
         [HttpGet]
         public async Task<PartialViewResult> ListData()
         {
@@ -34,13 +36,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 var list = _db.Class.AsQueryable();
-
-                listData = await list.OrderByDescending(g => g.CreateDay).ToListAsync();
-
+                listData = await list.Include(x => x.Faculty).OrderByDescending(g => g.CreateDay).ToListAsync();
             }
             catch (Exception ex)
             {
-                
+                _logger.LogError(ex, "Error fetching class list data.");
             }
             return PartialView(listData);
         }
@@ -55,7 +55,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             Models.Class objData = await _db.Class.FindAsync(id);
             if (objData == null)
             {
-                return Json(new { success = false, message = " Bản ghi không tồn tại" });
+                return Json(new { success = false, message = "Bản ghi không tồn tại" });
             }
             var listfaculty = _db.Faculty.ToList();
             ViewData["listfaculty"] = listfaculty;
@@ -76,22 +76,34 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    _db.Class.Add(obj);
-                    await _db.SaveChangesAsync();
-                }
-                else
-                {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
+
+                _db.Class.Add(obj);
+                await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo lớp mới: ClassName = {obj.ClassName}, FacultyId = {obj.FacultyId}");
+                return Json(new { success = true, message = "Thêm mới thành công" });
             }
             catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
 
+                if (ex.InnerException is SqlException sqlEx)
+                {
+                    if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
+                    {
+                        _logger.LogWarning($"[{currentUser}] Thêm lớp thất bại: ClassName {obj.ClassName} đã tồn tại.");
+                        return Json(new { success = false, message = "ClassName đã tồn tại!" });
+                    }
+                }
+
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm lớp: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
 
         [Authorize(Roles = "Class|Class.Edit")]
@@ -115,7 +127,6 @@ namespace WebUniversity.Areas.Admin.Controllers
 
         [Authorize(Roles = "Class|Class.Edit")]
         [HttpPost]
-
         public async Task<JsonResult> EditPost([Bind("Id,ClassName,FacultyId,Status")] Models.Class obj, int? Id)
         {
             if (Id == null)
@@ -136,6 +147,9 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Status = obj.Status;
 
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật lớp: Id = {objData.Id}, ClassName = {objData.ClassName}");
+                return Json(new { success = true, message = "Cập nhật thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -143,19 +157,20 @@ namespace WebUniversity.Areas.Admin.Controllers
                 var databaseEntry = entry.GetDatabaseValues();
                 if (databaseEntry == null)
                 {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị xóa bởi người dùng khác: Id = {Id}");
                     return Json(new { success = false, message = "Bản ghi này đã bị xóa bởi người dùng khác" });
                 }
                 else
                 {
+                    _logger.LogWarning($"[{User.Identity?.Name}] Bản ghi này đã bị sửa bởi người dùng khác: Id = {Id}");
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật lớp: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
-
-            return Json(new { success = true, message = "Cập nhật thành công" });
         }
 
         [Authorize(Roles = "Class|Class.Delete")]
@@ -174,10 +189,13 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Class.Remove(obj);
                     _db.SaveChanges();
+
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa lớp: Id = {id}, ClassName = {obj.ClassName}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Không xóa được bản ghi này: Id = {id}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -200,14 +218,15 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã thay đổi trạng thái lớp: Id = {id}, Status = {objData.Status}");
+                return Json(new { success = true, message = "Bản ghi đã được cập nhật trạng thái thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Không thay đổi được trạng thái bản ghi này: Id = {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
-
-            return Json(new { success = true, message = "Bản ghi đã được cập nhật trạng thái thành công" });
         }
 
         protected override void Dispose(bool disposing)

@@ -4093,6 +4093,10 @@
       "PackagePath": "staticwebassets\\assets\\vendor\\tinymce\\tinymce.min.js"
     },
     {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\css\\print.css",
+      "PackagePath": "staticwebassets\\css\\print.css"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -4587,6 +4591,10 @@
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\uploads\\cay-xoai-thai-lan-hat-lep.jpg",
       "PackagePath": "staticwebassets\\uploads\\cay-xoai-thai-lan-hat-lep.jpg"
+    },
+    {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\uploads\\logo-footer (1).png",
+      "PackagePath": "staticwebassets\\uploads\\logo-footer (1).png"
     },
     {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\uploads\\xoai-cat-hoa-loc-thom-ngon-dep-ma-da-cang-bong.jpg",

@@ -399,6 +399,7 @@ D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\echarts\package.json
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\tinymce\skins\content\tinymce-5-dark\content.css
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\apexcharts\locales\be-cyrl.json
+D:\ASP.NET Core\Web-University\wwwroot\css\print.css
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\chart.js\helpers.js
 D:\ASP.NET Core\Web-University\wwwroot\Admin\assets\vendor\php-email-form\validate.js
 D:\ASP.NET Core\Web-University\wwwroot\assets\vendor\apexcharts\locales\lv.json
@@ -1873,6 +1874,7 @@ wwwroot\assets\vendor\tinymce\themes\silver\theme.min.js
 wwwroot\assets\vendor\tinymce\tinymce.d.ts
 wwwroot\assets\vendor\tinymce\tinymce.js
 wwwroot\assets\vendor\tinymce\tinymce.min.js
+wwwroot\css\print.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\help-documentation\css\et-line-font\et-line-font.css
@@ -1994,6 +1996,7 @@ wwwroot\react\index.html
 wwwroot\react\vite.svg
 wwwroot\uploads\592c1c3e-2577-49a2-b166-8d43af35f52a.jpg
 wwwroot\uploads\cay-xoai-thai-lan-hat-lep.jpg
+wwwroot\uploads\logo-footer (1).png
 wwwroot\uploads\OIP (1).jpg
 wwwroot\uploads\OIP (2).jpg
 wwwroot\uploads\OIP.jpg

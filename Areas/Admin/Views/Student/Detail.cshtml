@@ -1,11 +1,6 @@
 ﻿@model WebUniversity.Models.Student
 @{
     var listclass = ViewData["listclass"] as List<WebUniversity.Models.Class>;
-    var selectClass = listclass?.Select(x => new SelectListItem
-            {
-                Text = x.ClassName,
-                Value = x.Id.ToString()
-            }).ToList();
 }
 <div class="modal" id="myModal">
     <div class="modal-dialog modal-xl">
@@ -59,7 +54,7 @@
                     <div class="row mb-3">
                         <label for="ClassId" class="control-label col-md-2 text-right">Class :</label>
                         <div class="col-md-4">
-                            <p class="form-control-static">@Model.Classes?.ClassName</p>
+                            <p class="form-control-static">@Model.Class?.ClassName</p>
                         </div>
                         <label for="Status" class="control-label col-md-2 text-right">Status :</label>
                         <div class="col-md-4">

@@ -1,43 +1,44 @@
 ﻿@model List<WebUniversity.Models.ClassSchedule>
 @{
+
     var lstClShift = ViewData["ClassShift"] as List<WebUniversity.Models.ClassShift>;
 }
-<table class="table">
-    <thead>
+<table class="table table-bordered table-striped">
+    <thead class="thead-dark">
         <tr>
-            <th>Class Shift</th>
-            <th>Monday </th>
-            <th>Tuesday  </th>
-            <th>Wednesday  </th>
-            <th>Thursday  </th>
-            <th>Friday  </th>
-            <th>Saturday </th>
+            <th>Ca</th>
+            <th>Thứ Hai</th>
+            <th>Thứ Ba</th>
+            <th>Thứ Tư</th>
+            <th>Thứ Năm</th>
+            <th>Thứ Sáu</th>
+            <th>Thứ Bảy</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var itemCS in lstClShift)
         {
             <tr>
-                <td>@itemCS.Name</td>
+                <td class="font-weight-bold">@itemCS.Name</td>
                 @for (int i = 2; i <= 7; i++)
                 {
                     var item = Model.FirstOrDefault(x => x.ClassShiftId == itemCS.Id && x.DayOfWeek == i);
                     if (item != null)
                     {
                         <td>
-                            <p>@item.Course?.Subject?.SubjectName
-                                <br>Giờ học: từ @item.ClassShift?.StartTime đến @item.ClassShift?.EndTime
-                                <br> Mã lớp học phần: @item.Course?.CourseName
-                                <br> Lớp : @item.Class?.ClassName
-                                <br> Phòng : @item.Room?.Name 
-                                <br>Tầng: @item.Room?.Floor
-                                <br> Tòa: @item.Room?.Building
-                            </p>
+                            <p class="font-weight-bold">@item.Course?.Subject?.SubjectName</p>
+                            <p class="text-muted">Giờ dạy: <span class="text-danger">@item.ClassShift?.StartTime</span> đến <span class="text-danger">@item.ClassShift?.EndTime</span></p>
+                            <p>Mã lớp học phần: <span class="font-italic">@item.Course?.CourseName</span></p>
+                            <p>Lớp: <span class="font-italic">@item.Class?.ClassName</span></p>
+                            <p>Phòng: <span class="font-italic">@item.Room?.Name</span></p>
+                            <p>Tầng: <span class="font-italic">@item.Room?.Floor</span></p>
+                            <p>Tòa: <span class="font-italic">@item.Room?.Building</span></p>
+                            <p class="text-center">Thời gian Từ <span class="text-danger">@item.StartDay?.ToString("dd/MM/yyyy")</span> đến <span class="text-danger">@item.EndDay?.ToString("dd/MM/yyyy")</span></p>
                         </td>
                     }
                     else
                     {
-                        <td></td>
+                        <td class="text-center text-muted">Không có lớp</td>
                     }
                 }
             </tr>
@@ -46,21 +47,29 @@
 </table>
 
 
-<!-- DataTables JS Script -->
-<script type="text/javascript">
-    $(document).ready(function() {
-      $('table').DataTable({
-        "pageLength": 10,  // Số dòng mỗi trang
-        "lengthChange": true, // Không cho phép thay đổi số lượng dòng
-        "searching": true,  // Tắt thanh tìm kiếm
-        "language": {
-          "lengthMenu": "Hiển thị _MENU_ dòng",
-          "info": "Hiển thị từ _START_ đến _END_ trong tổng số _TOTAL_ dòng",
-          "paginate": {
-            "previous": "Trước",
-            "next": "Tiếp"
-          }
-        }
-      });
-    });
-</script>
+<style>
+    .table th, .table td {
+        vertical-align: middle; /* Căn giữa nội dung */
+    }
+
+    .table th {
+        text-align: center; /* Căn giữa tiêu đề */
+    }
+
+    .table td {
+        padding: 15px; /* Tăng khoảng cách giữa các ô */
+    }
+
+    .text-danger {
+        font-weight: bold; /* Làm nổi bật thời gian */
+    }
+
+    .font-italic {
+        font-style: italic; /* Làm nghiêng các thông tin phụ */
+    }
+
+    .thead-dark {
+        background-color: #343a40; /* Màu nền cho tiêu đề bảng */
+        color: white; /* Màu chữ cho tiêu đề bảng */
+    }
+</style>

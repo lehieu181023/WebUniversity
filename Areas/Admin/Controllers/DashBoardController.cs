@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using WebUniversity.Models;
+using Newtonsoft.Json;
 
 namespace WebUniversity.Areas.Admin.Controllers
 {
@@ -10,10 +11,12 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class DashBoardController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<DashBoardController> _logger;
 
-        public DashBoardController(DBContext db)
+        public DashBoardController(DBContext db, ILogger<DashBoardController> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize(Policy = "NotLectureOrStudent")]
@@ -33,6 +36,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             // Truy vấn dữ liệu sinh viên
             var studentData = await _db.Student
+                .AsNoTracking()
                 .Where(s => s.CreateDay != null && s.CreateDay.Year >= startYear)
                 .GroupBy(s => s.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
@@ -40,6 +44,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             // Truy vấn dữ liệu giảng viên
             var lecturerData = await _db.Lecturer
+                .AsNoTracking()
                 .Where(l => l.CreateDay != null && l.CreateDay.Year >= startYear)
                 .GroupBy(l => l.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
@@ -47,6 +52,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             // Truy vấn dữ liệu phòng học
             var roomData = await _db.Room
+                .AsNoTracking()
                 .Where(r => r.CreateDay != null && r.CreateDay.Year >= startYear)
                 .GroupBy(r => r.CreateDay.Year)
                 .Select(g => new { Year = g.Key, Count = g.Count() })
@@ -56,7 +62,6 @@ namespace WebUniversity.Areas.Admin.Controllers
             var studentsFinal = years.Select(y => studentData.FirstOrDefault(d => d.Year == y)?.Count ?? 0).ToList();
             var lecturersFinal = years.Select(y => lecturerData.FirstOrDefault(d => d.Year == y)?.Count ?? 0).ToList();
             var roomsFinal = years.Select(y => roomData.FirstOrDefault(d => d.Year == y)?.Count ?? 0).ToList();
-
 
             var data = new
             {
@@ -84,7 +89,11 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return RedirectToAction("Login", "Account", new { area = "" });
             }
 
-            var user = await _db.Account.Include(x => x.Lecturer).Include(x => x.Student).FirstOrDefaultAsync(u => u.Username == username);
+            var user = await _db.Account
+                .AsNoTracking()
+                .Include(x => x.Lecturer)
+                .Include(x => x.Student)
+                .FirstOrDefaultAsync(u => u.Username == username);
             return PartialView(user);
         }
 
@@ -96,7 +105,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 return Json(new { success = false, message = "Id không được để trống" });
             }
 
-            Models.Account obj = _db.Account.Find(id) ?? new Account();
+            Models.Account obj = await _db.Account.AsNoTracking().FirstOrDefaultAsync(a => a.Id == id) ?? new Account();
             if (obj == null)
             {
                 return Json(new { success = false, message = "Bản ghi không tồn tại" });
@@ -141,6 +150,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
                 await _db.SaveChangesAsync();
 
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã đổi mật khẩu cho tài khoản: Id = {objData.Id}");
                 return Json(new { success = true, message = "Đổi mật khẩu thành công" });
             }
             catch (DbUpdateConcurrencyException ex)
@@ -156,8 +166,9 @@ namespace WebUniversity.Areas.Admin.Controllers
                     return Json(new { success = false, message = "Bản ghi này đã bị sửa bởi người dùng khác" });
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi đổi mật khẩu: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
         }
@@ -175,6 +186,5 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return hasUpper && hasLower && hasDigit && hasSpecial && hasMinLength;
         }
-
     }
 }

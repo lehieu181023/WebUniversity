@@ -18,7 +18,7 @@ namespace WebUniversity.Areas.Lec.Controllers
         {
             _db = db;
         }
-
+        [Authorize(Roles = "LecturerRole")]
         public IActionResult Index()
         {
             if (!User.Identity.IsAuthenticated)
@@ -43,7 +43,7 @@ namespace WebUniversity.Areas.Lec.Controllers
 
             return View(lecturer);
         }
-
+        [Authorize(Roles = "LecturerRole")]
         public IActionResult ReportViewPDF()
         {
             if (!User.Identity!.IsAuthenticated)

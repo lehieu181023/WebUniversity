@@ -14,11 +14,13 @@ namespace WebUniversity.Areas.Admin.Controllers
     public class AccountController : Controller
     {
         private readonly DBContext _db;
+        private readonly ILogger<Account> _logger;
         private const string KeyCache = "Account";
 
-        public AccountController(DBContext db)
+        public AccountController(DBContext db, ILogger<Account> logger)
         {
             _db = db;
+            _logger = logger;
         }
 
         [Authorize (Roles = "Account")]
@@ -74,31 +76,37 @@ namespace WebUniversity.Areas.Admin.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    obj.Password = new PasswordHelper().HashPassword(obj.Password);
-                    _db.Account.Add(obj);
-                    await _db.SaveChangesAsync();
-                }
-                else
-                {
-                    
+                    _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ: {JsonConvert.SerializeObject(obj)}");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
+
+                obj.Password = new PasswordHelper().HashPassword(obj.Password);
+                _db.Account.Add(obj);
+                await _db.SaveChangesAsync();
+
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã tạo tài khoản mới: Username = {obj.Username}, RoleGroupId = {obj.RoleGroupId}");
+                return Json(new { success = true, message = "Thêm mới thành công" });
             }
             catch (Exception ex)
             {
+                string currentUser = User.Identity?.Name ?? "Unknown";
+
                 if (ex.InnerException is SqlException sqlEx)
                 {
                     if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
                     {
+                        _logger.LogWarning($"[{currentUser}] Thêm tài khoản thất bại: Username {obj.Username} đã tồn tại.");
                         return Json(new { success = false, message = "Username đã tồn tại!" });
                     }
                 }
+
+                _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Thêm mới thất bại, vui lòng thử lại!" });
             }
-            return Json(new { success = true, message = "Thêm mới thành công" });
         }
+
 
 
 
@@ -138,10 +146,10 @@ namespace WebUniversity.Areas.Admin.Controllers
             try
             {
                 objData.RoleGroupId = obj.RoleGroupId;
-
                 objData.Status = obj.Status;
 
                 await _db.SaveChangesAsync();
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật tài khoản: Id = {objData.Id}, RoleGroupId = {objData.RoleGroupId}, Status = {objData.Status}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -158,6 +166,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật tài khoản: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
@@ -199,6 +208,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                 objData.Password = new PasswordHelper().HashPassword(obj.Password);
 
                 await _db.SaveChangesAsync();
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật mật khẩu tài khoản: Id = {objData.Id}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
@@ -215,6 +225,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật mật khẩu tài khoản: {JsonConvert.SerializeObject(obj)}");
                 return Json(new { success = false, message = "Không thể lưu được" });
             }
 
@@ -236,10 +247,12 @@ namespace WebUniversity.Areas.Admin.Controllers
                 {
                     _db.Account.Remove(obj);
                     _db.SaveChanges();
+                    _logger.LogInformation($"[{User.Identity?.Name}] Đã xóa tài khoản: Id = {obj.Id}");
                 }
             }
             catch (DbUpdateConcurrencyException ex)
             {
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi xóa tài khoản: Id = {id}");
                 return Json(new { success = false, message = "Không xóa được bản ghi này" });
             }
 
@@ -262,10 +275,11 @@ namespace WebUniversity.Areas.Admin.Controllers
             {
                 objData.Status = !objData.Status;
                 await _db.SaveChangesAsync();
+                _logger.LogInformation($"[{User.Identity?.Name}] Đã cập nhật trạng thái tài khoản: Id = {objData.Id}, Status = {objData.Status}");
             }
             catch (DbUpdateConcurrencyException ex)
             {
-
+                _logger.LogError(ex, $"[{User.Identity?.Name}] Lỗi khi cập nhật trạng thái tài khoản: Id = {id}");
                 return Json(new { success = false, message = "Không thay đổi được trạng thái bản ghi này" });
             }
 

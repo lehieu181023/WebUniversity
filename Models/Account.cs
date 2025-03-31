@@ -23,7 +23,7 @@ public partial class Account
 
     public virtual Lecturer? Lecturer { get; set; }
 
-    public virtual RoleGroup RoleGroup { get; set; } = null!;
+    public virtual RoleGroup? RoleGroup { get; set; } = null!;
 
     public virtual Student? Student { get; set; }
 }
