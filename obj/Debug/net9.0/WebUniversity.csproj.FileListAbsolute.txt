@@ -1136,7 +1136,6 @@ D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\23j9sak92w-3pgji81cbd
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\amfrbsfp7n-zo0dnh6gv9.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\9sokuyuy9y-d8dad84h8l.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\03kvd6b09c-yvu6wb6t47.gz
-D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-0yy5da9swa.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz
 D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Serilog.dll
 D:\ASP.NET Core\Web-University\bin\Debug\net9.0\Serilog.AspNetCore.dll
@@ -1153,3 +1152,4 @@ D:\ASP.NET Core\Web-University\obj\Debug\net9.0\WebUniversity.MvcApplicationPart
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\fvv27oc137-3abn0kryoz.gz
 D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\n2ffmjvyfl-7wbo1iy1br.gz
+D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-jxb6zdsjmi.gz

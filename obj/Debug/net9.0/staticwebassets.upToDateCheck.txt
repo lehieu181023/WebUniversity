@@ -1995,6 +1995,7 @@ wwwroot\react\assets\index-GNLSjkBZ.css
 wwwroot\react\index.html
 wwwroot\react\vite.svg
 wwwroot\uploads\592c1c3e-2577-49a2-b166-8d43af35f52a.jpg
+wwwroot\uploads\anh-dua-hau.jpg
 wwwroot\uploads\cay-xoai-thai-lan-hat-lep.jpg
 wwwroot\uploads\logo-footer (1).png
 wwwroot\uploads\OIP (1).jpg

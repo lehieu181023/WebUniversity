@@ -9084,8 +9084,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>0yy5da9swa</Fingerprint>
-      <Integrity>KGVq8uuXJc5JQEJesruoo+nWcKwb9B5uln89PxgTiyg=</Integrity>
+      <Fingerprint>jxb6zdsjmi</Fingerprint>
+      <Integrity>51gyG//2W4sFlbPv7Ob3Og6Ix9VsYxM+fADX/jtcnUY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Admin\js\DashBoard.js'))</OriginalItemSpec>
@@ -20573,6 +20573,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\592c1c3e-2577-49a2-b166-8d43af35f52a.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\anh-dua-hau.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>WebUniversity</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/WebUniversity</BasePath>
+      <RelativePath>uploads/anh-dua-hau.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ei90n3frma</Fingerprint>
+      <Integrity>2rxxk1NOXX7V3GF0u6Q26SvH57aDCG14s8iMxBEm720=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\anh-dua-hau.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\cay-xoai-thai-lan-hat-lep.jpg'))">
       <SourceType>Package</SourceType>

@@ -26,13 +26,13 @@ namespace WebUniversity.Areas.Admin.Controllers
         }
 
         [Authorize(Policy = "NotLectureOrStudent")]
-        public async Task<JsonResult> report1()
+        public async Task<JsonResult> report1(int yearcount = 2)
         {
             var currentYear = DateTime.UtcNow.Year;
-            var startYear = currentYear - 4; // Lấy dữ liệu từ 5 năm gần nhất
+            var startYear = currentYear - (yearcount - 1); // Lấy dữ liệu từ 5 năm gần nhất
 
             // Danh sách các năm cần có dữ liệu
-            var years = Enumerable.Range(startYear, 5).ToList();
+            var years = Enumerable.Range(startYear, yearcount).ToList();
 
             // Truy vấn dữ liệu sinh viên
             var studentData = await _db.Student
@@ -73,6 +73,249 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return Json(new { success = true, data });
         }
+        [Authorize(Policy = "NotLectureOrStudent")]
+        public async Task<JsonResult> report()
+        {
+
+            var lecturerNam = await _db.Lecturer
+                 .AsNoTracking()
+                 .Where(c => c.Gender && c.Status)
+                 .GroupBy(l => l.FacultyId)
+                 .Select(g => new { facultyId = g.Key, count = g.Count() })
+                 .ToListAsync();
+            var lecturerNu = await _db.Lecturer
+                 .AsNoTracking()
+                 .Where(c => !c.Gender && c.Status)
+                 .GroupBy(l => l.FacultyId)
+                 .Select(g => new { facultyId = g.Key, count = g.Count() })
+                 .ToListAsync();
+            var faculty = await _db.Faculty
+                .AsNoTracking()
+                .Where(f => f.Status)
+                .Select(f => f.FacultyName)
+                .ToListAsync();
+
+            var facultyId = await _db.Faculty
+                .AsNoTracking()
+                .Where(f => f.Status)
+                .Select(f => f.Id)
+                .ToListAsync();
+
+            var lecturerNamdata = facultyId.Select(f => lecturerNam.FirstOrDefault(l => l.facultyId == f)?.count ?? 0).ToList();
+            var lecturerNudata = facultyId.Select(f => lecturerNu.FirstOrDefault(l => l.facultyId == f)?.count ?? 0).ToList();
+
+            var data = new
+            {
+                Faculty = faculty,
+                LecturerNam = lecturerNamdata,
+                LecturerNu = lecturerNudata
+            };
+
+            return Json(new { success = true, data });
+        }
+        [Authorize(Policy = "NotLectureOrStudent")]
+        public async Task<JsonResult> report2()
+        {
+
+            var studentNam = await _db.Student
+                 .AsNoTracking()
+                 .Include(c => c.Class)
+                 .Where(c => c.Gender && c.Status)
+                 .GroupBy(l => l.Class!.FacultyId)
+                 .Select(g => new { facultyId = g.Key, count = g.Count() })
+                 .ToListAsync();
+            var studentNu = await _db.Student
+                 .AsNoTracking()
+                 .Include(c => c.Class)
+                 .Where(c => !c.Gender && c.Status)
+                 .GroupBy(l => l.Class!.FacultyId)
+                 .Select(g => new { facultyId = g.Key, count = g.Count() })
+                 .ToListAsync();
+            var faculty = await _db.Faculty
+                .AsNoTracking()
+                .Where(f => f.Status)
+                .Select(f => f.FacultyName)
+                .ToListAsync();
+
+            var facultyId = await _db.Faculty
+                .AsNoTracking()
+                .Where(f => f.Status)
+                .Select(f => f.Id)
+                .ToListAsync();
+
+            var studentNamdata = facultyId.Select(f => studentNam.FirstOrDefault(l => l.facultyId == f)?.count ?? 0).ToList();
+            var studentNudata = facultyId.Select(f => studentNu.FirstOrDefault(l => l.facultyId == f)?.count ?? 0).ToList();
+
+            var data = new
+            {
+                Faculty = faculty,
+                StudentNam = studentNamdata,
+                StudentNu = studentNudata
+            };
+
+            return Json(new { success = true, data });
+        }
+
+        [Authorize(Policy = "NotLectureOrStudent")]
+        public async Task<JsonResult> reportCountStu(int fillter = 0)
+        {
+            var currentYear = DateTime.UtcNow.Year;
+            var priorYear = currentYear - 1;
+            var StudentCurent = 0;
+            var StudentPri = 0;
+            if (fillter == 1)
+            {
+                 StudentCurent = await _db.Student
+                    .AsNoTracking()
+                    .CountAsync();
+                 StudentPri = await _db.Student
+                    .AsNoTracking()
+                    .CountAsync();
+            }
+            else 
+            {
+                 StudentCurent = await _db.Student
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == currentYear)
+                    .CountAsync();
+                 StudentPri = await _db.Student
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == priorYear)
+                    .CountAsync();
+            }
+            
+
+            var percentIn = 0.0;
+
+            if (StudentPri > 0)
+            {
+                percentIn = ((double)(StudentCurent - StudentPri) / StudentPri) * 100;
+            }
+            else if (StudentCurent > 0)
+            {
+                // Trường hợp năm trước chưa có sinh viên, năm nay có => tăng 100%
+                percentIn = 100.0;
+            }
+            else
+            {
+                // Cả hai năm đều không có sinh viên
+                percentIn = 0.0;
+            }
+
+            var data = new
+            {
+                StudentCurent,
+                StudentPri,
+                percentIn
+            };
+            return Json(new { success = true, data });
+        }
+        [Authorize(Policy = "NotLectureOrStudent")]
+        public async Task<JsonResult> reportCountLeturer(int fillter = 0)
+        {
+            var currentYear = DateTime.UtcNow.Year;
+            var priorYear = currentYear - 1;
+            var LecturerCurent = 0;
+            var LecturerPri = 0;
+            if (fillter == 1)
+            {
+                LecturerCurent = await _db.Lecturer
+                    .AsNoTracking()
+                    .CountAsync();
+                LecturerPri = await _db.Lecturer
+                    .AsNoTracking()
+                    .CountAsync();
+            }
+            else
+            {
+                LecturerCurent = await _db.Lecturer
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == currentYear)
+                    .CountAsync();
+                LecturerPri = await _db.Lecturer
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == priorYear)
+                    .CountAsync();
+            }
+
+            var percentIn = 0.0;
+
+            if (LecturerPri > 0)
+            {
+                percentIn = ((double)(LecturerCurent - LecturerPri) / LecturerPri) * 100;
+            }
+            else if (LecturerCurent > 0)
+            {
+                percentIn = 100.0;
+            }
+            else
+            {
+                percentIn = 0.0;
+            }
+
+            var data = new
+            {
+                LecturerCurent,
+                LecturerPri,
+                percentIn
+            };
+
+            return Json(new { success = true, data });
+        }
+
+        [Authorize(Policy = "NotLectureOrStudent")]
+        public async Task<JsonResult> reportCountRoom(int fillter = 0)
+        {
+            var currentYear = DateTime.UtcNow.Year;
+            var priorYear = currentYear - 1;
+            var RoomCurent = 0;
+            var RoomPri = 0;
+            if (fillter == 1)
+            {
+                RoomCurent = await _db.Room
+                    .AsNoTracking()
+                    .CountAsync();
+                RoomPri = await _db.Room
+                    .AsNoTracking()
+                    .CountAsync();
+            }
+            else
+            {
+                RoomCurent = await _db.Room
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == currentYear)
+                    .CountAsync();
+                RoomPri = await _db.Room
+                    .AsNoTracking()
+                    .Where(c => c.CreateDay.Year == priorYear)
+                    .CountAsync();
+            }
+
+            var percentIn = 0.0;
+
+            if (RoomPri > 0)
+            {
+                percentIn = ((double)(RoomCurent - RoomPri) / RoomPri) * 100;
+            }
+            else if (RoomCurent > 0)
+            {
+                percentIn = 100.0;
+            }
+            else
+            {
+                percentIn = 0.0;
+            }
+
+            var data = new
+            {
+                RoomCurent,
+                RoomPri,
+                percentIn
+            };
+
+            return Json(new { success = true, data });
+        }
+
 
         public async Task<IActionResult> AccountTB()
         {
@@ -186,5 +429,6 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return hasUpper && hasLower && hasDigit && hasSpecial && hasMinLength;
         }
+
     }
 }

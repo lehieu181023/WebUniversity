@@ -4589,6 +4589,10 @@
       "PackagePath": "staticwebassets\\uploads\\OIP.jpg"
     },
     {
+      "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\uploads\\anh-dua-hau.jpg",
+      "PackagePath": "staticwebassets\\uploads\\anh-dua-hau.jpg"
+    },
+    {
       "Id": "D:\\ASP.NET Core\\Web-University\\wwwroot\\uploads\\cay-xoai-thai-lan-hat-lep.jpg",
       "PackagePath": "staticwebassets\\uploads\\cay-xoai-thai-lan-hat-lep.jpg"
     },

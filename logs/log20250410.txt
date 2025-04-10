@@ -1,0 +1,1364 @@
+2025-04-10 14:48:01.698 +07:00 [INF] User profile is available. Using 'C:\Users\lehie\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-10 14:48:01.837 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 24 giờ trước lần backup đầu tiên.
+2025-04-10 14:48:03.183 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/ - null null
+2025-04-10 14:48:03.211 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-10 14:48:03.212 +07:00 [INF] Hosting environment: Development
+2025-04-10 14:48:03.212 +07:00 [INF] Content root path: D:\ASP.NET Core\Web-University
+2025-04-10 14:48:03.636 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Account/Login - null null
+2025-04-10 14:48:03.635 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/ - 302 null null 454.1654ms
+2025-04-10 14:48:03.645 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-04-10 14:48:03.679 +07:00 [INF] Route matched with {action = "login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult login() on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-04-10 14:48:04.301 +07:00 [INF] Executing ViewResult, running view login.
+2025-04-10 14:48:04.382 +07:00 [INF] Executed ViewResult - view login executed in 85.0542ms.
+2025-04-10 14:48:04.383 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.login (WebUniversity) in 703.4011ms
+2025-04-10 14:48:04.383 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-04-10 14:48:04.386 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Account/Login - 200 null text/html; charset=utf-8 749.8468ms
+2025-04-10 14:48:04.423 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:48:04.425 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:48:04.425 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:48:04.425 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:48:04.427 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:48:04.427 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:48:04.429 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:48:04.434 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/img/logo.png - null null
+2025-04-10 14:48:04.434 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/css/style.css - null null
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.436 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/img/logo.png was not modified
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 19.1953ms
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - 304 null text/css 13.0911ms
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/img/logo.png - 304 null image/png 7.5695ms
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - 304 null text/css 16.629ms
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - 304 null text/css 15.7514ms
+2025-04-10 14:48:04.442 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:48:04.443 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.443 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:48:04.441 +07:00 [INF] The file assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:48:04.443 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:48:04.442 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.443 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.442 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 16.8283ms
+2025-04-10 14:48:04.444 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 18.6851ms
+2025-04-10 14:48:04.444 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.444 +07:00 [INF] The file assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:48:04.444 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.443 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:48:04.444 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/js/main.js - null null
+2025-04-10 14:48:04.444 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - 304 null text/css 16.5466ms
+2025-04-10 14:48:04.444 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - null null
+2025-04-10 14:48:04.445 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:48:04.445 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.445 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:48:04.446 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.447 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.447 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 3.3412ms
+2025-04-10 14:48:04.450 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:48:04.454 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.454 +07:00 [INF] The file assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:48:04.455 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.456 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - 304 null text/javascript 10.928ms
+2025-04-10 14:48:04.459 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 8.1952ms
+2025-04-10 14:48:04.462 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:48:04.462 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:48:04.463 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.463 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.481 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:48:04.481 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.524 +07:00 [INF] Sending file. Request path: 'assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\e9xn4k5tno-wncy1ibapd.gz'
+2025-04-10 14:48:04.524 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.525 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/css/style.css - 200 21361 text/css 90.4505ms
+2025-04-10 14:48:04.526 +07:00 [INF] Sending file. Request path: 'assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6tob5d88xv-j1s052mfj7.gz'
+2025-04-10 14:48:04.526 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.526 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/js/main.js - 200 8891 text/javascript 81.8118ms
+2025-04-10 14:48:04.526 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.526 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/AppJs/Account.js - null null
+2025-04-10 14:48:04.527 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.556 +07:00 [INF] Sending file. Request path: 'assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tac8qs4qq4-m0ksaommmi.gz'
+2025-04-10 14:48:04.557 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.579 +07:00 [INF] Sending file. Request path: 'assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\gzh5x9ictr-7bfv779k36.gz'
+2025-04-10 14:48:04.579 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.582 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:48:04.587 +07:00 [INF] Sending file. Request path: 'assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\uiz4m8c624-kx3cwpk1ir.gz'
+2025-04-10 14:48:04.587 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.589 +07:00 [INF] Sending file. Request path: 'AppJs/Account.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\9sokuyuy9y-d8dad84h8l.gz'
+2025-04-10 14:48:04.589 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.589 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/AppJs/Account.js - 200 353 text/javascript 62.8218ms
+2025-04-10 14:48:04.595 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.596 +07:00 [INF] The file assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:48:04.596 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.596 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 14.0069ms
+2025-04-10 14:48:04.598 +07:00 [INF] Sending file. Request path: 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\si1qlylr3w-493y06b0oq.gz'
+2025-04-10 14:48:04.598 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.599 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 155.6366ms
+2025-04-10 14:48:04.600 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 119.2018ms
+2025-04-10 14:48:04.612 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 167.4025ms
+2025-04-10 14:48:04.612 +07:00 [INF] Sending file. Request path: 'assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\77xr10olhs-2a5arjvktv.gz'
+2025-04-10 14:48:04.612 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.615 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 169.6458ms
+2025-04-10 14:48:04.632 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 189.0792ms
+2025-04-10 14:48:04.644 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 182.5454ms
+2025-04-10 14:48:04.678 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:48:04.678 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.679 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 217.0281ms
+2025-04-10 14:48:04.691 +07:00 [INF] Sending file. Request path: 'assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\qracv1nz4u-ypojrgjh6b.gz'
+2025-04-10 14:48:04.691 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:04.692 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - 200 209403 text/javascript 247.1976ms
+2025-04-10 14:48:12.771 +07:00 [INF] Request starting HTTP/2 POST https://localhost:44344/Account/LoginAction - application/x-www-form-urlencoded; charset=UTF-8 244
+2025-04-10 14:48:12.773 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.LoginAction (WebUniversity)'
+2025-04-10 14:48:12.785 +07:00 [INF] Route matched with {action = "LoginAction", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginAction(System.String, System.String) on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-04-10 14:48:14.378 +07:00 [INF] Executed DbCommand (65ms) [Parameters=[@__UserName_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [r].[Id], [r].[CreateDay], [r].[NameRoleGroup], [r].[Status]
+FROM [Account] AS [a]
+INNER JOIN [RoleGroup] AS [r] ON [a].[RoleGroupId] = [r].[Id]
+WHERE [a].[Status] = CAST(1 AS bit) AND [a].[Username] = @__UserName_0
+2025-04-10 14:48:14.548 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_RoleGroupId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleGroupId], [r].[RoleId], [r0].[Id], [r0].[CreateDay], [r0].[ParentId], [r0].[RoleCode], [r0].[Status]
+FROM [RoleInRoleGroup] AS [r]
+INNER JOIN [Role] AS [r0] ON [r].[RoleId] = [r0].[Id]
+WHERE [r].[RoleGroupId] = @__user_RoleGroupId_0
+2025-04-10 14:48:14.603 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[RoleGroupId], [r].[RoleId]
+FROM [RoleInRoleGroup] AS [r]
+WHERE [r].[RoleGroupId] = @__p_0
+2025-04-10 14:48:14.607 +07:00 [INF] AuthenticationScheme: Cookies signed in.
+2025-04-10 14:48:14.610 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType12`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-10 14:48:14.617 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.LoginAction (WebUniversity) in 1832.1924ms
+2025-04-10 14:48:14.618 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.LoginAction (WebUniversity)'
+2025-04-10 14:48:14.625 +07:00 [INF] Request finished HTTP/2 POST https://localhost:44344/Account/LoginAction - 200 null application/json; charset=utf-8 1854.0254ms
+2025-04-10 14:48:14.639 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard - null null
+2025-04-10 14:48:14.647 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:48:14.648 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "DashBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:14.651 +07:00 [INF] Executing ViewResult, running view Index.
+2025-04-10 14:48:14.680 +07:00 [INF] Executed ViewResult - view Index executed in 30.1988ms.
+2025-04-10 14:48:14.681 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity) in 32.4483ms
+2025-04-10 14:48:14.681 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:48:14.681 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard - 200 null text/html; charset=utf-8 41.7104ms
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:48:14.733 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:48:14.734 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-04-10 14:48:14.734 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:48:14.734 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 3.8894ms
+2025-04-10 14:48:14.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 3.8649ms
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:48:14.737 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 3.7494ms
+2025-04-10 14:48:14.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:48:14.736 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:48:14.736 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 3.6077ms
+2025-04-10 14:48:14.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.737 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:48:14.737 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 3.1834ms
+2025-04-10 14:48:14.737 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.738 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 4.686ms
+2025-04-10 14:48:14.737 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.739 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 5.6492ms
+2025-04-10 14:48:14.839 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.839 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:48:14.839 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:48:14.840 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.840 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:48:14.840 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-04-10 14:48:14.840 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.840 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 106.6111ms
+2025-04-10 14:48:14.841 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-04-10 14:48:14.841 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:48:14.841 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:48:14.846 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.846 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.847 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:48:14.847 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.847 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-04-10 14:48:14.847 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.847 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 7.4485ms
+2025-04-10 14:48:14.848 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-04-10 14:48:14.848 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.849 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.850 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.850 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:48:14.851 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.851 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 10.158ms
+2025-04-10 14:48:14.852 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - null null
+2025-04-10 14:48:14.854 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.859 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-04-10 14:48:14.859 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-04-10 14:48:14.860 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-04-10 14:48:14.860 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.860 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-04-10 14:48:14.860 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.860 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:48:14.860 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.860 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:48:14.861 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.860 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.863 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 129.1955ms
+2025-04-10 14:48:14.864 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:48:14.864 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 126.7927ms
+2025-04-10 14:48:14.867 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.872 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 12.4468ms
+2025-04-10 14:48:14.874 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-04-10 14:48:14.874 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.874 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 32.7833ms
+2025-04-10 14:48:14.879 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-04-10 14:48:14.879 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.889 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:48:14.890 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.892 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 27.8124ms
+2025-04-10 14:48:14.892 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 154.9933ms
+2025-04-10 14:48:14.898 +07:00 [INF] Sending file. Request path: 'Admin/js/DashBoard.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-jxb6zdsjmi.gz'
+2025-04-10 14:48:14.898 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.898 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - 200 8110 text/javascript 46.459ms
+2025-04-10 14:48:14.899 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.208ms
+2025-04-10 14:48:14.901 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 61.6644ms
+2025-04-10 14:48:14.902 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-04-10 14:48:14.902 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.902 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 42.9535ms
+2025-04-10 14:48:14.909 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 69.0664ms
+2025-04-10 14:48:14.912 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-04-10 14:48:14.912 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.912 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 64.6203ms
+2025-04-10 14:48:14.923 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.928 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-04-10 14:48:14.928 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.932 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:48:14.937 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 96.3369ms
+2025-04-10 14:48:14.956 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.956 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:48:14.956 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:48:14.957 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 24.7415ms
+2025-04-10 14:48:15.028 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-04-10 14:48:15.028 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:48:15.031 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.043 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - null null
+2025-04-10 14:48:15.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - null null
+2025-04-10 14:48:15.045 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - null null
+2025-04-10 14:48:15.045 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - null null
+2025-04-10 14:48:15.045 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - null null
+2025-04-10 14:48:15.048 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:48:15.048 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:48:15.048 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:15.048 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:48:15.048 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:48:15.050 +07:00 [INF] Route matched with {area = "Admin", action = "report", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.051 +07:00 [INF] Route matched with {area = "Admin", action = "report2", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report2() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.051 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.051 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.051 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:15.145 +07:00 [INF] Executed DbCommand (15ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-04-10 14:48:15.163 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-04-10 14:48:15.166 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__currentYear_0
+2025-04-10 14:48:15.168 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__currentYear_0
+2025-04-10 14:48:15.169 +07:00 [INF] Executed PartialViewResult - view null executed in 6.5759ms.
+2025-04-10 14:48:15.170 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 138.7081ms
+2025-04-10 14:48:15.170 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:48:15.173 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 144.713ms
+2025-04-10 14:48:15.175 +07:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(1 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:48:15.176 +07:00 [INF] Executed DbCommand (7ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:48:15.179 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(1 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:48:15.180 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__priorYear_0
+2025-04-10 14:48:15.182 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:48:15.182 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__priorYear_0
+2025-04-10 14:48:15.182 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:15.183 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:15.183 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:15.187 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(0 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:48:15.188 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(0 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:48:15.192 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 141.3296ms
+2025-04-10 14:48:15.192 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 141.3963ms
+2025-04-10 14:48:15.192 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 141.3659ms
+2025-04-10 14:48:15.193 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:48:15.193 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:48:15.193 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:15.193 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - 200 null application/json; charset=utf-8 148.8709ms
+2025-04-10 14:48:15.193 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - 200 null application/json; charset=utf-8 150.165ms
+2025-04-10 14:48:15.193 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - 200 null application/json; charset=utf-8 148.1755ms
+2025-04-10 14:48:15.197 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:48:15.197 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:48:15.204 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:48:15.204 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:48:15.207 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:15.207 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:15.212 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity) in 161.6269ms
+2025-04-10 14:48:15.212 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity) in 161.5932ms
+2025-04-10 14:48:15.212 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:48:15.212 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:48:15.213 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - 200 null application/json; charset=utf-8 167.3739ms
+2025-04-10 14:48:15.213 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - 200 null application/json; charset=utf-8 167.2786ms
+2025-04-10 14:48:18.957 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - null null
+2025-04-10 14:48:18.959 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:18.959 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:18.969 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:18.969 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:18.970 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:18.970 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 10.4351ms
+2025-04-10 14:48:18.970 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:18.970 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - 200 null application/json; charset=utf-8 13.0982ms
+2025-04-10 14:48:21.532 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=0 - null null
+2025-04-10 14:48:21.533 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:21.533 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:21.535 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:48:21.536 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:48:21.536 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:21.536 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 3.6153ms
+2025-04-10 14:48:21.536 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:21.536 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=0 - 200 null application/json; charset=utf-8 4.4772ms
+2025-04-10 14:48:23.528 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - null null
+2025-04-10 14:48:23.529 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:23.529 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:23.530 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:23.531 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:23.531 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:23.532 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 3.1542ms
+2025-04-10 14:48:23.532 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:23.532 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - 200 null application/json; charset=utf-8 3.9641ms
+2025-04-10 14:48:25.490 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=0 - null null
+2025-04-10 14:48:25.491 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:25.491 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:25.493 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:48:25.494 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:48:25.495 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:25.495 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 3.747ms
+2025-04-10 14:48:25.495 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:25.495 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=0 - 200 null application/json; charset=utf-8 4.7947ms
+2025-04-10 14:48:27.197 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - null null
+2025-04-10 14:48:27.197 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:27.197 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:27.199 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:27.199 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:27.200 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:27.200 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 2.5323ms
+2025-04-10 14:48:27.200 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:27.200 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - 200 null application/json; charset=utf-8 3.247ms
+2025-04-10 14:48:30.727 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - null null
+2025-04-10 14:48:30.727 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:30.727 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:30.729 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:30.730 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:30.730 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:30.730 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 3.0202ms
+2025-04-10 14:48:30.731 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:30.731 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - 200 null application/json; charset=utf-8 3.9031ms
+2025-04-10 14:48:33.625 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - null null
+2025-04-10 14:48:33.626 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:33.626 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:48:33.628 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:33.628 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+2025-04-10 14:48:33.629 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:48:33.629 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 2.6656ms
+2025-04-10 14:48:33.629 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:48:33.629 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu?fillter=1 - 200 null application/json; charset=utf-8 3.5637ms
+2025-04-10 14:49:28.070 +07:00 [INF] User profile is available. Using 'C:\Users\lehie\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-10 14:49:28.129 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 24 giờ trước lần backup đầu tiên.
+2025-04-10 14:49:29.401 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard - null null
+2025-04-10 14:49:29.431 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-10 14:49:29.431 +07:00 [INF] Hosting environment: Development
+2025-04-10 14:49:29.431 +07:00 [INF] Content root path: D:\ASP.NET Core\Web-University
+2025-04-10 14:49:29.744 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:49:29.759 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "DashBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:29.835 +07:00 [INF] Executing ViewResult, running view Index.
+2025-04-10 14:49:29.901 +07:00 [INF] Executed ViewResult - view Index executed in 68.8999ms.
+2025-04-10 14:49:29.912 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity) in 151.6793ms
+2025-04-10 14:49:29.912 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:49:29.916 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard - 200 null text/html; charset=utf-8 516.3145ms
+2025-04-10 14:49:29.938 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:49:29.938 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:49:29.938 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:49:29.948 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.948 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.948 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.951 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:49:29.951 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:49:29.951 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:49:29.952 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.952 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.952 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.953 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 15.5055ms
+2025-04-10 14:49:29.953 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 15.5054ms
+2025-04-10 14:49:29.953 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 15.1735ms
+2025-04-10 14:49:29.962 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:49:29.964 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:49:29.966 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:49:29.967 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:49:29.967 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:49:29.967 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:49:29.967 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 5.5501ms
+2025-04-10 14:49:29.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 3.3073ms
+2025-04-10 14:49:29.967 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 0.8923ms
+2025-04-10 14:49:29.974 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-04-10 14:49:29.974 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:49:29.975 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-04-10 14:49:29.975 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.975 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.975 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:49:29.976 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.976 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.976 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 1.3488ms
+2025-04-10 14:49:29.982 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:49:29.983 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.990 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-04-10 14:49:29.990 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-04-10 14:49:29.990 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.990 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.990 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-04-10 14:49:29.991 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:29.991 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 15.875ms
+2025-04-10 14:49:29.991 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 16.1607ms
+2025-04-10 14:49:29.995 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 12.9634ms
+2025-04-10 14:49:30.000 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:49:30.000 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:49:30.001 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:49:30.001 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.001 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:49:30.001 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.001 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.001 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.001 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 1.016ms
+2025-04-10 14:49:30.002 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-04-10 14:49:30.003 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.003 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 3.3877ms
+2025-04-10 14:49:30.009 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-04-10 14:49:30.009 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.014 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-04-10 14:49:30.014 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 13.6276ms
+2025-04-10 14:49:30.017 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:49:30.020 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.022 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-04-10 14:49:30.022 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.022 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 5.0318ms
+2025-04-10 14:49:30.026 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:49:30.027 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.030 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-04-10 14:49:30.030 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.032 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 5.3382ms
+2025-04-10 14:49:30.044 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:49:30.045 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.045 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:49:30.045 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.045 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 1.2288ms
+2025-04-10 14:49:30.046 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-04-10 14:49:30.047 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.048 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-04-10 14:49:30.048 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.048 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 1.917ms
+2025-04-10 14:49:30.049 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.051 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-04-10 14:49:30.052 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-04-10 14:49:30.052 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.052 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.052 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-04-10 14:49:30.053 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 38.6489ms
+2025-04-10 14:49:30.053 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.053 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 1.9711ms
+2025-04-10 14:49:30.055 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:49:30.060 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - null null
+2025-04-10 14:49:30.061 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.062 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:49:30.063 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:49:30.063 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.064 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 1.7343ms
+2025-04-10 14:49:30.065 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 9.6013ms
+2025-04-10 14:49:30.080 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:49:30.095 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-04-10 14:49:30.098 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:49:30.107 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.111 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.7379ms
+2025-04-10 14:49:30.175 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.176 +07:00 [INF] Sending file. Request path: 'Admin/js/DashBoard.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-jxb6zdsjmi.gz'
+2025-04-10 14:49:30.176 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.176 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - 200 8110 text/javascript 115.7948ms
+2025-04-10 14:49:30.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - null null
+2025-04-10 14:49:30.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - null null
+2025-04-10 14:49:30.190 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - null null
+2025-04-10 14:49:30.191 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - null null
+2025-04-10 14:49:30.191 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - null null
+2025-04-10 14:49:30.194 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:49:30.194 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:30.194 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:30.194 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:49:30.194 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:49:30.197 +07:00 [INF] Route matched with {area = "Admin", action = "report2", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report2() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.197 +07:00 [INF] Route matched with {area = "Admin", action = "report", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.201 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.201 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.201 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:30.214 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:49:30.219 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.219 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:49:30.219 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.219 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 5.6352ms
+2025-04-10 14:49:30.235 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/img/favicon.png - null null
+2025-04-10 14:49:30.236 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.237 +07:00 [INF] The file Admin/assets/img/favicon.png was not modified
+2025-04-10 14:49:30.237 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:49:30.237 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/img/favicon.png - 304 null image/png 1.7534ms
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__currentYear_0
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(1 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (22ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (19ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__currentYear_0
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (27ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-04-10 14:49:31.025 +07:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(1 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:49:31.045 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-04-10 14:49:31.048 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__priorYear_0
+2025-04-10 14:49:31.048 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:49:31.049 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__priorYear_0
+2025-04-10 14:49:31.049 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:31.049 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:31.049 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:31.052 +07:00 [INF] Executed PartialViewResult - view null executed in 7.7944ms.
+2025-04-10 14:49:31.053 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 946.5026ms
+2025-04-10 14:49:31.054 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:49:31.054 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(0 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:49:31.054 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(0 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:49:31.059 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 963.9659ms
+2025-04-10 14:49:31.062 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 860.9175ms
+2025-04-10 14:49:31.062 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 860.9841ms
+2025-04-10 14:49:31.062 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:31.062 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 860.8388ms
+2025-04-10 14:49:31.062 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:49:31.062 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:31.062 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:49:31.062 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:49:31.063 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - 200 null application/json; charset=utf-8 872.7638ms
+2025-04-10 14:49:31.063 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - 200 null application/json; charset=utf-8 872.868ms
+2025-04-10 14:49:31.063 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - 200 null application/json; charset=utf-8 872.8418ms
+2025-04-10 14:49:31.069 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:49:31.070 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:49:31.071 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:31.072 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:31.076 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity) in 878.6322ms
+2025-04-10 14:49:31.076 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:49:31.076 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity) in 878.609ms
+2025-04-10 14:49:31.076 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - 200 null application/json; charset=utf-8 885.2064ms
+2025-04-10 14:49:31.076 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:49:31.076 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - 200 null application/json; charset=utf-8 885.5685ms
+2025-04-10 14:49:36.743 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer?fillter=1 - null null
+2025-04-10 14:49:36.746 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:36.746 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:36.783 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+2025-04-10 14:49:36.785 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+2025-04-10 14:49:36.785 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:36.785 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 39.6393ms
+2025-04-10 14:49:36.786 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:36.786 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer?fillter=1 - 200 null application/json; charset=utf-8 42.5984ms
+2025-04-10 14:49:38.500 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer?fillter=0 - null null
+2025-04-10 14:49:38.501 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:38.501 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:38.504 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__currentYear_0
+2025-04-10 14:49:38.505 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__priorYear_0
+2025-04-10 14:49:38.505 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:38.505 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 4.2394ms
+2025-04-10 14:49:38.505 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:49:38.506 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer?fillter=0 - 200 null application/json; charset=utf-8 5.4683ms
+2025-04-10 14:49:41.191 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom?fillter=1 - null null
+2025-04-10 14:49:41.192 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:41.193 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:41.197 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+2025-04-10 14:49:41.198 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+2025-04-10 14:49:41.198 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:41.198 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 5.6327ms
+2025-04-10 14:49:41.198 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:41.198 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom?fillter=1 - 200 null application/json; charset=utf-8 7.0311ms
+2025-04-10 14:49:42.779 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom?fillter=0 - null null
+2025-04-10 14:49:42.779 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:42.780 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:49:42.782 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__currentYear_0
+2025-04-10 14:49:42.783 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__priorYear_0
+2025-04-10 14:49:42.783 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:49:42.784 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 3.8015ms
+2025-04-10 14:49:42.784 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:49:42.784 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom?fillter=0 - 200 null application/json; charset=utf-8 4.8904ms
+2025-04-10 14:50:38.712 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/DashBoard - null null
+2025-04-10 14:50:38.716 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:50:38.717 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "DashBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.717 +07:00 [INF] Executing ViewResult, running view Index.
+2025-04-10 14:50:38.720 +07:00 [INF] Executed ViewResult - view Index executed in 3.4086ms.
+2025-04-10 14:50:38.720 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity) in 3.9138ms
+2025-04-10 14:50:38.720 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:50:38.721 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/DashBoard - 200 null text/html; charset=utf-8 8.6466ms
+2025-04-10 14:50:38.768 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:50:38.768 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:50:38.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:50:38.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:50:38.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-04-10 14:50:38.769 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:50:38.770 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:50:38.770 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:50:38.770 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.771 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-04-10 14:50:38.771 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.772 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 2.0895ms
+2025-04-10 14:50:38.772 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:50:38.776 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:50:38.776 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:50:38.776 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:50:38.776 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:50:38.776 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.776 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.777 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:50:38.776 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.777 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 6.8997ms
+2025-04-10 14:50:38.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 9.0545ms
+2025-04-10 14:50:38.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 7.2421ms
+2025-04-10 14:50:38.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 7.8905ms
+2025-04-10 14:50:38.777 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 8.8351ms
+2025-04-10 14:50:38.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:50:38.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:50:38.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-04-10 14:50:38.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-04-10 14:50:38.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:50:38.777 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.779 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.780 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:50:38.780 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.781 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-04-10 14:50:38.781 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.781 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:50:38.781 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 12.2216ms
+2025-04-10 14:50:38.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:50:38.783 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-04-10 14:50:38.783 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.783 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 6.2561ms
+2025-04-10 14:50:38.783 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.786 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.786 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:50:38.786 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.787 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 16.7653ms
+2025-04-10 14:50:38.787 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:50:38.787 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.792 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.792 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:50:38.792 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.793 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 6.1843ms
+2025-04-10 14:50:38.794 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-04-10 14:50:38.797 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.798 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-04-10 14:50:38.798 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.798 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-04-10 14:50:38.800 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-04-10 14:50:38.800 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.800 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.800 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 5.9557ms
+2025-04-10 14:50:38.800 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:50:38.801 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-04-10 14:50:38.801 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.801 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.801 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 2.8198ms
+2025-04-10 14:50:38.801 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - null null
+2025-04-10 14:50:38.803 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.804 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-04-10 14:50:38.804 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.805 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:50:38.806 +07:00 [INF] Sending file. Request path: 'Admin/js/DashBoard.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-jxb6zdsjmi.gz'
+2025-04-10 14:50:38.806 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.806 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - 200 8110 text/javascript 4.512ms
+2025-04-10 14:50:38.806 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:50:38.807 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 30.344ms
+2025-04-10 14:50:38.808 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:50:38.808 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.808 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 7.4366ms
+2025-04-10 14:50:38.806 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.8031ms
+2025-04-10 14:50:38.813 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 32.1666ms
+2025-04-10 14:50:38.828 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.7151ms
+2025-04-10 14:50:38.830 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 58.6308ms
+2025-04-10 14:50:38.835 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.839 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-04-10 14:50:38.839 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.844 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 62.6512ms
+2025-04-10 14:50:38.857 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:50:38.863 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.863 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:50:38.864 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.864 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 87.0351ms
+2025-04-10 14:50:38.865 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.865 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:50:38.865 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.865 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 8.6261ms
+2025-04-10 14:50:38.886 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.887 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.888 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-04-10 14:50:38.888 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.888 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 111.3697ms
+2025-04-10 14:50:38.900 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-04-10 14:50:38.900 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:38.908 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 131.5132ms
+2025-04-10 14:50:38.970 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-04-10 14:50:38.971 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:50:38.971 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.979 +07:00 [INF] Executed DbCommand (6ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-04-10 14:50:38.981 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - null null
+2025-04-10 14:50:38.981 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - null null
+2025-04-10 14:50:38.982 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-04-10 14:50:38.982 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:50:38.982 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:50:38.982 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.982 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.984 +07:00 [INF] Executed PartialViewResult - view null executed in 2.4524ms.
+2025-04-10 14:50:38.984 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 12.8353ms
+2025-04-10 14:50:38.984 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:50:38.985 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 14.1622ms
+2025-04-10 14:50:38.985 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - null null
+2025-04-10 14:50:38.986 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - null null
+2025-04-10 14:50:38.986 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - null null
+2025-04-10 14:50:38.986 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:50:38.986 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:50:38.986 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:50:38.986 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.986 +07:00 [INF] Route matched with {area = "Admin", action = "report", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.986 +07:00 [INF] Route matched with {area = "Admin", action = "report2", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report2() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:38.988 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:38.990 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:38.990 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:38.991 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:38.992 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 9.3728ms
+2025-04-10 14:50:38.992 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:50:38.993 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - 200 null application/json; charset=utf-8 11.1437ms
+2025-04-10 14:50:38.994 +07:00 [INF] Executed DbCommand (11ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:38.997 +07:00 [INF] Executed DbCommand (3ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:38.997 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(1 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:50:38.997 +07:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(1 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:50:38.997 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:38.998 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 11.7879ms
+2025-04-10 14:50:38.998 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:50:38.999 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - 200 null application/json; charset=utf-8 13.3855ms
+2025-04-10 14:50:39.000 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:39.000 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:39.000 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 17.7337ms
+2025-04-10 14:50:39.000 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:50:39.000 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - 200 null application/json; charset=utf-8 18.879ms
+2025-04-10 14:50:39.002 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(0 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:50:39.002 +07:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(0 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:50:39.004 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:39.004 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:39.006 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:39.006 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:39.007 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:39.008 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:39.008 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity) in 21.5993ms
+2025-04-10 14:50:39.008 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:50:39.009 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - 200 null application/json; charset=utf-8 22.9643ms
+2025-04-10 14:50:39.009 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity) in 22.9388ms
+2025-04-10 14:50:39.010 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:50:39.011 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - 200 null application/json; charset=utf-8 25.0984ms
+2025-04-10 14:50:40.819 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/DashBoard - null null
+2025-04-10 14:50:40.821 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:50:40.821 +07:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "DashBoard"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:40.822 +07:00 [INF] Executing ViewResult, running view Index.
+2025-04-10 14:50:40.823 +07:00 [INF] Executed ViewResult - view Index executed in 1.5738ms.
+2025-04-10 14:50:40.823 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity) in 1.9605ms
+2025-04-10 14:50:40.823 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.Index (WebUniversity)'
+2025-04-10 14:50:40.824 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/DashBoard - 200 null text/html; charset=utf-8 5.1068ms
+2025-04-10 14:50:40.866 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:50:40.866 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:50:40.866 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:50:40.867 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:50:40.867 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] The file Admin/assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:50:40.867 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:50:40.867 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] The file Admin/assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:50:40.867 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] The file Admin/assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:50:40.867 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:50:40.867 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.867 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.bubble.css - 304 null text/css 0.5091ms
+2025-04-10 14:50:40.867 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 0.8404ms
+2025-04-10 14:50:40.867 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 0.8517ms
+2025-04-10 14:50:40.867 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 0.9648ms
+2025-04-10 14:50:40.868 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.868 +07:00 [INF] The file Admin/assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:50:40.868 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.868 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:50:40.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.snow.css - 304 null text/css 0.8541ms
+2025-04-10 14:50:40.868 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.868 +07:00 [INF] The file Admin/assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:50:40.868 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.868 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/remixicon/remixicon.css - 304 null text/css 0.6403ms
+2025-04-10 14:50:40.869 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:50:40.869 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.869 +07:00 [INF] The file Admin/assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:50:40.869 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.869 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - null null
+2025-04-10 14:50:40.870 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/style.css - 304 null text/css 0.6966ms
+2025-04-10 14:50:40.869 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - null null
+2025-04-10 14:50:40.870 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.870 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.870 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:50:40.871 +07:00 [INF] Sending file. Request path: 'Admin/assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\oa9slsgj9g-5bmfcnc54p.gz'
+2025-04-10 14:50:40.871 +07:00 [INF] Sending file. Request path: 'react/assets/index-GNLSjkBZ.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\nniy0lirak-alqb4oh177.gz'
+2025-04-10 14:50:40.871 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.871 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/css/style.css - 200 22719 text/css 1.4611ms
+2025-04-10 14:50:40.871 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-GNLSjkBZ.css - 200 14188 text/css 1.476ms
+2025-04-10 14:50:40.871 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.871 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:50:40.872 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:50:40.872 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.872 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:50:40.872 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.873 +07:00 [INF] The file Admin/assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:50:40.873 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.873 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - null null
+2025-04-10 14:50:40.873 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.873 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 1.3092ms
+2025-04-10 14:50:40.873 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.874 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6kmfe9942o-493y06b0oq.gz'
+2025-04-10 14:50:40.874 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.875 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 3.7547ms
+2025-04-10 14:50:40.876 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:50:40.876 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\wsumrst718-7bfv779k36.gz'
+2025-04-10 14:50:40.876 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\m0yo08zm2j-ypojrgjh6b.gz'
+2025-04-10 14:50:40.876 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.876 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.876 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.877 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/quill/quill.js - 200 209403 text/javascript 4.19ms
+2025-04-10 14:50:40.877 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\28pehcrwfp-2a5arjvktv.gz'
+2025-04-10 14:50:40.878 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.878 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 2.1345ms
+2025-04-10 14:50:40.879 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:50:40.879 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - null null
+2025-04-10 14:50:40.879 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:50:40.880 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.880 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.880 +07:00 [INF] The file Admin/assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:50:40.880 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.880 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.7019ms
+2025-04-10 14:50:40.881 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.883 +07:00 [INF] Sending file. Request path: 'Admin/assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\f4bj8wdo9p-n4l97333y6.gz'
+2025-04-10 14:50:40.883 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.883 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:50:40.883 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\s4old43oo2-kx3cwpk1ir.gz'
+2025-04-10 14:50:40.884 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.884 +07:00 [INF] Sending file. Request path: 'Admin/assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\jijlz0k4ck-m0ksaommmi.gz'
+2025-04-10 14:50:40.884 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/js/main.js - 200 10408 text/javascript 4.8432ms
+2025-04-10 14:50:40.884 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.884 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 0.8426ms
+2025-04-10 14:50:40.884 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 11.9294ms
+2025-04-10 14:50:40.885 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 5.3256ms
+2025-04-10 14:50:40.888 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:50:40.888 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/TB.js - null null
+2025-04-10 14:50:40.888 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:50:40.888 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - null null
+2025-04-10 14:50:40.888 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.888 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.889 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.889 +07:00 [INF] Sending file. Request path: 'Admin/js/TB.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\z7pqzb55hu-8geixh7uvg.gz'
+2025-04-10 14:50:40.890 +07:00 [INF] Sending file. Request path: 'Admin/js/DashBoard.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\7r3922jn0h-jxb6zdsjmi.gz'
+2025-04-10 14:50:40.890 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.890 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.890 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/TB.js - 200 2200 text/javascript 1.9438ms
+2025-04-10 14:50:40.890 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/js/DashBoard.js - 200 8110 text/javascript 1.8678ms
+2025-04-10 14:50:40.891 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 20.5688ms
+2025-04-10 14:50:40.894 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:50:40.894 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.894 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 6.5319ms
+2025-04-10 14:50:40.907 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.5159ms
+2025-04-10 14:50:40.933 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:50:40.934 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.934 +07:00 [INF] The file Admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:50:40.934 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:40.934 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/admin/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 1.0135ms
+2025-04-10 14:50:40.997 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - null null
+2025-04-10 14:50:40.997 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:50:40.997 +07:00 [INF] Route matched with {area = "Admin", action = "AccountTB", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AccountTB() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:40.999 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__username_0='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreateDay], [a].[LecturerId], [a].[Password], [a].[RoleGroupId], [a].[Status], [a].[StudentId], [a].[Username], [l].[Id], [l].[Address], [l].[BirthDate], [l].[Cccd], [l].[CreateDay], [l].[Email], [l].[FacultyId], [l].[FullName], [l].[Gender], [l].[Image], [l].[LecturerCode], [l].[PhoneNumber], [l].[Status], [s].[Id], [s].[Address], [s].[BirthDate], [s].[CCCD], [s].[ClassId], [s].[CreateDay], [s].[Email], [s].[FullName], [s].[Gender], [s].[Image], [s].[PhoneNumber], [s].[Status], [s].[StudentCode]
+FROM [Account] AS [a]
+LEFT JOIN [Lecturer] AS [l] ON [a].[LecturerId] = [l].[Id]
+LEFT JOIN [Student] AS [s] ON [a].[StudentId] = [s].[Id]
+WHERE [a].[Username] = @__username_0
+2025-04-10 14:50:41.001 +07:00 [INF] Executing PartialViewResult, running view AccountTB.
+2025-04-10 14:50:41.002 +07:00 [INF] Executed PartialViewResult - view null executed in 0.908ms.
+2025-04-10 14:50:41.002 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity) in 4.3767ms
+2025-04-10 14:50:41.002 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.AccountTB (WebUniversity)'
+2025-04-10 14:50:41.002 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/AccountTB - 200 null text/html; charset=utf-8 5.1393ms
+2025-04-10 14:50:41.010 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - null null
+2025-04-10 14:50:41.011 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:50:41.011 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - null null
+2025-04-10 14:50:41.011 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountStu", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountStu(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:41.012 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:50:41.012 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountLeturer", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountLeturer(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:41.012 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - null null
+2025-04-10 14:50:41.012 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - null null
+2025-04-10 14:50:41.012 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - null null
+2025-04-10 14:50:41.012 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:50:41.012 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:50:41.012 +07:00 [INF] Route matched with {area = "Admin", action = "report", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:41.013 +07:00 [INF] Route matched with {area = "Admin", action = "report2", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] report2() on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:41.013 +07:00 [INF] Executing endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:50:41.013 +07:00 [INF] Route matched with {area = "Admin", action = "reportCountRoom", controller = "DashBoard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.JsonResult] reportCountRoom(Int32) on controller WebUniversity.Areas.Admin.Controllers.DashBoardController (WebUniversity).
+2025-04-10 14:50:41.014 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:41.014 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:41.015 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(1 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:50:41.015 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__currentYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__currentYear_0
+2025-04-10 14:50:41.015 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(1 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:50:41.015 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Room] AS [r]
+WHERE DATEPART(year, [r].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:41.015 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType9`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:41.016 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity) in 3.1024ms
+2025-04-10 14:50:41.016 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountRoom (WebUniversity)'
+2025-04-10 14:50:41.016 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountRoom - 200 null application/json; charset=utf-8 3.9239ms
+2025-04-10 14:50:41.017 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Lecturer] AS [l]
+WHERE [l].[Gender] = CAST(0 AS bit) AND [l].[Status] = CAST(1 AS bit)
+GROUP BY [l].[FacultyId]
+2025-04-10 14:50:41.017 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Lecturer] AS [l]
+WHERE DATEPART(year, [l].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:41.017 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@__priorYear_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Student] AS [s]
+WHERE DATEPART(year, [s].[CreateDay]) = @__priorYear_0
+2025-04-10 14:50:41.017 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType8`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:41.017 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType7`3[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:41.017 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity) in 5.9676ms
+2025-04-10 14:50:41.017 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity) in 5.6068ms
+2025-04-10 14:50:41.018 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountStu (WebUniversity)'
+2025-04-10 14:50:41.018 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.reportCountLeturer (WebUniversity)'
+2025-04-10 14:50:41.018 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountStu - 200 null application/json; charset=utf-8 7.3365ms
+2025-04-10 14:50:41.018 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/reportCountLeturer - 200 null application/json; charset=utf-8 6.4382ms
+2025-04-10 14:50:41.018 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[FacultyId] AS [facultyId], COUNT(*) AS [count]
+FROM [Student] AS [s]
+LEFT JOIN [Class] AS [c] ON [s].[ClassId] = [c].[Id]
+WHERE [s].[Gender] = CAST(0 AS bit) AND [s].[Status] = CAST(1 AS bit)
+GROUP BY [c].[FacultyId]
+2025-04-10 14:50:41.019 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:41.019 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[FacultyName]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:41.020 +07:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:41.020 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [f].[Id]
+FROM [Faculty] AS [f]
+WHERE [f].[Status] = CAST(1 AS bit)
+2025-04-10 14:50:41.020 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType5`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:41.020 +07:00 [INF] Executing JsonResult, writing value of type '<>f__AnonymousType3`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType6`3[[System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[System.Int32, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebUniversity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-04-10 14:50:41.020 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity) in 8.0631ms
+2025-04-10 14:50:41.021 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report (WebUniversity)'
+2025-04-10 14:50:41.021 +07:00 [INF] Executed action WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity) in 7.9883ms
+2025-04-10 14:50:41.021 +07:00 [INF] Executed endpoint 'WebUniversity.Areas.Admin.Controllers.DashBoardController.report2 (WebUniversity)'
+2025-04-10 14:50:41.021 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report - 200 null application/json; charset=utf-8 8.8875ms
+2025-04-10 14:50:41.021 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Admin/DashBoard/Report2 - 200 null application/json; charset=utf-8 8.8695ms
+2025-04-10 14:50:45.674 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Account/Logout - null null
+2025-04-10 14:50:45.676 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.Logout (WebUniversity)'
+2025-04-10 14:50:45.678 +07:00 [INF] Route matched with {action = "Logout", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout() on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-04-10 14:50:45.681 +07:00 [INF] AuthenticationScheme: Cookies signed out.
+2025-04-10 14:50:45.683 +07:00 [INF] Executing RedirectResult, redirecting to /Account/Login.
+2025-04-10 14:50:45.683 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.Logout (WebUniversity) in 4.5191ms
+2025-04-10 14:50:45.683 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.Logout (WebUniversity)'
+2025-04-10 14:50:45.683 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Account/Logout - 302 null null 9.4234ms
+2025-04-10 14:50:45.692 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/Account/Login - null null
+2025-04-10 14:50:45.695 +07:00 [INF] Executing endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-04-10 14:50:45.696 +07:00 [INF] Route matched with {action = "login", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult login() on controller WebUniversity.Controllers.AccountController (WebUniversity).
+2025-04-10 14:50:45.696 +07:00 [INF] Executing ViewResult, running view login.
+2025-04-10 14:50:45.711 +07:00 [INF] Executed ViewResult - view login executed in 15.3168ms.
+2025-04-10 14:50:45.711 +07:00 [INF] Executed action WebUniversity.Controllers.AccountController.login (WebUniversity) in 15.6865ms
+2025-04-10 14:50:45.711 +07:00 [INF] Executed endpoint 'WebUniversity.Controllers.AccountController.login (WebUniversity)'
+2025-04-10 14:50:45.712 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/Account/Login - 200 null text/html; charset=utf-8 19.4815ms
+2025-04-10 14:50:45.756 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - null null
+2025-04-10 14:50:45.756 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - null null
+2025-04-10 14:50:45.756 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.756 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.756 +07:00 [INF] The file assets/vendor/bootstrap-icons/bootstrap-icons.css was not modified
+2025-04-10 14:50:45.756 +07:00 [INF] The file assets/vendor/bootstrap/css/bootstrap.min.css was not modified
+2025-04-10 14:50:45.756 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.756 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.756 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/css/bootstrap.min.css - 304 null text/css 0.8996ms
+2025-04-10 14:50:45.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - null null
+2025-04-10 14:50:45.757 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - null null
+2025-04-10 14:50:45.757 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.757 +07:00 [INF] The file assets/vendor/quill/quill.snow.css was not modified
+2025-04-10 14:50:45.757 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.757 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.757 +07:00 [INF] The file assets/vendor/boxicons/css/boxicons.min.css was not modified
+2025-04-10 14:50:45.757 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/bootstrap-icons.css - 304 null text/css 1.2941ms
+2025-04-10 14:50:45.757 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.snow.css - 304 null text/css 0.4177ms
+2025-04-10 14:50:45.757 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.757 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/boxicons/css/boxicons.min.css - 304 null text/css 0.5047ms
+2025-04-10 14:50:45.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/css/style.css - null null
+2025-04-10 14:50:45.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - null null
+2025-04-10 14:50:45.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - null null
+2025-04-10 14:50:45.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - null null
+2025-04-10 14:50:45.776 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - null null
+2025-04-10 14:50:45.777 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - null null
+2025-04-10 14:50:45.778 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/img/logo.png - null null
+2025-04-10 14:50:45.778 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - null null
+2025-04-10 14:50:45.778 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.778 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.778 +07:00 [INF] The file assets/img/logo.png was not modified
+2025-04-10 14:50:45.778 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.778 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - null null
+2025-04-10 14:50:45.778 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/img/logo.png - 304 null image/png 0.9516ms
+2025-04-10 14:50:45.779 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_vs/browserLink - null null
+2025-04-10 14:50:45.779 +07:00 [INF] Sending file. Request path: 'assets/css/style.css'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\e9xn4k5tno-wncy1ibapd.gz'
+2025-04-10 14:50:45.779 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.779 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/js/main.js - null null
+2025-04-10 14:50:45.779 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/css/style.css - 200 21361 text/css 3.1891ms
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] The file assets/vendor/chart.js/chart.umd.js was not modified
+2025-04-10 14:50:45.780 +07:00 [INF] The file assets/vendor/remixicon/remixicon.css was not modified
+2025-04-10 14:50:45.780 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.780 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/remixicon/remixicon.css - 304 null text/css 3.4204ms
+2025-04-10 14:50:45.780 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/chart.js/chart.umd.js - 304 null text/javascript 2.1971ms
+2025-04-10 14:50:45.781 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.781 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/AppJs/Account.js - null null
+2025-04-10 14:50:45.781 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.781 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - null null
+2025-04-10 14:50:45.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - null null
+2025-04-10 14:50:45.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - null null
+2025-04-10 14:50:45.782 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Sending file. Request path: 'AppJs/Account.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\9sokuyuy9y-d8dad84h8l.gz'
+2025-04-10 14:50:45.782 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] The file assets/vendor/php-email-form/validate.js was not modified
+2025-04-10 14:50:45.782 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/AppJs/Account.js - 200 353 text/javascript 0.7937ms
+2025-04-10 14:50:45.782 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/php-email-form/validate.js - 304 null text/javascript 0.3922ms
+2025-04-10 14:50:45.780 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-10 14:50:45.780 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - null null
+2025-04-10 14:50:45.782 +07:00 [INF] The file assets/vendor/simple-datatables/style.css was not modified
+2025-04-10 14:50:45.782 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.782 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/style.css - 304 null text/css 6.1477ms
+2025-04-10 14:50:45.787 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.787 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_framework/aspnetcore-browser-refresh.js - 200 13778 application/javascript; charset=utf-8 7.3521ms
+2025-04-10 14:50:45.789 +07:00 [INF] Sending file. Request path: 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\si1qlylr3w-493y06b0oq.gz'
+2025-04-10 14:50:45.789 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.791 +07:00 [INF] Sending file. Request path: 'assets/js/main.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\6tob5d88xv-j1s052mfj7.gz'
+2025-04-10 14:50:45.791 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - null null
+2025-04-10 14:50:45.791 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.791 +07:00 [INF] Sending file. Request path: 'assets/vendor/simple-datatables/simple-datatables.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\77xr10olhs-2a5arjvktv.gz'
+2025-04-10 14:50:45.791 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/js/main.js - 200 8891 text/javascript 11.8473ms
+2025-04-10 14:50:45.791 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.793 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/simple-datatables/simple-datatables.js - 200 98148 text/javascript 10.3431ms
+2025-04-10 14:50:45.793 +07:00 [INF] Sending file. Request path: 'react/assets/index-CmBJohSG.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\vnv802erme-ivih5k8fvk.gz'
+2025-04-10 14:50:45.794 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.794 +07:00 [INF] Sending file. Request path: 'assets/vendor/tinymce/tinymce.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\tac8qs4qq4-m0ksaommmi.gz'
+2025-04-10 14:50:45.794 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.794 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap/js/bootstrap.bundle.min.js - 200 80764 text/javascript 17.8045ms
+2025-04-10 14:50:45.794 +07:00 [INF] Sending file. Request path: 'assets/vendor/apexcharts/apexcharts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\gzh5x9ictr-7bfv779k36.gz'
+2025-04-10 14:50:45.794 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.794 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/react/assets/index-CmBJohSG.js - 200 217590 text/javascript 12.7358ms
+2025-04-10 14:50:45.795 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/tinymce/tinymce.min.js - 200 438907 text/javascript 13.0344ms
+2025-04-10 14:50:45.795 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/apexcharts/apexcharts.min.js - 200 534047 text/javascript 18.3511ms
+2025-04-10 14:50:45.814 +07:00 [INF] Sending file. Request path: 'assets/vendor/echarts/echarts.min.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\uiz4m8c624-kx3cwpk1ir.gz'
+2025-04-10 14:50:45.814 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.820 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/echarts/echarts.min.js - 200 1031043 text/javascript 43.3695ms
+2025-04-10 14:50:45.829 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.9739ms
+2025-04-10 14:50:45.860 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.860 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.861 +07:00 [INF] The file assets/vendor/quill/quill.bubble.css was not modified
+2025-04-10 14:50:45.861 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.861 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.bubble.css - 304 null text/css 83.3037ms
+2025-04-10 14:50:45.863 +07:00 [INF] Sending file. Request path: 'assets/vendor/quill/quill.js'. Physical path: 'D:\ASP.NET Core\Web-University\obj\Debug\net9.0\compressed\qracv1nz4u-ypojrgjh6b.gz'
+2025-04-10 14:50:45.863 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.864 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/quill/quill.js - 200 209403 text/javascript 72.6036ms
+2025-04-10 14:50:45.908 +07:00 [INF] Request starting HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - null null
+2025-04-10 14:50:45.912 +07:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.912 +07:00 [INF] The file assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2 was not modified
+2025-04-10 14:50:45.912 +07:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2025-04-10 14:50:45.913 +07:00 [INF] Request finished HTTP/2 GET https://localhost:44344/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6 - 304 null font/woff2 4.6798ms

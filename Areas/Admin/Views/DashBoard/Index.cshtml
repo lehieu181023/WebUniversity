@@ -3,8 +3,6 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-
-
     <div class="pagetitle">
         <h1>Dashboard</h1>
         <nav>
@@ -18,35 +16,146 @@
     <section class="section dashboard">
         <div class="row">
 
-            <!-- Left side columns -->
-            <div class="col-lg-8">
-                <div class="row">
+
+
+                    <!-- Sales Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card sales-card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" onclick="loadCountStu(0)">This Year</a></li>
+                                    <li><a class="dropdown-item" onclick="loadCountStu(1)">All</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Students </h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3" id="CountStu">
+                                        <h6>0</h6>
+                                        <span class="text-success small pt-1 fw-bold">0%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Sales Card -->
+                    <!-- Revenue Card -->
+                    <div class="col-xxl-4 col-md-6">
+                        <div class="card info-card revenue-card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+                                    <li><a class="dropdown-item" onclick="loadCountLecturer(0)">This Year</a></li>
+                                    <li><a class="dropdown-item" onclick="loadCountLecturer(1)">All</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Lecturer </h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-people"></i>
+                                    </div>
+                                    <div class="ps-3" id="CountLec">
+                                        <h6>0</h6>
+                                        <span class="text-success small pt-1 fw-bold">0%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div><!-- End Revenue Card -->
+                    <!-- Customers Card -->
+                    <div class="col-xxl-4 col-xl-12">
+
+                        <div class="card info-card customers-card">
+                            <div class="filter">
+                                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                    <li class="dropdown-header text-start">
+                                        <h6>Filter</h6>
+                                    </li>
+
+                                    <li><a class="dropdown-item" onclick="loadCountRoom(0)">This Year</a></li>
+                                    <li><a class="dropdown-item" onclick="loadCountRoom(1)">All</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card-body">
+                                <h5 class="card-title">Room </h5>
+
+                                <div class="d-flex align-items-center">
+                                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                        <i class="bi bi-house"></i>
+                                    </div>
+                                    <div class="ps-3" id="CountRoom">
+                                        <h6>0</h6>
+                                        <span class="text-danger small pt-1 fw-bold">0%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- End Customers Card -->
                     <!-- Reports -->
                     <div class="col-12">
                         <div class="card">
+
                             <div class="card-body">
-                                <h5 class="card-title">Reports <span>/Today</span></h5>
+                                <h5 class="card-title">Reports lecturer in Faculty</h5>
 
                                 <!-- Line Chart -->
                                 <div id="reportsChart"></div>
-
-
 
                             </div>
 
                         </div>
                     </div><!-- End Reports -->
-                </div>
+                <!-- Reports -->
+                <div class="col-12">
+                    <div class="card">
+
+                        <div class="card-body">
+                            <h5 class="card-title">Reports lecturer in Faculty</h5>
+
+                            <!-- Line Chart -->
+                            <div id="reportsChart2"></div>
+
+                        </div>
+
+                    </div>
+
             </div><!-- End Left side columns -->
-            
+            <!-- Right side columns -->
+           
+
         </div>
     </section>
 
 
 
-   @section Scripts{
 
-    <script src="~/Admin/js/DashBoard.js"></script>
+
+   @section Scripts{
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+        <script src="https://code.highcharts.com/modules/cylinder.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <script src="~/Admin/js/DashBoard.js"></script>
    }
 
    

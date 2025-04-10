@@ -1,78 +1,61 @@
-﻿loadReport1 = function () {
+﻿
+loadReport1 = function () {
     BlockUI();
     $.ajax({
-        url: "/Admin/DashBoard/Report1",
+        url: "/Admin/DashBoard/Report",
         type: "GET",
         success: function (res) {
             UnBlockUI();
+            var data = res.data;
+            var faculty = data.faculty;
+            var lecturerNam = data.lecturerNam;
+            var lecturerNu = data.lecturerNu;
             debugger;
             if (res.success) {
-                var data = res.data;
-
-                // Trích xuất dữ liệu
-                var years = data.years;
-                var studentCounts = data.students;
-                var lecturerCounts = data.lecturers;
-                var roomCounts = data.rooms;
-
-                // Cập nhật biểu đồ
-                new ApexCharts(document.querySelector("#reportsChart"), {
-                    series: [
-                        {
-                            name: 'Students',
-                            data: [2000,3560,2300,4000,3560]
-                        },
-                        {
-                            name: 'Lecturers',
-                            data: [50,46,51,66,60]
-                        },
-                        {
-                            name: 'Rooms',
-                            data: [100,150,200,210,300]
-                        }
-                    ],
+                Highcharts.chart('reportsChart', {
                     chart: {
-                        height: 350,
-                        type: 'area',
-                        toolbar: {
-                            show: false
-                        },
+                        type: 'column'
                     },
-                    markers: {
-                        size: 4
+                    title: {
+                        text: 'Số lượng giảng viên theo khoa'
                     },
-                    colors: ['#4154f1', '#2eca6a', '#ff771d'], // Màu cho từng series
-                    fill: {
-                        type: "gradient",
-                        gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                        }
-                    },
-                    dataLabels: {
-                        enabled: false
-                    },
-                    stroke: {
-                        curve: 'smooth',
-                        width: 2
-                    },
-                    xaxis: {
-                        categories: years, // Danh sách năm từ API
+                    xAxis: {
+                        categories: faculty, // Danh sách tên khoa từ API
                         title: {
-                            text: "Year"
+                            text: 'Khoa'
                         }
                     },
                     tooltip: {
-                        x: {
-                            format: 'yyyy' // Hiển thị năm đúng format
-                        },
-                    }
-                }).render();
+                        format: '<b>{key}</b><br/>{series.name}: {y}<br/>' +
+                            'Total: {point.stackTotal}'
+                    },
+
+                    plotOptions: {
+                        column: {
+                            stacking: 'normal'
+                        }
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Số lượng giảng viên'
+                        }
+                    },
+                    series: [{
+                        name: 'Số giảng viên nam',
+                        data: lecturerNam,
+                        stack: '1'
+                    },
+                    {
+                        name: 'Số giang viên nữ',
+                        data: lecturerNu,
+                        stack: '1'
+                    }]
+                });
+
             }
             else {
-                showToast("lỗi thống kê","error");
+                showToast("lỗi thống kê", "error");
             }
         },
         error: function (xhr) {
@@ -82,4 +65,173 @@
     });
 }
 
+loadReport2 = function () {
+    BlockUI();
+    $.ajax({
+        url: "/Admin/DashBoard/Report2",
+        type: "GET",
+        success: function (res) {
+            UnBlockUI();
+            var data = res.data;
+            var faculty = data.faculty;
+            var studentnam = data.studentNam;
+            var studentnu = data.studentNu;
+            debugger;
+            if (res.success) {
+                Highcharts.chart('reportsChart2', {
+                    chart: {
+                        type: 'column'
+                    },
+                    title: {
+                        text: 'Số lượng sinh viên theo khoa'
+                    },
+                    xAxis: {
+                        categories: faculty, // Danh sách tên khoa từ API
+                        title: {
+                            text: 'Khoa'
+                        }
+                    },
+                    tooltip: {
+                        format: '<b>{key}</b><br/>{series.name}: {y}<br/>' +
+                            'Total: {point.stackTotal}'
+                    },
+
+                    plotOptions: {
+                        column: {
+                            stacking: 'normal'
+                        }
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Số lượng sinh vien'
+                        }
+                    },
+                    series: [{
+                        name: 'Số sinh viên nam',
+                        data: studentnam,
+                        stack : '1'
+                    },
+                    {
+                        name: 'Số sinh viên nữ',
+                        data: studentnu,
+                        stack : '1'
+                    }]
+                });
+
+            }
+            else {
+                showToast("lỗi thống kê", "error");
+            }
+        },
+        error: function (xhr) {
+            UnBlockUI();
+            showToast("lỗi tải dữ liệu", "error");
+        }
+    });
+}
+
+loadCountStu = function (fillter) {
+    $.ajax({
+        url: "/Admin/DashBoard/reportCountStu",
+        type: "GET",
+        data: { fillter: fillter },
+        success: function (res) {
+            if (res.success) {
+                debugger;
+                var data = res.data;
+                var percent = data.percentIn.toFixed(2);
+                var isIncrease = percent >= 0;
+
+                var $countStu = $("#CountStu");
+                var $h6 = $countStu.find("h6").eq(0);
+                var $spanPercent = $countStu.find("span").eq(0);
+                var $spanLabel = $countStu.find("span").eq(1);
+
+                $h6.text("" + data.studentCurent);
+                $spanPercent
+                    .text((isIncrease ? "+" : "") + percent + "%")
+                    .removeClass("text-success text-danger")
+                    .addClass(isIncrease ? "text-success" : "text-danger");
+
+                $spanLabel.text(isIncrease ? "increase" : "decrease");
+            } else {
+                showToast("lỗi thống kê", "error");
+            }
+        },
+        error: function () {
+            showToast("lỗi tải dữ liệu", "error");
+        }
+    });
+}
+loadCountLecturer = function (fillter) {
+    $.ajax({
+        url: "/Admin/DashBoard/reportCountLeturer",
+        type: "GET",
+        data: { fillter: fillter },
+        success: function (res) {
+            if (res.success) {
+                debugger;
+                var data = res.data;
+                var percent = data.percentIn.toFixed(2);
+                var isIncrease = percent >= 0;
+
+                var $countLecturer = $("#CountLec");
+                var $h6 = $countLecturer.find("h6").eq(0);
+                var $spanPercent = $countLecturer.find("span").eq(0);
+                var $spanLabel = $countLecturer.find("span").eq(1);
+                $h6.text("" + data.lecturerCurent);
+                $spanPercent
+                    .text((isIncrease ? "+" : "") + percent + "%")
+                    .removeClass("text-success text-danger")
+                    .addClass(isIncrease ? "text-success" : "text-danger");
+
+                $spanLabel.text(isIncrease ? "increase" : "decrease");
+            } else {
+                showToast("lỗi thống kê", "error");
+            }
+        },
+        error: function () {
+            showToast("lỗi tải dữ liệu", "error");
+        }
+    });
+}
+loadCountRoom = function (fillter) {
+    $.ajax({
+        url: "/Admin/DashBoard/reportCountRoom",
+        type: "GET",
+        data: { fillter: fillter },
+        success: function (res) {
+            if (res.success) {
+                debugger;
+                var data = res.data;
+                var percent = data.percentIn.toFixed(2);
+                var isIncrease = percent >= 0;
+
+                var $countRoom = $("#CountRoom");
+                var $h6 = $countRoom.find("h6").eq(0);
+                var $spanPercent = $countRoom.find("span").eq(0);
+                var $spanLabel = $countRoom.find("span").eq(1);
+
+                $h6.text("" + data.roomCurent);
+                $spanPercent
+                    .text((isIncrease ? "+" : "") + percent + "%")
+                    .removeClass("text-success text-danger")
+                    .addClass(isIncrease ? "text-success" : "text-danger");
+
+                $spanLabel.text(isIncrease ? "increase" : "decrease");
+            } else {
+                showToast("lỗi thống kê", "error");
+            }
+        },
+        error: function () {
+            showToast("lỗi tải dữ liệu", "error");
+        }
+    });
+}
+
+loadCountStu();
+loadCountLecturer();
+loadCountRoom();
 loadReport1();
+loadReport2();

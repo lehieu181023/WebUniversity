@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "D:\\ASP.NET Core\\Web-University\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\views\\classschedule\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\views\\classschedule\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\views\\rolegroup\\roleinrolegroup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\views\\rolegroup\\roleinrolegroup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\wwwroot\\admin\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:wwwroot\\admin\\js\\dashboard.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\rolegroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\rolegroupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\views\\rolegroup\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\views\\rolegroup\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\views\\account\\editpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\views\\account\\editpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|d:\\asp.net core\\web-university\\areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4BC34BDC-4EA4-4DA8-BCA0-8916FCDF1A9F}|WebUniversity.csproj|solutionrelative:areas\\admin\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,86 +25,51 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\ClassSchedule\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\ClassSchedule\\Edit.cshtml",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\ClassSchedule\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\ClassSchedule\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAC7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T21:01:40.266Z",
+              "DocumentIndex": 1,
+              "Title": "DashBoard.js",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\DashBoard.js",
+              "RelativeDocumentMoniker": "wwwroot\\Admin\\js\\DashBoard.js",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\wwwroot\\Admin\\js\\DashBoard.js",
+              "RelativeToolTip": "wwwroot\\Admin\\js\\DashBoard.js",
+              "ViewState": "AgIAAKcAAAAAAAAAAAAAAMYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-04-10T07:24:37.89Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoleInRoleGroup.cshtml",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\RoleGroup\\RoleInRoleGroup.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\RoleGroup\\RoleInRoleGroup.cshtml",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\RoleGroup\\RoleInRoleGroup.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\RoleGroup\\RoleInRoleGroup.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\DashBoard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\DashBoard\\Index.cshtml",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\DashBoard\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Admin\\Views\\DashBoard\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAD8AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:49:10.296Z",
+              "WhenOpened": "2025-04-10T07:15:08.902Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RoleGroupController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\RoleGroupController.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAgwDoAAAANAAAAAAAAAA==",
+              "Title": "DashBoardController.cs",
+              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "RelativeToolTip": "Areas\\Admin\\Controllers\\DashBoardController.cs",
+              "ViewState": "AgIAAFgAAAAAAAAAAAAowJ8AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:47:35.696Z",
+              "WhenOpened": "2025-04-10T07:14:08.808Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\RoleGroup\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\RoleGroup\\Edit.cshtml",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\RoleGroup\\Edit.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\RoleGroup\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:47:45.359Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EditPassword.cshtml",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\Account\\EditPassword.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Views\\Account\\EditPassword.cshtml",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Views\\Account\\EditPassword.cshtml",
-              "RelativeToolTip": "Areas\\Admin\\Views\\Account\\EditPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-31T20:45:07.998Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Areas\\Admin\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\ASP.NET Core\\Web-University\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAADwv7IAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T20:44:56.105Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         }
