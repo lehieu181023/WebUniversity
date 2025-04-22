@@ -141,7 +141,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                         {
                             Username = lecturer.LecturerCode,
                             Password = Password,
-                            RoleGroupId = 2009,
+                            RoleGroupId = 5,
                             LecturerId = item,
                             Status = true
                         };
@@ -165,7 +165,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                     if (sqlEx.Number == 2627 || sqlEx.Number == 2601) // Lỗi UNIQUE constraint
                     {
                         _logger.LogWarning($"[{currentUser}] Thêm tài khoản giảng viên thất bại: Có học sinh đã tạo tài khoản.");
-                        return Json(new { success = false, message = "Có học sinh đã tạo tài khoản!" });
+                        return Json(new { success = false, message = "Có giảng viên đã được tạo tài khoản!" });
                     }
                 }
                 _logger.LogError(ex, $"[{currentUser}] Lỗi khi thêm tài khoản giảng viên");

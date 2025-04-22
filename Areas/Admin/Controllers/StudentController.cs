@@ -156,7 +156,7 @@ namespace WebUniversity.Areas.Admin.Controllers
                         {
                             Username = student.StudentCode,
                             Password = Password,
-                            RoleGroupId = 2010,
+                            RoleGroupId = 3,
                             StudentId = item,
                             Status = true
                         };

@@ -28,11 +28,15 @@ namespace WebUniversity.Controllers
         [HttpPost]
         public async Task<IActionResult> LoginAction(string UserName, string PassWord)
         {
-            var user = _db.Account.Where(s => s.Status).Include(u => u.RoleGroup).FirstOrDefault(u => u.Username == UserName);
+            var user = _db.Account.Include(u => u.RoleGroup).FirstOrDefault(u => u.Username == UserName);
 
             if (user == null)
             {
                 return Json(new { success = false, message = "Tài khoản không tồn tại" });
+            }
+            else if (!user.Status)
+            {
+                return Json(new { success = false, message = "Tài khoản đã bị khóa" });
             }
 
             // Kiểm tra mật khẩu
