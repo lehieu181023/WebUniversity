@@ -28,11 +28,11 @@
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            _logger.LogInformation("[Backup] Ứng dụng khởi động. Đợi 24 giờ trước lần backup đầu tiên.");
+            _logger.LogInformation("[Backup] Ứng dụng khởi động. Đợi 30 ngày trước lần backup đầu tiên.");
 
             try
             {
-                await Task.Delay(TimeSpan.FromDays(1), stoppingToken); // Chờ 24 giờ đầu tiên
+                await Task.Delay(TimeSpan.FromDays(30), stoppingToken); // Chờ 24 giờ đầu tiên
             }
             catch (TaskCanceledException)
             {
@@ -48,7 +48,7 @@
 
                     await ExecuteBackup();
 
-                    _logger.LogInformation("[Backup] Đã hoàn thành backup. Đợi 24 giờ trước lần tiếp theo.");
+                    _logger.LogInformation("[Backup] Đã hoàn thành backup. Đợi 30 ngày trước lần tiếp theo.");
                 }
                 catch (Exception ex)
                 {
@@ -58,7 +58,7 @@
                 // Đợi 24 giờ trước khi chạy backup tiếp theo
                 try
                 {
-                    await Task.Delay(TimeSpan.FromDays(1), stoppingToken);
+                    await Task.Delay(TimeSpan.FromDays(30), stoppingToken);
                 }
                 catch (TaskCanceledException)
                 {
