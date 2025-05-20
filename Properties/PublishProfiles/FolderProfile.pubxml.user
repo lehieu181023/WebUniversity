@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- https://go.microsoft.com/fwlink/?LinkID=208121. -->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\web1</_PublishTargetUrl>
+    <History>True|2025-05-19T16:57:00.7046777Z||;True|2025-05-19T23:53:44.0561482+07:00||;True|2025-05-19T23:49:16.1777662+07:00||;True|2025-05-19T23:44:43.0100590+07:00||;True|2025-05-19T23:24:57.0872249+07:00||;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=210.245.53.80%3bDatabase=zWebUniversity%3bUser ID=ThucTap%3bPassword=123456%3bEncrypt=False%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="WebUniversity.Models.DBContext">
+      <Value>Server=210.245.53.80%3bDatabase=zWebUniversity%3bUser ID=ThucTap%3bPassword=123456%3bEncrypt=False%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

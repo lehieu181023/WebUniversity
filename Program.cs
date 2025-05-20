@@ -19,8 +19,18 @@ builder.Services.AddDbContext<DBContext>(options =>
 });
 builder.Host.UseSerilog((context, config) =>
 {
-    config.WriteTo.Console()
-          .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day);
+    config
+        // Chỉ ghi log KHÔNG đến từ Microsoft hoặc System
+        .Filter.ByExcluding(logEvent =>
+            logEvent.Properties.ContainsKey("SourceContext") &&
+            (
+                logEvent.Properties["SourceContext"].ToString().StartsWith("\"Microsoft") ||
+                logEvent.Properties["SourceContext"].ToString().StartsWith("\"System")
+            )
+        )
+        .MinimumLevel.Information() // Tùy chọn mức log tối thiểu
+        .WriteTo.Console()
+        .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day);
 });
 
 builder.Services.AddHostedService<BackupService>();
@@ -144,6 +154,24 @@ app.Use(async (context, next) =>
     await next();
 });
 
-
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<DBContext>();
+    try
+    {
+        if (context.Database.CanConnect())
+        {
+            Log.Information("✅ Đã kết nối được đến database");
+        }
+        else
+        {
+            Log.Error("❌ Không thể kết nối đến database");
+        }
+    }
+    catch (Exception ex)
+    {
+        Log.Error(ex, "❌ Không thể kết nối đến database (exception)");
+    }
+}
 
 app.Run();

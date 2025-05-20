@@ -19,13 +19,13 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public IActionResult Index()
         {
             return View();
         }
 
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> report1(int yearcount = 2)
         {
             var currentYear = DateTime.UtcNow.Year;
@@ -73,7 +73,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return Json(new { success = true, data });
         }
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> report()
         {
 
@@ -113,7 +113,7 @@ namespace WebUniversity.Areas.Admin.Controllers
 
             return Json(new { success = true, data });
         }
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> report2()
         {
 
@@ -156,7 +156,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, data });
         }
 
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> reportCountStu(int fillter = 0)
         {
             var currentYear = DateTime.UtcNow.Year;
@@ -210,7 +210,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             };
             return Json(new { success = true, data });
         }
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> reportCountLeturer(int fillter = 0)
         {
             var currentYear = DateTime.UtcNow.Year;
@@ -263,7 +263,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             return Json(new { success = true, data });
         }
 
-        [Authorize(Policy = "NotLectureOrStudent")]
+        [Authorize]
         public async Task<JsonResult> reportCountRoom(int fillter = 0)
         {
             var currentYear = DateTime.UtcNow.Year;
