@@ -23,7 +23,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-       
+        [Authorize]
         public ActionResult Index(int ClassId = 0)
         {
             var roles = User.Claims

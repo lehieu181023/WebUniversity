@@ -220,6 +220,15 @@
   ],
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file D:\\ASP.NET Core\\Web-University\\WebUniversity\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\ASP.NET Core\\Web-University\\WebUniversity\\WebUniversity.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\ASP.NET Core\\Web-University\\WebUniversity\\WebUniversity.csproj",
+      "targetGraphs": []
+    },
+    {
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: Microsoft.CodeAnalysis.CSharp.Features 4.8.0-3.final requires Microsoft.CodeAnalysis.Common (= 4.8.0-3.final) but version Microsoft.CodeAnalysis.Common 4.8.0 was resolved.",

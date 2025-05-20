@@ -1,0 +1,6 @@
+2025-05-20 17:22:29.628 +07:00 [INF] ✅ Đã kết nối được đến database
+2025-05-20 17:22:29.722 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 30 ngày trước lần backup đầu tiên.
+2025-05-20 17:32:56.384 +07:00 [INF] ✅ Đã kết nối được đến database
+2025-05-20 17:32:56.455 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 30 ngày trước lần backup đầu tiên.
+2025-05-20 17:36:30.655 +07:00 [INF] ✅ Đã kết nối được đến database
+2025-05-20 17:36:30.699 +07:00 [INF] [Backup] Ứng dụng khởi động. Đợi 30 ngày trước lần backup đầu tiên.

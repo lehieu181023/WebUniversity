@@ -10014,6 +10014,12 @@
   },
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\ASP.NET Core\\Web-University\\WebUniversity\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
+    },
+    {
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
