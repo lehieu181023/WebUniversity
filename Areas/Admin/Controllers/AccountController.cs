@@ -23,7 +23,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize (Roles = "Account")]
+        [Authorize(Roles = "Account,Account.View")]
         public ActionResult Index()
         {
             return View();

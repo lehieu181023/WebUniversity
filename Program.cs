@@ -33,7 +33,7 @@ builder.Host.UseSerilog((context, config) =>
         .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day);
 });
 
-builder.Services.AddHostedService<BackupService>();
+//builder.Services.AddHostedService<BackupService>();
 
 // Thêm services cho Session
 builder.Services.AddDistributedMemoryCache();

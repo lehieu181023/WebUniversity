@@ -102,7 +102,10 @@ namespace WebUniversity.Areas.Admin.Controllers
                     _logger.LogWarning($"[{User.Identity?.Name}] Nhập dữ liệu không hợp lệ");
                     return Json(new { success = false, message = "Lỗi dữ liệu nhập" });
                 }
-
+                if(obj.StartDay > obj.EndDay)
+                {
+                    return Json(new { success = false, message = "Ngày bắt đầu không được lớn hơn ngày kết thúc" });
+                }
                 _db.ClassSchedule.Add(obj);
                 await _db.SaveChangesAsync();
 

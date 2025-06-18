@@ -32,7 +32,7 @@
 
             try
             {
-                await Task.Delay(TimeSpan.FromDays(30), stoppingToken); // Chờ 24 giờ đầu tiên
+                await Task.Delay(TimeSpan.FromDays(30), stoppingToken);
             }
             catch (TaskCanceledException)
             {

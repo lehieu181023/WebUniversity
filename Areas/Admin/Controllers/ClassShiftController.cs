@@ -22,7 +22,7 @@ namespace WebUniversity.Areas.Admin.Controllers
             _logger = logger;
         }
 
-        [Authorize]
+        [Authorize(Roles = "ClassShift,ClassShift.View")]
         public ActionResult Index()
         {
             return View();
